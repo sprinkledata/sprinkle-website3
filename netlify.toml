@@ -1,0 +1,50 @@
+# ============================================================
+# Netlify Configuration — Sprinkle Data
+# ============================================================
+
+[build]
+  publish = "."           # Static site — serve from root
+  command = ""            # No build step needed
+
+# ── Headers for performance & security ──
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options         = "DENY"
+    X-XSS-Protection        = "1; mode=block"
+    X-Content-Type-Options  = "nosniff"
+    Referrer-Policy         = "strict-origin-when-cross-origin"
+    Permissions-Policy      = "camera=(), microphone=(), geolocation=()"
+    Cache-Control           = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# ── Redirects ──
+[[redirects]]
+  from   = "/ai-analyst"
+  to     = "/#ai-analyst"
+  status = 301
+
+[[redirects]]
+  from   = "/platform"
+  to     = "/#platform"
+  status = 301
+
+# 404 fallback
+[[redirects]]
+  from   = "/*"
+  to     = "/404.html"
+  status = 404
