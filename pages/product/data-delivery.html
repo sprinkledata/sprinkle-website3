@@ -1,0 +1,2471 @@
+<!doctype html>
+<html lang="en-US" class="w-mod-js">
+  <head>
+    <meta charset="utf-8" />
+    <title>Data Delivery | Deliver the right data, to the right people</title>
+    <meta
+      content="Deliver reports, trigger alerts, and share dashboards – all designed to get the right information to the right people at the right time."
+      name="description"
+    />
+    <meta
+      content="Data Delivery | Deliver the right data, to the right people"
+      property="og:title"
+    />
+    <meta
+      content="Deliver reports, trigger alerts, and share dashboards – all designed to get the right information to the right people at the right time."
+      property="og:description"
+    />
+    <meta
+      content="Data Delivery | Deliver the right data, to the right people"
+      property="twitter:title"
+    />
+    <meta
+      content="Deliver reports, trigger alerts, and share dashboards – all designed to get the right information to the right people at the right time."
+      property="twitter:description"
+    />
+    <meta property="og:type" content="website" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="../../styles/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link
+      href="https://fonts.gstatic.com"
+      rel="preconnect"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      WebFont.load({
+        google: {
+          families: [
+            "Inconsolata:400,700",
+            "Crimson Pro:300,400,500,600,700",
+            "Crimson Pro:300,400,500,600,700",
+            "Poppins:300,400,500,600,700",
+            "Poppins:300,400,500,600,700",
+          ],
+        },
+      });
+    </script>
+    <script type="text/javascript">
+      !(function (o, c) {
+        var n = c.documentElement,
+          t = " w-mod-";
+        ((n.className += t + "js"),
+          ("ontouchstart" in o ||
+            (o.DocumentTouch && c instanceof DocumentTouch)) &&
+            (n.className += t + "touch"));
+      })(window, document);
+    </script>
+    <link
+      href="https://cdn.prod.website-files.com/6058658002faec26b7e08402/60b760aee88eff277667ebcb_Sprinkle_logo_flat_32x32.png"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.prod.website-files.com/6058658002faec26b7e08402/60b761003cae0e1e9a1e967d_Sprinkle_logo_flat_256x256.png"
+      rel="apple-touch-icon"
+    />
+    <link
+      href="https://www.sprinkledata.com/product/data-delivery"
+      rel="canonical"
+    />
+    <script
+      src="https://www.google.com/recaptcha/api.js"
+      type="text/javascript"
+    ></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-106573134-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-106573134-1");
+    </script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-NN89GDT");
+    </script>
+    <script>
+      function addCountries(selector) {
+        var select = document.querySelector(selector);
+
+        if (!select) {
+          return;
+        }
+
+        var countriesfile =
+          "Albania, Algeria, Andorra, Angola, Antigua & Deps, Argentina, Armenia, Australia, Austria, Azerbaijan, Bahamas, Bahrain, Bangladesh, Barbados, Belarus, Belgium, Belize, Benin, Bhutan, Bolivia, Bosnia Herzegovina, Botswana, Brazil, Brunei, Bulgaria, Burkina, Burma, Burundi, Cambodia, Cameroon, Canada, Cape Verde, Central African Rep, Chad, Chile, People's Republic of China, Republic of China, Colombia, Comoros, Democratic Republic of the Congo, Republic of the Congo, Costa Rica, Croatia, Cuba, Cyprus, Czech Republic, Danzig, Denmark, Djibouti, Dominica, Dominican Republic, East Timor, Ecuador, Egypt, El Salvador, Equatorial Guinea, Eritrea, Estonia, Ethiopia, Fiji, Finland, France, Gabon, Gaza Strip, The Gambia, Georgia, Germany, Ghana, Greece, Grenada, Guatemala, Guinea, Guinea-Bissau, Guyana, Haiti, Holy Roman Empire, Honduras, Hungary, Iceland, India, Indonesia, Iran, Iraq, Republic of Ireland, Israel, Italy, Ivory Coast, Jamaica, Japan, Jonathanland, Jordan, Kazakhstan, Kenya, Kiribati, North Korea, South Korea, Kosovo, Kuwait, Kyrgyzstan, Laos, Latvia, Lebanon, Lesotho, Liberia, Libya, Liechtenstein, Lithuania, Luxembourg, Macedonia, Madagascar, Malawi, Malaysia, Maldives, Mali, Malta, Marshall Islands, Mauritania, Mauritius, Mexico, Micronesia, Moldova, Monaco, Mongolia, Montenegro, Morocco, Mount Athos, Mozambique, Namibia, Nauru, Nepal, Newfoundland, Netherlands, New Zealand, Nicaragua, Niger, Nigeria, Norway, Oman, Ottoman Empire, Pakistan, Palau, Panama, Papua New Guinea, Paraguay, Peru, Philippines, Poland, Portugal, Prussia, Qatar, Romania, Rome, Russian Federation, Rwanda, St Kitts & Nevis, St Lucia, Saint Vincent & the, Grenadines, Samoa, San Marino, Sao Tome & Principe, Saudi Arabia, Senegal, Serbia, Seychelles, Sierra Leone, Singapore, Slovakia, Slovenia, Solomon Islands, Somalia, South Africa, Spain, Sri Lanka, Sudan, Suriname, Swaziland, Sweden, Switzerland, Syria, Tajikistan, Tanzania, Thailand, Togo, Tonga, Trinidad & Tobago, Tunisia, Turkey, Turkmenistan, Tuvalu, Uganda, Ukraine, United Arab Emirates, United Kingdom, United States of America, Uruguay, Uzbekistan, Vanuatu, Vatican City, Venezuela, Vietnam, Yemen, Zambia, Zimbabwe";
+        var countries = countriesfile.split(", ");
+        var fragment = document.createDocumentFragment();
+
+        for (var c = 0; c < countries.length; c++) {
+          var option = document.createElement("option");
+          option.value = countries[c];
+          option.textContent = countries[c];
+          fragment.appendChild(option);
+        }
+
+        select.appendChild(fragment);
+      }
+    </script>
+    <style>
+      .w-slider-dot {
+        background: #77838f;
+      }
+      .w-slider-dot.w-active {
+        background: #377dff;
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Sprinkle Data",
+        "url": "https://www.sprinkledata.com/",
+        "logo": "https://cdn.prod.website-files.com/6058658002faec26b7e08402/605b2e5626cff37ef2e1b9d9_sprinkle_new_logo_partial.png",
+        "sameAs": [
+          "https://www.linkedin.com/company/sprinkle-data/",
+          "https://www.facebook.com/SprinkleData",
+          "https://twitter.com/sprinkledata"
+        ]
+      }
+    </script>
+    <style>
+      .js-accordion-body-2 {
+        display: none;
+      }
+      .w-slider-dot {
+        background: #276df452;
+      }
+      .w-slider-nav.w-round {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .w-slider-nav.w-round > div {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+      }
+      .w-slider-dot.w-active {
+        background: #276df4;
+        width: 12px !important;
+        height: 12px !important;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div data-w-id="be25b21a-776d-5db1-6592-c8f86cee5dfd" class="navbar">
+      <div
+        data-animation="default"
+        data-collapse="medium"
+        data-duration="400"
+        data-easing="ease-in-out-quad"
+        data-easing2="ease"
+        role="banner"
+        class="navbar-flex-wrapper w-nav"
+      >
+        <div class="navbar-container">
+          <div class="navbar-wrapper-items">
+            <a href="/" class="navbar-company-logo w-nav-brand">
+              <img
+                src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65cdd1e92bbc7d57ac605a68_logo.png"
+                alt=""
+                width="80"
+                class="sprinkle-logo-navbar"
+              />
+            </a>
+            <nav role="navigation" class="nav-menu-wrapper-items w-nav-menu">
+              <ul role="list" class="nav-menu-list w-list-unstyled">
+                <li class="list-item_1">
+                  <div
+                    data-hover="false"
+                    data-delay="0"
+                    class="nav-dropdown-3 w-dropdown"
+                  >
+                    <div class="nav-dropdown-toggle-2 w-dropdown-toggle">
+                      <div
+                        class="nav-dropdown-icon-3 w-icon-dropdown-toggle"
+                      ></div>
+                      <div class="text-block-55">Product</div>
+                    </div>
+                    <nav
+                      class="nav-dropdown-list-2 shadow-three mobile-shadow-hide w-dropdown-list"
+                    ></nav>
+                  </div>
+                </li>
+                <li class="list-item_2 list-item-integrations">
+                  <div
+                    data-hover="true"
+                    data-delay="0"
+                    class="nav-dropdown-3 w-dropdown"
+                  >
+                    <div
+                      data-w-id="62f53f42-8e46-7c04-4002-229760ab8685"
+                      class="nav-dropdown-toggle-2 w-dropdown-toggle"
+                    >
+                      <div
+                        class="nav-dropdown-icon-3 w-icon-dropdown-toggle"
+                      ></div>
+                      <div class="text-block-56 global-new-font">Product</div>
+                      <div class="underline-nav"></div>
+                    </div>
+                    <nav
+                      class="nav-dropdown-list-2 shadow-three mobile-shadow-hide integration-new-nav big-nav w-dropdown-list"
+                    >
+                      <div class="nav-extra">
+                        <div class="nav-left-extra">
+                          <a
+                            data-w-id="230caf00-4d06-5575-49a8-45c5e5c058fc"
+                            href="/product/connectors"
+                            class="single-extra-nav w-inline-block"
+                          >
+                            <img
+                              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/662a0120f95b0af70485f4e9_qs0bddlpnadlvewi5zf.svg"
+                              loading="lazy"
+                              alt=""
+                              class="image-128"
+                            />
+                            <div class="nav-titles">
+                              <h2 class="heading-51">Data Integration</h2>
+                              <p class="paragraph-24">
+                                Bring data to your warehouse
+                              </p>
+                            </div>
+                          </a>
+                          <a
+                            data-w-id="461849ae-a94c-8e49-724a-a097a19a1922"
+                            href="/product/transformation-layer"
+                            class="single-extra-nav w-inline-block"
+                          >
+                            <img
+                              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6628a954ad0bd6d2f945b179_code_FILL0_wght300_GRAD0_opsz24%201.png"
+                              loading="lazy"
+                              alt=""
+                              class="image-128"
+                            />
+                            <div class="nav-titles">
+                              <h2 class="heading-51">Transformation layer</h2>
+                              <p class="paragraph-24">
+                                Clean &amp; prepare your data with SQL
+                              </p>
+                            </div>
+                          </a>
+                          <a
+                            data-w-id="c116786a-6b4e-b028-cb69-188b8ce0ecc1"
+                            href="/product/self-serve-bi"
+                            class="single-extra-nav w-inline-block"
+                          >
+                            <img
+                              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6628a40a1e37b251a11ded68_dashboard_FILL0_wght300_GRAD0_opsz24%201.png"
+                              loading="lazy"
+                              alt=""
+                              class="image-128"
+                            />
+                            <div class="nav-titles">
+                              <h2 class="heading-51">Self-Serve BI</h2>
+                              <p class="paragraph-24">
+                                Drag &amp; Drop Your Way to Insights
+                              </p>
+                            </div>
+                          </a>
+                          <a
+                            data-w-id="cb09b959-c45a-ca48-9c3b-882686ab322a"
+                            href="/product/data-delivery"
+                            aria-current="page"
+                            class="single-extra-nav hide-for-normal w-inline-block w--current"
+                          >
+                            <img
+                              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6628a95876781b48cc57d412_rocket_launch_FILL0_wght300_GRAD0_opsz24%201.png"
+                              loading="lazy"
+                              alt=""
+                              class="image-128"
+                            />
+                            <div class="nav-titles">
+                              <h2 class="heading-51">Data Delivery</h2>
+                              <p class="paragraph-24">
+                                Get the data you need, where you need it
+                              </p>
+                            </div>
+                          </a>
+                          <a
+                            data-w-id="c18070c9-03ed-4fc4-7d1d-44d9fe8407c9"
+                            href="/product/embed-analytics"
+                            class="single-extra-nav hide-for-normal w-inline-block"
+                          >
+                            <img
+                              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66329f355140715fd5c50d13_category_FILL0_wght300_GRAD0_opsz24%201.png"
+                              loading="lazy"
+                              alt=""
+                              class="image-128"
+                            />
+                            <div class="nav-titles">
+                              <h2 class="heading-51">Embed Analytics</h2>
+                              <p class="paragraph-24">
+                                Supercharge Your Applications with embedded
+                                dashboards.
+                              </p>
+                            </div>
+                          </a>
+                          <a
+                            href="/generative-ai"
+                            class="single-extra-nav hide-for-normal w-inline-block"
+                          >
+                            <img
+                              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6661a35036860c32ec39c398_bot%20(1).png"
+                              loading="lazy"
+                              alt=""
+                              class="image-128 bot-image"
+                            />
+                            <div class="nav-titles">
+                              <h2 class="heading-51">Write with AI</h2>
+                              <p class="paragraph-24">
+                                Generate SQl code from natural language prompt
+                              </p>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="nav-left-extra hide-for-tab">
+                          <a
+                            data-w-id="eaf95fd5-c5eb-3feb-c522-cb61434f1718"
+                            href="/product/data-delivery"
+                            aria-current="page"
+                            class="single-extra-nav w-inline-block w--current"
+                          >
+                            <img
+                              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6628a95876781b48cc57d412_rocket_launch_FILL0_wght300_GRAD0_opsz24%201.png"
+                              loading="lazy"
+                              alt=""
+                              class="image-128"
+                            />
+                            <div class="nav-titles">
+                              <h2 class="heading-51">Data Delivery</h2>
+                              <p class="paragraph-24">
+                                Get the data you need, where you need it
+                              </p>
+                            </div>
+                          </a>
+                          <a
+                            data-w-id="eaf95fd5-c5eb-3feb-c522-cb61434f171f"
+                            href="/product/embed-analytics"
+                            class="single-extra-nav w-inline-block"
+                          >
+                            <img
+                              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66329f355140715fd5c50d13_category_FILL0_wght300_GRAD0_opsz24%201.png"
+                              loading="lazy"
+                              alt=""
+                              class="image-128"
+                            />
+                            <div class="nav-titles">
+                              <h2 class="heading-51">Embed Analytics</h2>
+                              <p class="paragraph-24">
+                                Supercharge Your Applications with embedded
+                                dashboards.
+                              </p>
+                            </div>
+                          </a>
+                          <a
+                            data-w-id="7cd36135-26d6-59ff-ab9a-a4b5a912c540"
+                            href="/generative-ai"
+                            class="single-extra-nav w-inline-block"
+                          >
+                            <img
+                              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6661a35036860c32ec39c398_bot%20(1).png"
+                              loading="lazy"
+                              alt=""
+                              class="image-128 bot-image"
+                            />
+                            <div class="nav-titles">
+                              <h2 class="heading-51">Write with AI</h2>
+                              <p class="paragraph-24">
+                                Generate SQl code from natural language prompt
+                              </p>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="nav-right-extra">
+                          <div class="nav-right-content">
+                            <div class="nav-right-upper">
+                              <p class="nav-right-text">
+                                Data Warehouses<br />
+                              </p>
+                            </div>
+                            <p class="nav-right-extra-text">
+                              Supported SQL warehouses
+                            </p>
+                            <a
+                              href="/product/datawarehouse"
+                              class="connectors-div w-inline-block"
+                            >
+                              <div class="single-container">
+                                <img
+                                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603c028d2e42216b6a427c7_image_processing20200607-24705-1ry6qs5%201.png"
+                                  loading="lazy"
+                                  alt=""
+                                  class="image-125"
+                                />
+                                <p class="paragraph-19">Snowflake</p>
+                              </div>
+                              <div class="single-container">
+                                <img
+                                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603c0187a15857911a65c21_google-bigquery-2048x688%201.png"
+                                  loading="lazy"
+                                  alt=""
+                                  class="image-125"
+                                />
+                                <p class="paragraph-19">Bigquery</p>
+                              </div>
+                              <div class="single-container">
+                                <img
+                                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603c007a8c60b1936f46351_aws-redshift-logo%201.png"
+                                  loading="lazy"
+                                  alt=""
+                                  class="image-125"
+                                />
+                                <p class="paragraph-19">Redshift</p>
+                              </div>
+                              <div class="single-container">
+                                <img
+                                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603c00e181f2a2d4c0a1cd0_amazon-athena-logo%402x%201.png"
+                                  loading="lazy"
+                                  alt=""
+                                  class="image-125"
+                                />
+                                <p class="paragraph-19">Athena</p>
+                              </div>
+                            </a>
+                            <a
+                              href="/product/datawarehouse"
+                              class="connectors-div w-inline-block"
+                            >
+                              <div class="single-container">
+                                <img
+                                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603c0309e11010647bbe23e_1681406945310%201.png"
+                                  loading="lazy"
+                                  alt=""
+                                  class="image-125"
+                                />
+                                <p class="paragraph-19">Databricks</p>
+                              </div>
+                              <div class="single-container">
+                                <img
+                                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603c002fbb5b321e07939a6_pngwing%203.png"
+                                  loading="lazy"
+                                  alt=""
+                                  class="image-125"
+                                />
+                                <p class="paragraph-19">MySQL</p>
+                              </div>
+                              <div class="single-container">
+                                <img
+                                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603c025141be8921ae1fa17_postgresql-logo-png-transparent%201.png"
+                                  loading="lazy"
+                                  alt=""
+                                  class="image-125"
+                                />
+                                <p class="paragraph-19">Postgres</p>
+                              </div>
+                              <div class="single-container">
+                                <img
+                                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603c02ca8c60b1936f47ec2_pngwing%202.png"
+                                  loading="lazy"
+                                  alt=""
+                                  class="image-125"
+                                />
+                                <p class="paragraph-19">SQL Server</p>
+                              </div>
+                            </a>
+                            <div class="connectors-div">
+                              <a
+                                data-w-id="f63e6f35-1385-ea96-6b64-bcf270ae6d3c"
+                                href="/product/datawarehouse"
+                                class="arrow-extra connector-flex nav-see-all w-inline-block"
+                              >
+                                <div class="text-container-white">
+                                  <div class="text-block-58 connector-text">
+                                    See all
+                                  </div>
+                                  <div
+                                    class="div-block-134 extra-blocknav"
+                                  ></div>
+                                </div>
+                                <img
+                                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65da284a2ed568152b2de52a_arrow-blue.svg"
+                                  loading="lazy"
+                                  alt=""
+                                  class="arrow-icon connector-arrow-iocn"
+                                />
+                                <div class="div-block-133">
+                                  <img
+                                    src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ee94685cb31cfdcaeaab68_arrow-full-blue.svg"
+                                    loading="lazy"
+                                    alt=""
+                                    class="image-112 connector-full-arrow-icon"
+                                  />
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <a
+                        href="/product/connectors"
+                        class="nav-dropdown-link-2 nav-text-animation hide-for-integration w-dropdown-link"
+                        >Data Integration</a
+                      >
+                      <a
+                        href="/product/transformation-layer"
+                        class="nav-dropdown-link-2 nav-text-animation hide-for-integration w-dropdown-link"
+                        >Transformation layer</a
+                      >
+                      <a
+                        href="/product/self-serve-bi"
+                        class="nav-dropdown-link-2 nav-text-animation hide-for-integration w-dropdown-link"
+                        >Self Serve BI</a
+                      >
+                      <a
+                        href="/product/data-delivery"
+                        aria-current="page"
+                        class="nav-dropdown-link-2 nav-text-animation hide-for-integration w-dropdown-link w--current"
+                        >Data Delivery</a
+                      >
+                      <a
+                        href="/product/embed-analytics"
+                        class="nav-dropdown-link-2 nav-text-animation hide-for-integration w-dropdown-link"
+                        >Embed Analytics</a
+                      >
+                      <a
+                        href="/product/datawarehouse"
+                        class="nav-dropdown-link-2 nav-text-animation hide-for-integration w-dropdown-link"
+                        >Data Warehouses</a
+                      >
+                      <a
+                        href="/generative-ai"
+                        class="nav-dropdown-link-2 nav-text-animation hide-for-integration w-dropdown-link"
+                        >Write with AI</a
+                      >
+                    </nav>
+                  </div>
+                </li>
+                <li class="list-item_2">
+                  <div
+                    data-hover="true"
+                    data-delay="0"
+                    class="nav-dropdown-3 w-dropdown"
+                  >
+                    <div
+                      data-w-id="be25b21a-776d-5db1-6592-c8f86cee5e0e"
+                      class="nav-dropdown-toggle-2 w-dropdown-toggle"
+                    >
+                      <div
+                        class="nav-dropdown-icon-3 w-icon-dropdown-toggle"
+                      ></div>
+                      <div class="text-block-56 global-new-font">Usecases</div>
+                      <div class="underline-nav"></div>
+                    </div>
+                    <nav
+                      class="nav-dropdown-list-2 shadow-three mobile-shadow-hide w-dropdown-list"
+                    >
+                      <a
+                        data-w-id="be25b21a-776d-5db1-6592-c8f86cee5e14"
+                        href="/usecases/sales-analytics"
+                        class="nav-dropdown-link-2 nav-text-animation w-dropdown-link"
+                        >Sales Analytics</a
+                      >
+                      <a
+                        href="/usecases/marketing-analytics"
+                        class="nav-dropdown-link-2 nav-text-animation w-dropdown-link"
+                        >Marketing Analytics</a
+                      >
+                      <a
+                        href="/usecases/operations"
+                        class="nav-dropdown-link-2 nav-text-animation w-dropdown-link"
+                        >Operations Analytics</a
+                      >
+                      <a
+                        href="/usecases/data-management"
+                        class="nav-dropdown-link-2 nav-text-animation w-dropdown-link"
+                        >Data Management</a
+                      >
+                    </nav>
+                  </div>
+                </li>
+                <li
+                  data-w-id="be25b21a-776d-5db1-6592-c8f86cee5e20"
+                  class="list-item_4"
+                >
+                  <a href="/pricing" class="nav-link-3 nav-common-wd"
+                    >Pricing</a
+                  >
+                  <div class="underline-nav nav-without-dropdown"></div>
+                </li>
+                <li
+                  data-w-id="be25b21a-776d-5db1-6592-c8f86cee5e24"
+                  class="list-item_5"
+                >
+                  <a href="/customers" class="nav-link-3 nav-common-wd"
+                    >Customers</a
+                  >
+                  <div class="underline-nav nav-without-dropdown"></div>
+                </li>
+                <li class="list-item_6">
+                  <div
+                    data-hover="true"
+                    data-delay="0"
+                    class="nav-dropdown-3 w-dropdown"
+                  >
+                    <div
+                      data-w-id="be25b21a-776d-5db1-6592-c8f86cee5e2a"
+                      class="nav-dropdown-toggle-2 w-dropdown-toggle"
+                    >
+                      <div
+                        class="nav-dropdown-icon-3 w-icon-dropdown-toggle"
+                      ></div>
+                      <div class="text-block-57">Resources</div>
+                      <div class="underline-nav"></div>
+                    </div>
+                    <nav
+                      class="nav-dropdown-list-2 shadow-three mobile-shadow-hide resources-nav resouces-nav-small w-dropdown-list"
+                    >
+                      <a
+                        href="/blogs"
+                        class="nav-dropdown-link-2 nav-text-animation resources w-dropdown-link"
+                        >Blogs</a
+                      >
+                      <a
+                        href="https://docs.sprinkledata.com/product/data-security-and-privacy/security-at-sprinkle"
+                        target="_blank"
+                        class="nav-dropdown-link-2 nav-text-animation w-dropdown-link"
+                        >Data Security</a
+                      >
+                      <a
+                        href="https://docs.sprinkledata.com/product/"
+                        target="_blank"
+                        class="nav-dropdown-link-2 nav-text-animation w-dropdown-link"
+                        >Documentation</a
+                      >
+                    </nav>
+                  </div>
+                </li>
+              </ul>
+              <div class="navbar-actions action-dropdwon">
+                <div
+                  data-w-id="f2b418ce-103e-0481-d092-b19cc8df2650"
+                  class="login-container"
+                >
+                  <a
+                    href="https://console.sprinkledata.com/signin.html"
+                    target="_blank"
+                    class="button-ghost-login w-button"
+                    >Login</a
+                  >
+                  <div class="underline-login"></div>
+                </div>
+                <a
+                  data-w-id="be25b21a-776d-5db1-6592-c8f86cee5e39"
+                  href="/request-demo"
+                  class="animated-color-button animated-small w-inline-block"
+                >
+                  <div class="animated-slide"></div>
+                  <div class="animated-text navbar-action-btn">Book a demo</div>
+                </a>
+                <a
+                  data-w-id="be25b21a-776d-5db1-6592-c8f86cee5e3d"
+                  href="https://console.sprinkledata.com/signin.html#createaccount"
+                  target="_blank"
+                  class="animated-button-shine-effect small-animated-button hide-free-trial w-inline-block"
+                >
+                  <div class="box-shadow-animated-button"></div>
+                  <div class="animated-button-text navbar-action-btn-free">
+                    Start free trial
+                  </div>
+                </a>
+              </div>
+            </nav>
+            <div class="menu-button-responsive w-nav-button">
+              <img
+                src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d5cfc797eac4afa0dab683_menu.png"
+                loading="lazy"
+                width="25"
+                sizes="(max-width: 479px) 39vw, (max-width: 767px) 25px, 100vw"
+                alt=""
+                srcset="
+                  https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d5cfc797eac4afa0dab683_menu-p-500.png 500w,
+                  https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d5cfc797eac4afa0dab683_menu.png       512w
+                "
+                class="hamburger-icon"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="banner-container">
+        <div class="banner-text data-delivery-page-text">
+          <div class="hero-frame-content warehouse-hero-frame">
+            <div class="content">
+              <div
+                data-w-id="ba408613-d39a-254e-7564-349fba2c0ce1"
+                style="opacity: 0"
+                class="frame-content-header"
+              >
+                <div class="frame-content-short-heading">
+                  <img
+                    src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65cf3776674013074c568e82_Vectors-Wrapper.svg"
+                    loading="lazy"
+                    width="20"
+                    height="20"
+                    alt=""
+                    class="magic-icon"
+                  />
+                  <h1 class="subheading">Data delivery</h1>
+                </div>
+                <h2 class="heading">
+                  Deliver the right data, to the right people
+                </h2>
+              </div>
+              <h3
+                data-w-id="ba408613-d39a-254e-7564-349fba2c0cea"
+                style="opacity: 0"
+                class="text"
+              >
+                Deliver reports, trigger alerts, and share dashboards – all
+                designed to get the right information to the right people at the
+                right time.
+              </h3>
+            </div>
+            <div class="actions">
+              <div
+                data-w-id="4022fdb7-d0e7-b663-3f0d-51d3ea5c2165"
+                style="opacity: 0"
+                class="frame-actions"
+              >
+                <a
+                  data-w-id="4022fdb7-d0e7-b663-3f0d-51d3ea5c2166"
+                  href="/request-demo"
+                  class="animated-button-shine-effect w-inline-block"
+                >
+                  <div
+                    style="
+                      -webkit-transform: translate3d(-70px, -70%, 0)
+                        scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(20deg)
+                        skew(0, 0);
+                      -moz-transform: translate3d(-70px, -70%, 0)
+                        scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(20deg)
+                        skew(0, 0);
+                      -ms-transform: translate3d(-70px, -70%, 0)
+                        scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(20deg)
+                        skew(0, 0);
+                      transform: translate3d(-70px, -70%, 0) scale3d(1, 1, 1)
+                        rotateX(0) rotateY(0) rotateZ(20deg) skew(0, 0);
+                    "
+                    class="box-shadow-animated-button"
+                  ></div>
+                  <div class="animated-button-text">Book a demo</div>
+                </a>
+                <a
+                  data-w-id="4022fdb7-d0e7-b663-3f0d-51d3ea5c216a"
+                  href="/request-demo-old"
+                  class="animated-color-button hide-button-book-demo w-inline-block"
+                >
+                  <div
+                    style="
+                      -webkit-transform: translate3d(-100%, 0, 0)
+                        scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0)
+                        skew(0, 0);
+                      -moz-transform: translate3d(-100%, 0, 0) scale3d(1, 1, 1)
+                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                      -ms-transform: translate3d(-100%, 0, 0) scale3d(1, 1, 1)
+                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                      transform: translate3d(-100%, 0, 0) scale3d(1, 1, 1)
+                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    "
+                    class="animated-slide"
+                  ></div>
+                  <div style="color: rgb(39, 109, 244)" class="animated-text">
+                    Book a demo
+                  </div>
+                </a>
+              </div>
+              <div
+                data-w-id="ba408613-d39a-254e-7564-349fba2c0cf6"
+                style="opacity: 0"
+                class="hero-small-text"
+              >
+                <div class="small-text-container">
+                  <img
+                    src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65f14dd0b89cfcd9e5cb2303_14days.svg"
+                    loading="lazy"
+                    alt=""
+                  />
+                  <h4 class="text-small">14 day free trial</h4>
+                </div>
+                <div class="small-text-container">
+                  <img
+                    src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65f14ddd5d22e28c43895c0c_credit-card.svg"
+                    loading="lazy"
+                    alt=""
+                  />
+                  <h4 class="text-small">No credit card required</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          data-w-id="ba408613-d39a-254e-7564-349fba2c0cff"
+          style="opacity: 0"
+          class="banner-image data-delivery-image"
+        >
+          <img
+            src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6625fc61bc2b48b90c3d7f03_Group%201000002816.png"
+            loading="lazy"
+            width="Auto"
+            sizes="(max-width: 767px) 100vw, (max-width: 1439px) 45vw, (max-width: 1919px) 620.3984375px, 686.1953125px"
+            alt=""
+            srcset="
+              https://cdn.prod.website-files.com/6058658002faec26b7e08402/6625fc61bc2b48b90c3d7f03_Group%201000002816-p-500.png   500w,
+              https://cdn.prod.website-files.com/6058658002faec26b7e08402/6625fc61bc2b48b90c3d7f03_Group%201000002816-p-800.png   800w,
+              https://cdn.prod.website-files.com/6058658002faec26b7e08402/6625fc61bc2b48b90c3d7f03_Group%201000002816-p-1080.png 1080w,
+              https://cdn.prod.website-files.com/6058658002faec26b7e08402/6625fc61bc2b48b90c3d7f03_Group%201000002816-p-1600.png 1600w,
+              https://cdn.prod.website-files.com/6058658002faec26b7e08402/6625fc61bc2b48b90c3d7f03_Group%201000002816-p-2000.png 2000w,
+              https://cdn.prod.website-files.com/6058658002faec26b7e08402/6625fc61bc2b48b90c3d7f03_Group%201000002816-p-2600.png 2600w,
+              https://cdn.prod.website-files.com/6058658002faec26b7e08402/6625fc61bc2b48b90c3d7f03_Group%201000002816.png        2853w
+            "
+            class="image-114"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="warehouse-container warehouse-page">
+        <div
+          data-w-id="d4e72195-c5c3-5645-e127-6d3477b2d637"
+          style="opacity: 0"
+          class="image-container"
+        >
+          <div class="frame-1000003521 bg-blue-color-text">
+            <h6 class="text-7">Scheduled exports</h6>
+          </div>
+          <h2
+            data-w-id="d4e72195-c5c3-5645-e127-6d3477b2d63b"
+            style="opacity: 0"
+            class="supported-carrier-heading warehouse-heading-text"
+          >
+            Get Data Delivered Straight to Your Inbox
+          </h2>
+          <div class="img-wrapper data-delivery-img-wrapper">
+            <img
+              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66275b5d9079c1adec42e336_Group%201000002825.png"
+              loading="lazy"
+              width="350"
+              sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 96vw, (max-width: 1439px) 460px, (max-width: 1919px) 580.796875px, 657px"
+              alt=""
+              srcset="
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/66275b5d9079c1adec42e336_Group%201000002825-p-500.png   500w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/66275b5d9079c1adec42e336_Group%201000002825-p-800.png   800w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/66275b5d9079c1adec42e336_Group%201000002825-p-1080.png 1080w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/66275b5d9079c1adec42e336_Group%201000002825-p-1600.png 1600w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/66275b5d9079c1adec42e336_Group%201000002825-p-2000.png 2000w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/66275b5d9079c1adec42e336_Group%201000002825-p-2600.png 2600w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/66275b5d9079c1adec42e336_Group%201000002825-p-3200.png 3200w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/66275b5d9079c1adec42e336_Group%201000002825.png        3212w
+              "
+              class="image-117 image-data-delivery-1"
+            />
+          </div>
+        </div>
+        <div
+          data-w-id="d4e72195-c5c3-5645-e127-6d3477b2d63f"
+          style="opacity: 0"
+          class="content-container"
+        >
+          <p class="paragraph-16 extra-text-upper">
+            Have data delivered on your schedule
+          </p>
+          <div class="accordion-2 js-accordion-2">
+            <div class="accordion__item-2 js-accordion-item-2 cd active-2">
+              <div class="accordion-header-2 js-accordion-header-2">
+                <div class="accordian-header-content-text">
+                  <img
+                    src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66275c50225836c80c7e43bb_Frame%20237617.png"
+                    loading="lazy"
+                    width="40"
+                    alt=""
+                    class="image-118"
+                  />
+                  <h5 class="heading-48">Schedule Reports and Dashboards</h5>
+                </div>
+                <img
+                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6604176c3376e314c9b725c8_Vector%20(1).png"
+                  loading="lazy"
+                  width="14"
+                  alt=""
+                  class="js-accordion-icon-2 active-2"
+                />
+              </div>
+              <div class="accordion-body-2 js-accordion-body-2">
+                <p class="paragraph-16">
+                  Schedule reports and dashboards to be automatically delivered
+                  to individuals or groups at set intervals – daily, weekly,
+                  monthly, or a custom cadence that fits your needs.
+                </p>
+              </div>
+            </div>
+            <div class="accordion__item-2 js-accordion-item-2">
+              <div class="accordion-header-2 js-accordion-header-2">
+                <div class="accordian-header-content-text">
+                  <img
+                    src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66275c749079c1adec43cba5_Frame%20237617%20(2).png"
+                    loading="lazy"
+                    width="40"
+                    alt=""
+                    class="image-119"
+                  />
+                  <h5 class="heading-48">
+                    Customize Delivery for Each Recipient
+                  </h5>
+                </div>
+                <img
+                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6604176c3376e314c9b725c8_Vector%20(1).png"
+                  loading="lazy"
+                  width="14"
+                  alt=""
+                  class="js-accordion-icon-2"
+                />
+              </div>
+              <div class="accordion-body-2 js-accordion-body-2">
+                <p class="paragraph-16">
+                  Don&#x27;t send generic reports. Apply filters to each
+                  scheduled export, ensuring recipients receive data relevant to
+                  their role or area of responsibility.
+                </p>
+              </div>
+            </div>
+            <div class="accordion__item-2 js-accordion-item-2">
+              <div class="accordion-header-2 js-accordion-header-2">
+                <div class="accordian-header-content-text">
+                  <img
+                    src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66275c71c55d65842ac58d84_Frame%20237617%20(1).png"
+                    loading="lazy"
+                    width="40"
+                    alt=""
+                    class="image-120"
+                  />
+                  <h5 class="heading-48">Format and Personalise Emails</h5>
+                </div>
+                <img
+                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6604176c3376e314c9b725c8_Vector%20(1).png"
+                  loading="lazy"
+                  width="14"
+                  alt=""
+                  class="js-accordion-icon-2"
+                />
+              </div>
+              <div class="accordion-body-2 js-accordion-body-2">
+                <p class="paragraph-16">
+                  Choose the format (CSV/PDF) that works for you and personalise
+                  email notifications with custom subject lines and body text.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="warehouse-container warehouse-page">
+        <div
+          data-w-id="3e99d026-7c08-6c0f-caa1-2414e044319d"
+          style="opacity: 0"
+          class="image-container"
+        >
+          <div class="frame-1000003521 bg-blue-color-text">
+            <h6 class="text-7">Data alerts</h6>
+          </div>
+          <h2
+            data-w-id="3e99d026-7c08-6c0f-caa1-2414e04431a1"
+            style="opacity: 0"
+            class="supported-carrier-heading warehouse-heading-text"
+          >
+            Create custom alerts based on data thresholds
+          </h2>
+          <div class="img-wrapper data-delivery-img-wrapper">
+            <img
+              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/662768cbd0a744471812c1e4_Group%201000002824.png"
+              loading="lazy"
+              width="350"
+              sizes="(max-width: 479px) 86vw, (max-width: 767px) 95vw, (max-width: 991px) 96vw, (max-width: 1439px) 420px, (max-width: 1919px) 554.3984375px, 605.8984375px"
+              alt=""
+              srcset="
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/662768cbd0a744471812c1e4_Group%201000002824-p-500.png   500w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/662768cbd0a744471812c1e4_Group%201000002824-p-800.png   800w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/662768cbd0a744471812c1e4_Group%201000002824-p-1080.png 1080w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/662768cbd0a744471812c1e4_Group%201000002824-p-1600.png 1600w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/662768cbd0a744471812c1e4_Group%201000002824-p-2000.png 2000w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/662768cbd0a744471812c1e4_Group%201000002824-p-2600.png 2600w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/662768cbd0a744471812c1e4_Group%201000002824.png        2750w
+              "
+              class="image-117"
+            />
+          </div>
+        </div>
+        <div
+          data-w-id="3e99d026-7c08-6c0f-caa1-2414e04431a5"
+          style="opacity: 0"
+          class="content-container"
+        >
+          <p class="paragraph-16 extra-text-upper">
+            Get notified instantly via email when predefined data conditions are
+            met.
+          </p>
+          <a
+            data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e972"
+            href="https://docs.sprinkledata.com/product/analysing-your-data/dashboards/data-alerts"
+            target="_blank"
+            class="arrow-btn-white arrow-button arrow-custom-explore-integrations-btn w-inline-block"
+          >
+            <div class="text-container">
+              <div class="text-block-58 primary-blue">Learn more</div>
+              <div class="underline-arrow-btn-blue"></div>
+            </div>
+            <img
+              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65da284a2ed568152b2de52a_arrow-blue.svg"
+              loading="lazy"
+              data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e977"
+              alt=""
+              class="image-111"
+            />
+            <div class="arrow-full-container">
+              <img
+                src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ee94685cb31cfdcaeaab68_arrow-full-blue.svg"
+                loading="lazy"
+                alt=""
+                class="image-92"
+              />
+            </div>
+          </a>
+          <div class="accordion-2 js-accordion-2">
+            <div class="accordion__item-2 js-accordion-item-2 cd active-2">
+              <div class="accordion-header-2 js-accordion-header-2">
+                <div class="accordian-header-content-text">
+                  <img
+                    src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6627698e5f050ab5fd4bb50d_Frame%20237617%20(3).png"
+                    loading="lazy"
+                    width="40"
+                    alt=""
+                    class="image-118"
+                  />
+                  <h5 class="heading-48">Define Custom alert conditions</h5>
+                </div>
+                <img
+                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6604176c3376e314c9b725c8_Vector%20(1).png"
+                  loading="lazy"
+                  width="14"
+                  alt=""
+                  class="js-accordion-icon-2 active-2"
+                />
+              </div>
+              <div class="accordion-body-2 js-accordion-body-2">
+                <p class="paragraph-16">
+                  Set up alerts to trigger when data crosses the thresholds,
+                  ensuring you only receive notifications for critical changes.
+                </p>
+              </div>
+            </div>
+            <div class="accordion__item-2 js-accordion-item-2">
+              <div class="accordion-header-2 js-accordion-header-2">
+                <div class="accordian-header-content-text">
+                  <img
+                    src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66276991dc792fc07fcfaa42_Frame%20237617%20(4).png"
+                    loading="lazy"
+                    width="40"
+                    alt=""
+                    class="image-119"
+                  />
+                  <h5 class="heading-48">
+                    Catch Issues Early and Mitigate Risk
+                  </h5>
+                </div>
+                <img
+                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6604176c3376e314c9b725c8_Vector%20(1).png"
+                  loading="lazy"
+                  width="14"
+                  alt=""
+                  class="js-accordion-icon-2"
+                />
+              </div>
+              <div class="accordion-body-2 js-accordion-body-2">
+                <p class="paragraph-16">
+                  Move beyond reactive reporting and get notified when key data
+                  changes, allowing for immediate action.
+                </p>
+              </div>
+            </div>
+            <div class="accordion__item-2 js-accordion-item-2">
+              <div class="accordion-header-2 js-accordion-header-2">
+                <div class="accordian-header-content-text">
+                  <img
+                    src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6627699ba01a1902b11dab5c_Frame%20237617%20(5).png"
+                    loading="lazy"
+                    width="40"
+                    alt=""
+                    class="image-120"
+                  />
+                  <h5 class="heading-48">Personalise alerts</h5>
+                </div>
+                <img
+                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6604176c3376e314c9b725c8_Vector%20(1).png"
+                  loading="lazy"
+                  width="14"
+                  alt=""
+                  class="js-accordion-icon-2"
+                />
+              </div>
+              <div class="accordion-body-2 js-accordion-body-2">
+                <p class="paragraph-16">
+                  Personalise email notifications with custom filters, subject
+                  lines, body text &amp; previews.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div
+        data-w-id="f2a327ac-a343-7051-c1e5-7ac5d9c4e1bd"
+        style="opacity: 0"
+        class="additonal-container"
+      >
+        <div class="pricing-content faq-content warehouse-faq">
+          <h1
+            data-w-id="77d96d48-90d8-a680-6f77-2fd69ef408f5"
+            style="opacity: 0"
+            class="main-head-pricing faq-heading"
+          >
+            Additional Delivery Options
+          </h1>
+          <p
+            data-w-id="77d96d48-90d8-a680-6f77-2fd69ef408f7"
+            style="opacity: 0"
+            class="extra-text"
+          >
+            Sprinkle offers a variety of ways to extend the reach of your data
+            insights:
+          </p>
+        </div>
+        <div class="additonal-cards">
+          <div
+            data-w-id="b266be97-146e-eaf3-7635-c9527f9a6c9e"
+            class="additional-card"
+          >
+            <img
+              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66276da91e9abd16c0a6a67e_Sprinkle-video%20(9)%201.png"
+              loading="lazy"
+              width="Auto"
+              alt=""
+              class="image-127"
+            />
+            <div class="text-inner">
+              <h2 class="heading-50">Embedded Dashboards</h2>
+              <p class="paragraph-22">
+                Seamlessly embed dashboards for partner or client access (no
+                user accounts required).
+              </p>
+            </div>
+          </div>
+          <div
+            data-w-id="4dd0625c-7e46-86a2-8163-5c567e8a9e02"
+            class="additional-card"
+          >
+            <img
+              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6627a292f8d2b5065607631d_Sprinkle-video%20(10)%201.png"
+              loading="lazy"
+              width="Auto"
+              alt=""
+              class="image-127"
+            />
+            <div class="text-inner">
+              <h2 class="heading-50">Shareable Links</h2>
+              <p class="paragraph-22">
+                Instantly share Sprinkle entities (reports, dashboards, etc.)
+                with internal colleagues.
+              </p>
+            </div>
+          </div>
+          <div
+            data-w-id="0fb6db6a-48c6-7b4a-7a70-426074d7d0db"
+            class="additional-card"
+          >
+            <img
+              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6627a32be5a94099daf48535_Group%201000002817.png"
+              loading="lazy"
+              width="Auto"
+              alt=""
+              class="image-127"
+            />
+            <div class="text-inner">
+              <h2 class="heading-50">Mobile Views</h2>
+              <p class="paragraph-22">
+                Access and analyze dashboards and reports on the go using the
+                Sprinkle mobile app.
+              </p>
+            </div>
+          </div>
+          <div
+            data-w-id="195b3378-5676-da27-4872-2629ed473c93"
+            class="additional-card"
+          >
+            <img
+              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6627a3417ac8940229c4d270_slack_logo_icon_134008%201.png"
+              loading="lazy"
+              width="Auto"
+              alt=""
+              class="image-127"
+            />
+            <div class="text-inner">
+              <h2 class="heading-50">Slack Messages</h2>
+              <p class="paragraph-22">
+                Receive instant data insights directly within your Slack
+                workspace.
+              </p>
+            </div>
+          </div>
+          <div
+            data-w-id="f23e1174-1105-06a5-3616-53ed737f1170"
+            class="additional-card"
+          >
+            <img
+              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6627a3542713fe1f9f8ccf3f_Group%201000002818.png"
+              loading="lazy"
+              width="Auto"
+              alt=""
+              class="image-127"
+            />
+            <div class="text-inner">
+              <h2 class="heading-50">Sprinkle API</h2>
+              <p class="paragraph-22">
+                Programmatically access and integrate Sprinkle data into custom
+                workflows and applications.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <article class="container-fluid">
+      <div class="faq-section">
+        <img
+          src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65f1e8e2a125d24560df67ed_gradient.svg"
+          loading="lazy"
+          alt=""
+          class="gradient-image gradient-faq warehouse-faq"
+        />
+        <div class="faq-container">
+          <div class="pricing-content faq-content warehouse-faq">
+            <div
+              data-w-id="aa965aaa-35af-2659-1c12-9fdd53319b56"
+              style="opacity: 0"
+              class="frame-1000003521 bg-blue-color-text"
+            >
+              <div class="text-11">Questions</div>
+            </div>
+            <h1
+              data-w-id="aa965aaa-35af-2659-1c12-9fdd53319b59"
+              style="opacity: 0"
+              class="main-head-pricing faq-heading"
+            >
+              Frequently asked questions
+            </h1>
+            <p
+              data-w-id="aa965aaa-35af-2659-1c12-9fdd53319b5b"
+              style="opacity: 0"
+              class="extra-text"
+            >
+              Can’t find the answer you’re looking for? Feel free to
+              <a href="/request-demo-old" class="link-24">contact us</a>
+            </p>
+          </div>
+          <div class="faqs">
+            <div
+              data-hover="false"
+              data-delay="0"
+              data-w-id="aa965aaa-35af-2659-1c12-9fdd53319b60"
+              style="height: 70px"
+              class="faq w-dropdown"
+            >
+              <div class="faq-wrapper w-dropdown-toggle">
+                <div
+                  data-is-ix2-target="1"
+                  class="lottie-animation"
+                  data-w-id="aa965aaa-35af-2659-1c12-9fdd53319b62"
+                  data-animation-type="lottie"
+                  data-src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66029e681dcae2416719f686_cross-icon-anim.json"
+                  data-loop="0"
+                  data-direction="1"
+                  data-autoplay="0"
+                  data-renderer="svg"
+                  data-default-duration="0.5"
+                  data-duration="0"
+                  data-ix2-initial-state="0"
+                ></div>
+                <div class="dropdown-header">
+                  Can I get data delivered from Sprinkle to other tools?
+                </div>
+              </div>
+              <nav class="dropdown-content w-dropdown-list">
+                <p class="faq-text">
+                  Sprinkle allows you to deliver your data as CSV &amp; PDF
+                  directly via email &amp; slack. Additionally, you can use
+                  Sprinkle APIs allowing you to programmatically access and
+                  integrate data delivery features into custom workflows or
+                  applications..
+                </p>
+              </nav>
+            </div>
+            <div
+              data-hover="false"
+              data-delay="0"
+              data-w-id="aa965aaa-35af-2659-1c12-9fdd53319b7d"
+              style="height: 70px"
+              class="faq w-dropdown"
+            >
+              <div class="faq-wrapper w-dropdown-toggle">
+                <div
+                  data-is-ix2-target="1"
+                  class="lottie-animation"
+                  data-w-id="aa965aaa-35af-2659-1c12-9fdd53319b7f"
+                  data-animation-type="lottie"
+                  data-src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66029e681dcae2416719f686_cross-icon-anim.json"
+                  data-loop="0"
+                  data-direction="1"
+                  data-autoplay="0"
+                  data-renderer="svg"
+                  data-default-duration="0.5"
+                  data-duration="0"
+                  data-ix2-initial-state="0"
+                ></div>
+                <div class="dropdown-header">
+                  Can I share reports &amp; dashboards with people who
+                  don&#x27;t have Sprinkle accounts?
+                </div>
+              </div>
+              <nav class="dropdown-content w-dropdown-list">
+                <p class="faq-text">
+                  You can embed Sprinkle dashboards in your application or share
+                  the embedded link  with people who don’t have a sprinkle
+                  account allowing them to run &amp; view the dashboard.
+                </p>
+              </nav>
+            </div>
+            <div
+              data-hover="false"
+              data-delay="0"
+              data-w-id="aa965aaa-35af-2659-1c12-9fdd53319b85"
+              style="height: 70px"
+              class="faq w-dropdown"
+            >
+              <div class="faq-wrapper w-dropdown-toggle">
+                <div
+                  data-is-ix2-target="1"
+                  class="lottie-animation"
+                  data-w-id="aa965aaa-35af-2659-1c12-9fdd53319b87"
+                  data-animation-type="lottie"
+                  data-src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66029e681dcae2416719f686_cross-icon-anim.json"
+                  data-loop="0"
+                  data-direction="1"
+                  data-autoplay="0"
+                  data-renderer="svg"
+                  data-default-duration="0.5"
+                  data-duration="0"
+                  data-ix2-initial-state="0"
+                ></div>
+                <div class="dropdown-header">
+                  Do I need to manage report exports individually?
+                </div>
+              </div>
+              <nav class="dropdown-content w-dropdown-list">
+                <p class="faq-text">
+                  No! Sprinkle offers a centralised location to manage all your
+                  data delivery needs. You can manage and track delivery history
+                   for all your exports under the “Schedule” module of Sprinkle,
+                  saving you valuable time and effort.
+                </p>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <section class="footer-container">
+      <img
+        src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ef0d806feb36f3d570455f_Vector.png"
+        loading="lazy"
+        width="250"
+        sizes="(max-width: 479px) 100vw, 250px"
+        alt=""
+        srcset="
+          https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ef0d806feb36f3d570455f_Vector-p-500.png   500w,
+          https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ef0d806feb36f3d570455f_Vector-p-800.png   800w,
+          https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ef0d806feb36f3d570455f_Vector-p-1080.png 1080w,
+          https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ef0d806feb36f3d570455f_Vector.png        1197w
+        "
+        class="image-93"
+      />
+      <img
+        src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ef0d8351a4e36357360c68_Vector-two.png"
+        loading="lazy"
+        width="290"
+        sizes="(max-width: 479px) 100vw, 290px"
+        alt=""
+        srcset="
+          https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ef0d8351a4e36357360c68_Vector-two-p-500.png   500w,
+          https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ef0d8351a4e36357360c68_Vector-two-p-800.png   800w,
+          https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ef0d8351a4e36357360c68_Vector-two-p-1080.png 1080w,
+          https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ef0d8351a4e36357360c68_Vector-two-p-1600.png 1600w,
+          https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ef0d8351a4e36357360c68_Vector-two-p-2000.png 2000w,
+          https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ef0d8351a4e36357360c68_Vector-two.png        2046w
+        "
+        class="image-94"
+      />
+      <div class="w-layout-blockcontainer container-15 w-container">
+        <div class="div-block-130">
+          <img
+            src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d6320f301fd729472bb059_footer-avatar.png"
+            loading="lazy"
+            data-w-id="1ed80f1d-a64d-2f3d-af28-396ee4f131f6"
+            alt=""
+            sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 939.982666015625px"
+            srcset="
+              https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d6320f301fd729472bb059_footer-avatar-p-500.png   500w,
+              https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d6320f301fd729472bb059_footer-avatar-p-800.png   800w,
+              https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d6320f301fd729472bb059_footer-avatar-p-1080.png 1080w,
+              https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d6320f301fd729472bb059_footer-avatar-p-1600.png 1600w,
+              https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d6320f301fd729472bb059_footer-avatar.png        1800w
+            "
+            class="image-96"
+          />
+        </div>
+        <div class="div-block-131">
+          <div
+            data-w-id="1ed80f1d-a64d-2f3d-af28-396ee4f131f8"
+            class="container-16"
+          >
+            <div class="section-title">
+              <div class="section-title">
+                <h2 class="heading-43">
+                  Start Delivering Actionable Insights NOW!
+                </h2>
+                <p class="text-20">Got a question? Reach out to us!</p>
+              </div>
+            </div>
+            <div class="actions-3">
+              <a
+                href="https://console.sprinkledata.com/signin.html#createaccount"
+                target="_blank"
+                class="button-5"
+              >
+                <div class="button-6">Start for free</div>
+              </a>
+              <a
+                data-w-id="1ed80f1d-a64d-2f3d-af28-396ee4f13200"
+                href="/request-demo"
+                class="button-7"
+              >
+                <div class="button-8">Contact us</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-14">
+        <div class="footer-wrapper-two">
+          <a href="#" class="footer-brand w-inline-block">
+            <img
+              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65cdd1e92bbc7d57ac605a68_logo.png"
+              loading="lazy"
+              alt=""
+              class="image-84"
+            />
+          </a>
+          <div class="footer-block-two">
+            <div class="footer-title">Product</div>
+            <div
+              data-w-id="e8fa49aa-e7c0-673d-e29b-d97f19064203"
+              class="footer-link-container hide-me-link"
+            >
+              <a href="#" class="footer-link-two footer-link-override-css"
+                >Why Sprinkle?</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="3b47cd88-8e18-eea7-36de-ad934ef97652"
+              class="footer-link-container hide-me-link"
+            >
+              <a href="#" class="footer-link-two footer-link-override-css"
+                >Dashboards</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="abf01da9-2da6-26ef-c369-bb308f31db60"
+              class="footer-link-container hide-me-link"
+            >
+              <a href="#" class="footer-link-two footer-link-override-css"
+                >Reports</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="3e268f99-7e7d-59fa-a4ad-345cee9e8db6"
+              class="footer-link-container hide-me-link"
+            >
+              <a href="#" class="footer-link-two footer-link-override-css"
+                >Models</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="80f7d8d1-1484-1133-ce67-f9d0b0e244ad"
+              class="footer-link-container"
+            >
+              <a
+                href="/product/connectors"
+                class="footer-link-two footer-link-override-css"
+                >Data Integration</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="18c995a9-637e-7c3b-5bf7-7997307801b9"
+              class="footer-link-container"
+            >
+              <a
+                href="/product/transformation-layer"
+                class="footer-link-two footer-link-override-css"
+                >Transformation layer</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="04f1df9d-7ce0-f262-d3aa-e0b5a497fcad"
+              class="footer-link-container"
+            >
+              <a
+                href="/product/self-serve-bi"
+                class="footer-link-two footer-link-override-css"
+                >Self Serve BI</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="fc501493-cba9-e789-2c6b-0647c60fdcce"
+              class="footer-link-container"
+            >
+              <a
+                href="/product/data-delivery"
+                aria-current="page"
+                class="footer-link-two footer-link-override-css w--current"
+                >Data Delivery</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="46ef3150-4543-091e-22df-4d703d97ab2e"
+              class="footer-link-container"
+            >
+              <a
+                href="/product/embed-analytics"
+                class="footer-link-two footer-link-override-css"
+                >Embed Analytics</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="f3f08617-c127-f12b-b512-54dab158e29f"
+              class="footer-link-container hide-me-link"
+            >
+              <a href="#" class="footer-link-two footer-link-override-css"
+                >Data delivery</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="7941d964-3b4a-513a-0fb3-bda5c3af25f4"
+              class="footer-link-container"
+            >
+              <a
+                href="/product/datawarehouse"
+                class="footer-link-two footer-link-override-css"
+                >Data Warehouses</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="5520566c-b7d6-b69a-12aa-ba089494e3ad"
+              class="footer-link-container"
+            >
+              <a
+                href="/generative-ai"
+                class="footer-link-two footer-link-override-css"
+                >Write with AI</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+          </div>
+          <div class="footer-block-two">
+            <div class="footer-title">Compare</div>
+            <div
+              data-w-id="a9862f03-125f-c832-9d6d-d2fffc69789f"
+              class="footer-link-container"
+            >
+              <a
+                href="/analytics/tableau-alternative"
+                class="footer-link-two footer-link-override-css"
+                >Tableau</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="c2197790-08ef-29c7-8421-f970d2fd6adf"
+              class="footer-link-container"
+            >
+              <a
+                href="/analytics/powerbi-alternative"
+                class="footer-link-two footer-link-override-css"
+                >Power BI</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="43a76ca8-dfa7-55f1-ccfb-5c19a39ba6d1"
+              class="footer-link-container"
+            >
+              <a
+                href="/analytics/google-data-studio-alternative"
+                class="footer-link-two footer-link-override-css"
+                >Google data studio</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="2cd49cd0-6b7e-9e69-5e5d-c6ea45d3814b"
+              class="footer-link-container"
+            >
+              <a
+                href="/analytics/metabase-alternative"
+                class="footer-link-two footer-link-override-css"
+                >Metabase</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="9a3d10f9-8dbd-686d-79d7-06fcca00f58c"
+              class="footer-link-container"
+            >
+              <a
+                href="/analytics/redash-alternative"
+                class="footer-link-two footer-link-override-css"
+                >Redash</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="d495aada-f23c-3e38-019b-efe6ab4671c4"
+              class="footer-link-container"
+            >
+              <a
+                href="/analytics/redash-alternative"
+                class="footer-link-two footer-link-override-css"
+                >Superset</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+          </div>
+          <div class="footer-block-two">
+            <div class="footer-title">Usecases</div>
+            <div
+              data-w-id="4c0bd584-d8ce-8063-8b03-de22894059bd"
+              class="footer-link-container"
+            >
+              <a
+                href="/usecases/sales-analytics"
+                class="footer-link-two footer-link-override-css"
+                >Sales analytics</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="b153f8a1-4c55-8363-7620-f73fe47f7be0"
+              class="footer-link-container"
+            >
+              <a
+                href="/usecases/marketing-analytics"
+                class="footer-link-two footer-link-override-css"
+                >Marketing analytics</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="e467d3a1-69d5-5713-06f0-e5232428f34b"
+              class="footer-link-container"
+            >
+              <a
+                href="/usecases/operations"
+                class="footer-link-two footer-link-override-css"
+                >Operations analytics</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="a08e8c57-e2c0-4aa6-ab06-09a2c9bbb728"
+              class="footer-link-container"
+            >
+              <a
+                href="/usecases/data-management"
+                class="footer-link-two footer-link-override-css"
+                >Data management</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="4544185a-4cd2-519a-787a-2f4630d0e41c"
+              class="footer-link-container"
+            >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="f47fbbc2-366e-7151-6948-39e2ae655f9e"
+              class="footer-link-container"
+            >
+              <div class="footer-underline"></div>
+            </div>
+          </div>
+          <div class="footer-block-two">
+            <div class="footer-title">Resources</div>
+            <div
+              data-w-id="89cb9e4e-a3e2-1ff7-75df-9f0f323048cd"
+              class="footer-link-container hide-me-link"
+            >
+              <a href="#" class="footer-link-two footer-link-override-css"
+                >How it works</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="46b56244-b512-59e8-b7ff-40b45b1e0538"
+              class="footer-link-container"
+            >
+              <a
+                href="/pricing"
+                class="footer-link-two footer-link-override-css"
+                >Pricing</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="6da77c69-b96a-e81b-75a6-91ec53cdf3bc"
+              class="footer-link-container"
+            >
+              <a
+                href="https://docs.sprinkledata.com/product"
+                target="_blank"
+                class="footer-link-two footer-link-override-css"
+                >Documentation</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="a22e5e3e-00f4-589f-5e77-6205df0ecb5a"
+              class="footer-link-container"
+            >
+              <a
+                href="https://docs.sprinkledata.com/product/data-security-and-privacy/security-at-sprinkle"
+                target="_blank"
+                class="footer-link-two footer-link-override-css"
+                >Data Security</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="67955a89-277b-19b6-0ec1-1e3281eb1583"
+              class="footer-link-container"
+            >
+              <a
+                href="https://docs.sprinkledata.com/product/data-security-and-privacy/gdpr"
+                target="_blank"
+                class="footer-link-two footer-link-override-css"
+                >GDPR</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="d1af9c37-5a7f-c6e1-478a-faa10d23cd11"
+              class="footer-link-container"
+            >
+              <a
+                href="/customers"
+                class="footer-link-two footer-link-override-css"
+                >Customers</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="7dd8023f-6af5-3ed0-4d0a-cabcbb4a958c"
+              class="footer-link-container hide-me-link"
+            >
+              <a href="#" class="footer-link-two footer-link-override-css"
+                >FAQs</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="dd4393a6-f903-f3bf-1ab0-e33d6b0cacbf"
+              class="footer-link-container"
+            >
+              <a href="/blogs" class="footer-link-two footer-link-override-css"
+                >Blogs</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="c9cd972e-c52b-c66e-9385-0194b6934944"
+              class="footer-link-container"
+            >
+              <a
+                href="https://docs.sprinkledata.com/product/release-notes/release-notes"
+                target="_blank"
+                class="footer-link-two footer-link-override-css"
+                >Release Notes</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+            <div
+              data-w-id="6c6a066c-a068-9226-f7eb-a95fb17ef943"
+              class="footer-link-container hide-me-link"
+            >
+              <a href="#" class="footer-link-two footer-link-override-css"
+                >About Sprinkle</a
+              >
+              <div class="footer-underline"></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-divider-two"></div>
+        <div class="footer-bottom-2">
+          <div class="div-block-129">
+            <div class="footer-copyright">
+              © 2024 Sprinkle. All rights reserved.
+            </div>
+            <a
+              href="https://docs.sprinkledata.com/product/data-security-and-privacy/privacy-policy"
+              target="_blank"
+              class="link-21"
+              >Privacy Policy</a
+            >
+            <a href="/terms" class="link-22">Terms of Service</a>
+          </div>
+          <div class="footer-social-block-two">
+            <a
+              href="https://www.facebook.com/SprinkleData"
+              target="_blank"
+              class="footer-social-link w-inline-block"
+            >
+              <img
+                src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d628b7a6be3544b11c49d9_Facebook.svg"
+                loading="lazy"
+                alt=""
+              />
+            </a>
+            <a href="#" class="footer-social-link hide-social w-inline-block">
+              <img
+                src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d62929fa7e69243eaf2a93_Instagram.svg"
+                loading="lazy"
+                alt=""
+              />
+            </a>
+            <a
+              href="https://twitter.com/sprinkledata"
+              target="_blank"
+              class="footer-social-link w-inline-block"
+            >
+              <img
+                src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d62931b27c230c2f712190_X.svg"
+                loading="lazy"
+                alt=""
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/sprinkle-data/"
+              target="_blank"
+              class="footer-social-link w-inline-block"
+            >
+              <img
+                src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d6293bc120fde0d54ba434_LinkedIn-logo.svg"
+                loading="lazy"
+                alt=""
+              />
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UC3F0YwGaykiD6AyPya9nTBg/featured"
+              target="_blank"
+              class="footer-social-link w-inline-block"
+            >
+              <img
+                src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d629411eb52fb40c3165a6_Youtube.svg"
+                loading="lazy"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NN89GDT"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      >
+      </iframe>
+    </noscript>
+    <script>
+      (function () {
+        function initCustomReveal() {
+          var hiddenItems = Array.prototype.filter.call(
+            document.querySelectorAll("[data-w-id][style]"),
+            function (element) {
+              var inlineStyle = (element.getAttribute("style") || "")
+                .replace(/\s+/g, "")
+                .toLowerCase();
+              return inlineStyle.indexOf("opacity:0") !== -1;
+            },
+          );
+
+          if (!hiddenItems.length) {
+            return;
+          }
+
+          hiddenItems.forEach(function (element, index) {
+            element.classList.add("custom-reveal");
+            element.style.opacity = "0";
+            element.style.transitionDelay = Math.min(index * 40, 240) + "ms";
+          });
+
+          function reveal(element) {
+            element.classList.add("is-visible");
+            element.style.opacity = "1";
+            element.style.transform = "none";
+          }
+
+          if (!("IntersectionObserver" in window)) {
+            hiddenItems.forEach(reveal);
+            return;
+          }
+
+          var observer = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (!entry.isIntersecting) {
+                  return;
+                }
+
+                reveal(entry.target);
+                observer.unobserve(entry.target);
+              });
+            },
+            {
+              threshold: 0.12,
+              rootMargin: "0px 0px -10% 0px",
+            },
+          );
+
+          hiddenItems.forEach(function (element) {
+            observer.observe(element);
+          });
+        }
+
+        function initDropdowns() {
+          var dropdowns = Array.prototype.slice.call(
+            document.querySelectorAll(".w-dropdown:not(.faq)"),
+          );
+
+          if (!dropdowns.length) {
+            return;
+          }
+
+          function closeDropdown(dropdown) {
+            dropdown.classList.remove("w--open");
+            var toggle = dropdown.querySelector(".w-dropdown-toggle");
+            var list = dropdown.querySelector(".w-dropdown-list");
+
+            if (toggle) {
+              toggle.classList.remove("w--open");
+              toggle.setAttribute("aria-expanded", "false");
+            }
+
+            if (list) {
+              list.classList.remove("w--open");
+            }
+          }
+
+          function openDropdown(dropdown) {
+            dropdowns.forEach(function (item) {
+              if (item !== dropdown) {
+                closeDropdown(item);
+              }
+            });
+
+            dropdown.classList.add("w--open");
+            var toggle = dropdown.querySelector(".w-dropdown-toggle");
+            var list = dropdown.querySelector(".w-dropdown-list");
+
+            if (toggle) {
+              toggle.classList.add("w--open");
+              toggle.setAttribute("aria-expanded", "true");
+            }
+
+            if (list) {
+              list.classList.add("w--open");
+            }
+          }
+
+          dropdowns.forEach(function (dropdown) {
+            var toggle = dropdown.querySelector(".w-dropdown-toggle");
+            if (!toggle) {
+              return;
+            }
+
+            toggle.setAttribute("aria-expanded", "false");
+
+            toggle.addEventListener("click", function (event) {
+              event.preventDefault();
+              event.stopPropagation();
+
+              if (dropdown.classList.contains("w--open")) {
+                closeDropdown(dropdown);
+              } else {
+                openDropdown(dropdown);
+              }
+            });
+
+            dropdown.addEventListener("mouseenter", function () {
+              if (window.innerWidth > 991) {
+                openDropdown(dropdown);
+              }
+            });
+
+            dropdown.addEventListener("mouseleave", function () {
+              if (window.innerWidth > 991) {
+                closeDropdown(dropdown);
+              }
+            });
+          });
+
+          document.addEventListener("click", function (event) {
+            dropdowns.forEach(function (dropdown) {
+              if (!dropdown.contains(event.target)) {
+                closeDropdown(dropdown);
+              }
+            });
+          });
+        }
+
+        function initMobileNav() {
+          var button = document.querySelector(".menu-button-responsive");
+          var navMenu = document.querySelector(".nav-menu-wrapper-items");
+
+          if (!button || !navMenu) {
+            return;
+          }
+
+          button.setAttribute("role", "button");
+          button.setAttribute("tabindex", "0");
+          button.setAttribute("aria-expanded", "false");
+
+          function closeMenu() {
+            button.classList.remove("w--open");
+            navMenu.classList.remove("w--open");
+            button.setAttribute("aria-expanded", "false");
+            document.body.classList.remove("custom-nav-open");
+          }
+
+          function toggleMenu() {
+            var willOpen = !navMenu.classList.contains("w--open");
+            navMenu.classList.toggle("w--open", willOpen);
+            button.classList.toggle("w--open", willOpen);
+            button.setAttribute("aria-expanded", willOpen ? "true" : "false");
+            document.body.classList.toggle("custom-nav-open", willOpen);
+          }
+
+          button.addEventListener("click", function (event) {
+            event.preventDefault();
+            toggleMenu();
+          });
+
+          button.addEventListener("keydown", function (event) {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              toggleMenu();
+            }
+          });
+
+          navMenu.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+              if (window.innerWidth <= 991) {
+                closeMenu();
+              }
+            });
+          });
+
+          window.addEventListener("resize", function () {
+            if (window.innerWidth > 991) {
+              closeMenu();
+            }
+          });
+
+          document.addEventListener("click", function (event) {
+            if (window.innerWidth > 991) {
+              return;
+            }
+
+            if (
+              !button.contains(event.target) &&
+              !navMenu.contains(event.target)
+            ) {
+              closeMenu();
+            }
+          });
+        }
+
+        function initTabs() {
+          var tabGroups = document.querySelectorAll(".w-tabs");
+
+          tabGroups.forEach(function (tabGroup) {
+            var links = Array.prototype.slice.call(
+              tabGroup.querySelectorAll(".w-tab-menu .w-tab-link"),
+            );
+            var panes = Array.prototype.slice.call(
+              tabGroup.querySelectorAll(".w-tab-content .w-tab-pane"),
+            );
+
+            if (!links.length || !panes.length) {
+              return;
+            }
+
+            function activateTab(name) {
+              links.forEach(function (link) {
+                var isActive = link.getAttribute("data-w-tab") === name;
+                link.classList.toggle("w--current", isActive);
+                link.setAttribute("aria-selected", isActive ? "true" : "false");
+                link.setAttribute("tabindex", isActive ? "0" : "-1");
+              });
+
+              panes.forEach(function (pane) {
+                var isActive = pane.getAttribute("data-w-tab") === name;
+                pane.classList.toggle("w--tab-active", isActive);
+                pane.style.display = isActive ? "block" : "none";
+              });
+            }
+
+            links.forEach(function (link) {
+              link.setAttribute("role", "tab");
+              link.addEventListener("click", function (event) {
+                event.preventDefault();
+                activateTab(link.getAttribute("data-w-tab"));
+              });
+            });
+
+            var initialLink =
+              tabGroup.querySelector(".w-tab-menu .w-tab-link.w--current") ||
+              links[0];
+
+            activateTab(initialLink.getAttribute("data-w-tab"));
+          });
+        }
+
+        function initFaqs() {
+          var faqs = document.querySelectorAll(".faq.w-dropdown");
+
+          faqs.forEach(function (faq) {
+            var toggle = faq.querySelector(".faq-wrapper.w-dropdown-toggle");
+            var content = faq.querySelector(
+              ".dropdown-content.w-dropdown-list",
+            );
+
+            if (!toggle || !content) {
+              return;
+            }
+
+            toggle.setAttribute("role", "button");
+            toggle.setAttribute("tabindex", "0");
+
+            function closeFaq() {
+              faq.classList.remove("w--open");
+              toggle.classList.remove("w--open");
+              content.classList.remove("w--open");
+              toggle.setAttribute("aria-expanded", "false");
+              content.style.display = "none";
+              faq.style.height = toggle.offsetHeight + "px";
+            }
+
+            function openFaq() {
+              faqs.forEach(function (item) {
+                if (item !== faq) {
+                  var otherToggle = item.querySelector(
+                    ".faq-wrapper.w-dropdown-toggle",
+                  );
+                  var otherContent = item.querySelector(
+                    ".dropdown-content.w-dropdown-list",
+                  );
+
+                  item.classList.remove("w--open");
+                  if (otherToggle) {
+                    otherToggle.classList.remove("w--open");
+                    otherToggle.setAttribute("aria-expanded", "false");
+                  }
+                  if (otherContent) {
+                    otherContent.classList.remove("w--open");
+                    otherContent.style.display = "none";
+                  }
+                  if (otherToggle) {
+                    item.style.height = otherToggle.offsetHeight + "px";
+                  }
+                }
+              });
+
+              faq.classList.add("w--open");
+              toggle.classList.add("w--open");
+              content.classList.add("w--open");
+              toggle.setAttribute("aria-expanded", "true");
+              content.style.display = "block";
+              faq.style.height =
+                toggle.offsetHeight + content.scrollHeight + "px";
+            }
+
+            closeFaq();
+
+            toggle.addEventListener("click", function (event) {
+              event.preventDefault();
+              event.stopPropagation();
+
+              if (faq.classList.contains("w--open")) {
+                closeFaq();
+              } else {
+                openFaq();
+              }
+            });
+
+            toggle.addEventListener("keydown", function (event) {
+              if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                toggle.click();
+              }
+            });
+          });
+        }
+
+        function initSliders() {
+          var sliders = document.querySelectorAll(".w-slider");
+
+          sliders.forEach(function (slider) {
+            var mask = slider.querySelector(".w-slider-mask");
+            var slides = Array.prototype.slice.call(
+              slider.querySelectorAll(".w-slide")
+            );
+            var prev = slider.querySelector(".w-slider-arrow-left");
+            var next = slider.querySelector(".w-slider-arrow-right");
+            var nav = slider.querySelector(".w-slider-nav");
+            var currentIndex = 0;
+            var autoplay = slider.getAttribute("data-autoplay") === "true";
+            var delay = parseInt(slider.getAttribute("data-delay") || "5000", 10);
+            var timer = null;
+
+            if (!mask || slides.length <= 1) {
+              return;
+            }
+
+            if (nav && !nav.children.length) {
+              slides.forEach(function (_, index) {
+                var dot = document.createElement("button");
+                dot.type = "button";
+                dot.className = "w-slider-dot";
+                dot.setAttribute("aria-label", "Go to slide " + (index + 1));
+                dot.addEventListener("click", function () {
+                  goTo(index);
+                });
+                nav.appendChild(dot);
+              });
+            }
+
+            var dots = nav
+              ? Array.prototype.slice.call(nav.querySelectorAll(".w-slider-dot"))
+              : [];
+
+            function render() {
+              slides.forEach(function (slide, index) {
+                var isActive = index === currentIndex;
+                slide.style.display = isActive ? "block" : "none";
+                slide.setAttribute("aria-hidden", isActive ? "false" : "true");
+              });
+
+              dots.forEach(function (dot, index) {
+                dot.classList.toggle("w-active", index === currentIndex);
+                dot.setAttribute(
+                  "aria-pressed",
+                  index === currentIndex ? "true" : "false"
+                );
+              });
+            }
+
+            function goTo(index) {
+              currentIndex = (index + slides.length) % slides.length;
+              render();
+              restartAutoplay();
+            }
+
+            function restartAutoplay() {
+              if (!autoplay) {
+                return;
+              }
+
+              window.clearInterval(timer);
+              timer = window.setInterval(function () {
+                goTo(currentIndex + 1);
+              }, delay);
+            }
+
+            if (prev) {
+              prev.setAttribute("role", "button");
+              prev.setAttribute("tabindex", "0");
+              prev.addEventListener("click", function (event) {
+                event.preventDefault();
+                goTo(currentIndex - 1);
+              });
+            }
+
+            if (next) {
+              next.setAttribute("role", "button");
+              next.setAttribute("tabindex", "0");
+              next.addEventListener("click", function (event) {
+                event.preventDefault();
+                goTo(currentIndex + 1);
+              });
+            }
+
+            slider.addEventListener("mouseenter", function () {
+              window.clearInterval(timer);
+            });
+
+            slider.addEventListener("mouseleave", function () {
+              restartAutoplay();
+            });
+
+            render();
+            restartAutoplay();
+          });
+        }
+
+        function init() {
+          addCountries("#country");
+          initCustomReveal();
+          initDropdowns();
+          initMobileNav();
+          initTabs();
+          initFaqs();
+          initSliders();
+        }
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", init);
+        } else {
+          init();
+        }
+      })();
+    </script>
+    <script>
+      (function () {
+        var settings = {
+          oneOpen: true,
+          accordion: ".js-accordion-2",
+          header: ".js-accordion-header-2",
+          item: ".js-accordion-item-2",
+          body: ".js-accordion-body-2",
+          icon: ".js-accordion-icon-2",
+          active: "active-2",
+        };
+
+        function setBodyState(item, isOpen) {
+          var body = item.querySelector(settings.body);
+          var icon = item.querySelector(settings.icon);
+
+          if (body) {
+            body.style.display = isOpen ? "block" : "none";
+          }
+
+          if (icon) {
+            icon.classList.toggle(settings.active, isOpen);
+          }
+
+          item.classList.toggle(settings.active, isOpen);
+        }
+
+        function initAccordion(rootEl) {
+          var items = Array.prototype.slice.call(
+            rootEl.querySelectorAll(":scope > " + settings.item),
+          );
+
+          items.forEach(function (item) {
+            var header = item.querySelector(":scope > " + settings.header);
+            var isOpen = item.classList.contains(settings.active);
+
+            setBodyState(item, isOpen);
+
+            if (!header) {
+              return;
+            }
+
+            header.addEventListener("click", function () {
+              var willOpen = !item.classList.contains(settings.active);
+
+              if (settings.oneOpen) {
+                items.forEach(function (other) {
+                  if (other !== item) {
+                    setBodyState(other, false);
+                  }
+                });
+              }
+
+              setBodyState(item, willOpen);
+            });
+          });
+        }
+
+        document.querySelectorAll(settings.accordion).forEach(initAccordion);
+      })();
+    </script>
+  </body>
+</html>

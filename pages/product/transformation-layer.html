@@ -1,0 +1,1473 @@
+<!doctype html>
+<html
+  lang="en-US"
+  class="w-mod-js"
+  >
+  <head>
+    <meta charset="utf-8"/>
+    <title>Transformation Layer | Create and schedule transformation pipelines</title>
+    <meta content="Create advanced tables from your existing data sources using familiar SQL queries for seamless analysis." name="description"/>
+    <meta content="Transformation Layer | Create and schedule transformation pipelines" property="og:title"/>
+    <meta content="Create advanced tables from your existing data sources using familiar SQL queries for seamless analysis." property="og:description"/>
+    <meta content="Transformation Layer | Create and schedule transformation pipelines" property="twitter:title"/>
+    <meta content="Create advanced tables from your existing data sources using familiar SQL queries for seamless analysis." property="twitter:description"/>
+    <meta property="og:type" content="website"/>
+    <meta content="summary_large_image" name="twitter:card"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="../../styles/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script type="text/javascript">WebFont.load({  google: {    families: ["Inconsolata:400,700","Crimson Pro:300,400,500,600,700","Crimson Pro:300,400,500,600,700","Poppins:300,400,500,600,700","Poppins:300,400,500,600,700"]  }});</script>
+    <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+    <link href="https://cdn.prod.website-files.com/6058658002faec26b7e08402/60b760aee88eff277667ebcb_Sprinkle_logo_flat_32x32.png" rel="shortcut icon" type="image/x-icon"/>
+    <link href="https://cdn.prod.website-files.com/6058658002faec26b7e08402/60b761003cae0e1e9a1e967d_Sprinkle_logo_flat_256x256.png" rel="apple-touch-icon"/>
+    <link href="https://www.sprinkledata.com/product/transformation-layer" rel="canonical"/>
+    <script src="https://www.google.com/recaptcha/api.js" type="text/javascript"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106573134-1"></script>
+    <script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-106573134-1');
+</script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NN89GDT');</script>
+    <script>
+      function addCountries(selector) {
+        var select = document.querySelector(selector);
+
+        if (!select) {
+          return;
+        }
+
+        var countriesfile =
+          "Albania, Algeria, Andorra, Angola, Antigua & Deps, Argentina, Armenia, Australia, Austria, Azerbaijan, Bahamas, Bahrain, Bangladesh, Barbados, Belarus, Belgium, Belize, Benin, Bhutan, Bolivia, Bosnia Herzegovina, Botswana, Brazil, Brunei, Bulgaria, Burkina, Burma, Burundi, Cambodia, Cameroon, Canada, Cape Verde, Central African Rep, Chad, Chile, People's Republic of China, Republic of China, Colombia, Comoros, Democratic Republic of the Congo, Republic of the Congo, Costa Rica, Croatia, Cuba, Cyprus, Czech Republic, Danzig, Denmark, Djibouti, Dominica, Dominican Republic, East Timor, Ecuador, Egypt, El Salvador, Equatorial Guinea, Eritrea, Estonia, Ethiopia, Fiji, Finland, France, Gabon, Gaza Strip, The Gambia, Georgia, Germany, Ghana, Greece, Grenada, Guatemala, Guinea, Guinea-Bissau, Guyana, Haiti, Holy Roman Empire, Honduras, Hungary, Iceland, India, Indonesia, Iran, Iraq, Republic of Ireland, Israel, Italy, Ivory Coast, Jamaica, Japan, Jonathanland, Jordan, Kazakhstan, Kenya, Kiribati, North Korea, South Korea, Kosovo, Kuwait, Kyrgyzstan, Laos, Latvia, Lebanon, Lesotho, Liberia, Libya, Liechtenstein, Lithuania, Luxembourg, Macedonia, Madagascar, Malawi, Malaysia, Maldives, Mali, Malta, Marshall Islands, Mauritania, Mauritius, Mexico, Micronesia, Moldova, Monaco, Mongolia, Montenegro, Morocco, Mount Athos, Mozambique, Namibia, Nauru, Nepal, Newfoundland, Netherlands, New Zealand, Nicaragua, Niger, Nigeria, Norway, Oman, Ottoman Empire, Pakistan, Palau, Panama, Papua New Guinea, Paraguay, Peru, Philippines, Poland, Portugal, Prussia, Qatar, Romania, Rome, Russian Federation, Rwanda, St Kitts & Nevis, St Lucia, Saint Vincent & the, Grenadines, Samoa, San Marino, Sao Tome & Principe, Saudi Arabia, Senegal, Serbia, Seychelles, Sierra Leone, Singapore, Slovakia, Slovenia, Solomon Islands, Somalia, South Africa, Spain, Sri Lanka, Sudan, Suriname, Swaziland, Sweden, Switzerland, Syria, Tajikistan, Tanzania, Thailand, Togo, Tonga, Trinidad & Tobago, Tunisia, Turkey, Turkmenistan, Tuvalu, Uganda, Ukraine, United Arab Emirates, United Kingdom, United States of America, Uruguay, Uzbekistan, Vanuatu, Vatican City, Venezuela, Vietnam, Yemen, Zambia, Zimbabwe";
+        var countries = countriesfile.split(", ");
+        var fragment = document.createDocumentFragment();
+
+        for (var c = 0; c < countries.length; c++) {
+          var option = document.createElement("option");
+          option.value = countries[c];
+          option.textContent = countries[c];
+          fragment.appendChild(option);
+        }
+
+        select.appendChild(fragment);
+      }
+    </script>
+    <style> .w-slider-dot { background: #77838f; } .w-slider-dot.w-active { background: #377dff; } </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Sprinkle Data",
+  "url": "https://www.sprinkledata.com/",
+  "logo": "https://cdn.prod.website-files.com/6058658002faec26b7e08402/605b2e5626cff37ef2e1b9d9_sprinkle_new_logo_partial.png",
+  "sameAs": [
+    "https://www.linkedin.com/company/sprinkle-data/",
+    "https://www.facebook.com/SprinkleData",
+    "https://twitter.com/sprinkledata"
+  ]
+}
+</script>
+    <html lang="en-US">
+      <style>
+  .js-accordion-body-2 {
+    display: none;
+  }
+  .w-slider-dot {
+    background: #276DF452;
+  }
+  .w-slider-nav.w-round {
+  	display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .w-slider-nav.w-round>div {
+  	width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  .w-slider-dot.w-active {
+  	background: #276DF4;
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50%;
+  }
+</style>
+    </head>
+    <body>
+      <div data-w-id="be25b21a-776d-5db1-6592-c8f86cee5dfd" class="navbar">
+        <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease-in-out-quad" data-easing2="ease" role="banner" class="navbar-flex-wrapper w-nav">
+          <div class="navbar-container">
+            <div class="navbar-wrapper-items">
+              <a href="/" class="navbar-company-logo w-nav-brand">
+                <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65cdd1e92bbc7d57ac605a68_logo.png" alt="" width="80" class="sprinkle-logo-navbar"/>
+              </a>
+              <nav role="navigation" class="nav-menu-wrapper-items w-nav-menu">
+                <ul role="list" class="nav-menu-list w-list-unstyled">
+                  <li class="list-item_1">
+                    <div data-hover="false" data-delay="0" class="nav-dropdown-3 w-dropdown">
+                      <div class="nav-dropdown-toggle-2 w-dropdown-toggle">
+                        <div class="nav-dropdown-icon-3 w-icon-dropdown-toggle">
+                        </div>
+                        <div class="text-block-55">Product</div>
+                      </div>
+                      <nav class="nav-dropdown-list-2 shadow-three mobile-shadow-hide w-dropdown-list">
+                      </nav>
+                    </div>
+                  </li>
+                  <li class="list-item_2 list-item-integrations">
+                    <div data-hover="true" data-delay="0" class="nav-dropdown-3 w-dropdown">
+                      <div data-w-id="62f53f42-8e46-7c04-4002-229760ab8685" class="nav-dropdown-toggle-2 w-dropdown-toggle">
+                        <div class="nav-dropdown-icon-3 w-icon-dropdown-toggle">
+                        </div>
+                        <div class="text-block-56 global-new-font">Product</div>
+                        <div class="underline-nav">
+                        </div>
+                      </div>
+                      <nav class="nav-dropdown-list-2 shadow-three mobile-shadow-hide integration-new-nav big-nav w-dropdown-list">
+                        <div class="nav-extra">
+                          <div class="nav-left-extra">
+                            <a data-w-id="230caf00-4d06-5575-49a8-45c5e5c058fc" href="/product/connectors" class="single-extra-nav w-inline-block">
+                              <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/662a0120f95b0af70485f4e9_qs0bddlpnadlvewi5zf.svg" loading="lazy" alt="" class="image-128"/>
+                              <div class="nav-titles">
+                                <h2 class="heading-51">Data Integration</h2>
+                                <p class="paragraph-24">Bring data to your warehouse</p>
+                              </div>
+                            </a>
+                            <a data-w-id="461849ae-a94c-8e49-724a-a097a19a1922" href="/product/transformation-layer" aria-current="page" class="single-extra-nav w-inline-block w--current">
+                              <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6628a954ad0bd6d2f945b179_code_FILL0_wght300_GRAD0_opsz24%201.png" loading="lazy" alt="" class="image-128"/>
+                              <div class="nav-titles">
+                                <h2 class="heading-51">Transformation layer</h2>
+                                <p class="paragraph-24">Clean &amp; prepare your data with SQL</p>
+                              </div>
+                            </a>
+                            <a data-w-id="c116786a-6b4e-b028-cb69-188b8ce0ecc1" href="/product/self-serve-bi" class="single-extra-nav w-inline-block">
+                              <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6628a40a1e37b251a11ded68_dashboard_FILL0_wght300_GRAD0_opsz24%201.png" loading="lazy" alt="" class="image-128"/>
+                              <div class="nav-titles">
+                                <h2 class="heading-51">Self-Serve BI</h2>
+                                <p class="paragraph-24">Drag &amp; Drop Your Way to Insights</p>
+                              </div>
+                            </a>
+                            <a data-w-id="cb09b959-c45a-ca48-9c3b-882686ab322a" href="/product/data-delivery" class="single-extra-nav hide-for-normal w-inline-block">
+                              <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6628a95876781b48cc57d412_rocket_launch_FILL0_wght300_GRAD0_opsz24%201.png" loading="lazy" alt="" class="image-128"/>
+                              <div class="nav-titles">
+                                <h2 class="heading-51">Data Delivery</h2>
+                                <p class="paragraph-24">Get the data you need, where you need it</p>
+                              </div>
+                            </a>
+                            <a data-w-id="c18070c9-03ed-4fc4-7d1d-44d9fe8407c9" href="/product/embed-analytics" class="single-extra-nav hide-for-normal w-inline-block">
+                              <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66329f355140715fd5c50d13_category_FILL0_wght300_GRAD0_opsz24%201.png" loading="lazy" alt="" class="image-128"/>
+                              <div class="nav-titles">
+                                <h2 class="heading-51">Embed Analytics</h2>
+                                <p class="paragraph-24">Supercharge Your Applications with embedded dashboards.</p>
+                              </div>
+                            </a>
+                            <a href="/generative-ai" class="single-extra-nav hide-for-normal w-inline-block">
+                              <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6661a35036860c32ec39c398_bot%20(1).png" loading="lazy" alt="" class="image-128 bot-image"/>
+                              <div class="nav-titles">
+                                <h2 class="heading-51">Write with AI</h2>
+                                <p class="paragraph-24">Generate SQl code from natural language prompt</p>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="nav-left-extra hide-for-tab">
+                            <a data-w-id="eaf95fd5-c5eb-3feb-c522-cb61434f1718" href="/product/data-delivery" class="single-extra-nav w-inline-block">
+                              <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6628a95876781b48cc57d412_rocket_launch_FILL0_wght300_GRAD0_opsz24%201.png" loading="lazy" alt="" class="image-128"/>
+                              <div class="nav-titles">
+                                <h2 class="heading-51">Data Delivery</h2>
+                                <p class="paragraph-24">Get the data you need, where you need it</p>
+                              </div>
+                            </a>
+                            <a data-w-id="eaf95fd5-c5eb-3feb-c522-cb61434f171f" href="/product/embed-analytics" class="single-extra-nav w-inline-block">
+                              <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66329f355140715fd5c50d13_category_FILL0_wght300_GRAD0_opsz24%201.png" loading="lazy" alt="" class="image-128"/>
+                              <div class="nav-titles">
+                                <h2 class="heading-51">Embed Analytics</h2>
+                                <p class="paragraph-24">Supercharge Your Applications with embedded dashboards.</p>
+                              </div>
+                            </a>
+                            <a data-w-id="7cd36135-26d6-59ff-ab9a-a4b5a912c540" href="/generative-ai" class="single-extra-nav w-inline-block">
+                              <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6661a35036860c32ec39c398_bot%20(1).png" loading="lazy" alt="" class="image-128 bot-image"/>
+                              <div class="nav-titles">
+                                <h2 class="heading-51">Write with AI</h2>
+                                <p class="paragraph-24">Generate SQl code from natural language prompt</p>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="nav-right-extra">
+                            <div class="nav-right-content">
+                              <div class="nav-right-upper">
+                                <p class="nav-right-text">Data Warehouses<br/>
+                              </p>
+                            </div>
+                            <p class="nav-right-extra-text">Supported SQL warehouses</p>
+                            <a href="/product/datawarehouse" class="connectors-div w-inline-block">
+                              <div class="single-container">
+                                <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603c028d2e42216b6a427c7_image_processing20200607-24705-1ry6qs5%201.png" loading="lazy" alt="" class="image-125"/>
+                                <p class="paragraph-19">Snowflake</p>
+                              </div>
+                              <div class="single-container">
+                                <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603c0187a15857911a65c21_google-bigquery-2048x688%201.png" loading="lazy" alt="" class="image-125"/>
+                                <p class="paragraph-19">Bigquery</p>
+                              </div>
+                              <div class="single-container">
+                                <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603c007a8c60b1936f46351_aws-redshift-logo%201.png" loading="lazy" alt="" class="image-125"/>
+                                <p class="paragraph-19">Redshift</p>
+                              </div>
+                              <div class="single-container">
+                                <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603c00e181f2a2d4c0a1cd0_amazon-athena-logo%402x%201.png" loading="lazy" alt="" class="image-125"/>
+                                <p class="paragraph-19">Athena</p>
+                              </div>
+                            </a>
+                            <a href="/product/datawarehouse" class="connectors-div w-inline-block">
+                              <div class="single-container">
+                                <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603c0309e11010647bbe23e_1681406945310%201.png" loading="lazy" alt="" class="image-125"/>
+                                <p class="paragraph-19">Databricks</p>
+                              </div>
+                              <div class="single-container">
+                                <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603c002fbb5b321e07939a6_pngwing%203.png" loading="lazy" alt="" class="image-125"/>
+                                <p class="paragraph-19">MySQL</p>
+                              </div>
+                              <div class="single-container">
+                                <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603c025141be8921ae1fa17_postgresql-logo-png-transparent%201.png" loading="lazy" alt="" class="image-125"/>
+                                <p class="paragraph-19">Postgres</p>
+                              </div>
+                              <div class="single-container">
+                                <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603c02ca8c60b1936f47ec2_pngwing%202.png" loading="lazy" alt="" class="image-125"/>
+                                <p class="paragraph-19">SQL Server</p>
+                              </div>
+                            </a>
+                            <div class="connectors-div">
+                              <a data-w-id="f63e6f35-1385-ea96-6b64-bcf270ae6d3c" href="/product/datawarehouse" class="arrow-extra connector-flex nav-see-all w-inline-block">
+                                <div class="text-container-white">
+                                  <div class="text-block-58 connector-text">See all</div>
+                                  <div class="div-block-134 extra-blocknav">
+                                  </div>
+                                </div>
+                                <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65da284a2ed568152b2de52a_arrow-blue.svg" loading="lazy" alt="" class="arrow-icon connector-arrow-iocn"/>
+                                <div class="div-block-133">
+                                  <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ee94685cb31cfdcaeaab68_arrow-full-blue.svg" loading="lazy" alt="" class="image-112 connector-full-arrow-icon"/>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <a href="/product/connectors" class="nav-dropdown-link-2 nav-text-animation hide-for-integration w-dropdown-link">Data Integration</a>
+                      <a href="/product/transformation-layer" aria-current="page" class="nav-dropdown-link-2 nav-text-animation hide-for-integration w-dropdown-link w--current">Transformation layer</a>
+                      <a href="/product/self-serve-bi" class="nav-dropdown-link-2 nav-text-animation hide-for-integration w-dropdown-link">Self Serve BI</a>
+                      <a href="/product/data-delivery" class="nav-dropdown-link-2 nav-text-animation hide-for-integration w-dropdown-link">Data Delivery</a>
+                      <a href="/product/embed-analytics" class="nav-dropdown-link-2 nav-text-animation hide-for-integration w-dropdown-link">Embed Analytics</a>
+                      <a href="/product/datawarehouse" class="nav-dropdown-link-2 nav-text-animation hide-for-integration w-dropdown-link">Data Warehouses</a>
+                      <a href="/generative-ai" class="nav-dropdown-link-2 nav-text-animation hide-for-integration w-dropdown-link">Write with AI</a>
+                    </nav>
+                  </div>
+                </li>
+                <li class="list-item_2">
+                  <div data-hover="true" data-delay="0" class="nav-dropdown-3 w-dropdown">
+                    <div data-w-id="be25b21a-776d-5db1-6592-c8f86cee5e0e" class="nav-dropdown-toggle-2 w-dropdown-toggle">
+                      <div class="nav-dropdown-icon-3 w-icon-dropdown-toggle">
+                      </div>
+                      <div class="text-block-56 global-new-font">Usecases</div>
+                      <div class="underline-nav">
+                      </div>
+                    </div>
+                    <nav class="nav-dropdown-list-2 shadow-three mobile-shadow-hide w-dropdown-list">
+                      <a data-w-id="be25b21a-776d-5db1-6592-c8f86cee5e14" href="/usecases/sales-analytics" class="nav-dropdown-link-2 nav-text-animation w-dropdown-link">Sales Analytics</a>
+                      <a href="/usecases/marketing-analytics" class="nav-dropdown-link-2 nav-text-animation w-dropdown-link">Marketing Analytics</a>
+                      <a href="/usecases/operations" class="nav-dropdown-link-2 nav-text-animation w-dropdown-link">Operations Analytics</a>
+                      <a href="/usecases/data-management" class="nav-dropdown-link-2 nav-text-animation w-dropdown-link">Data Management</a>
+                    </nav>
+                  </div>
+                </li>
+                <li data-w-id="be25b21a-776d-5db1-6592-c8f86cee5e20" class="list-item_4">
+                  <a href="/pricing" class="nav-link-3 nav-common-wd">Pricing</a>
+                  <div class="underline-nav nav-without-dropdown">
+                  </div>
+                </li>
+                <li data-w-id="be25b21a-776d-5db1-6592-c8f86cee5e24" class="list-item_5">
+                  <a href="/customers" class="nav-link-3 nav-common-wd">Customers</a>
+                  <div class="underline-nav nav-without-dropdown">
+                  </div>
+                </li>
+                <li class="list-item_6">
+                  <div data-hover="true" data-delay="0" class="nav-dropdown-3 w-dropdown">
+                    <div data-w-id="be25b21a-776d-5db1-6592-c8f86cee5e2a" class="nav-dropdown-toggle-2 w-dropdown-toggle">
+                      <div class="nav-dropdown-icon-3 w-icon-dropdown-toggle">
+                      </div>
+                      <div class="text-block-57">Resources</div>
+                      <div class="underline-nav">
+                      </div>
+                    </div>
+                    <nav class="nav-dropdown-list-2 shadow-three mobile-shadow-hide resources-nav resouces-nav-small w-dropdown-list">
+                      <a href="/blogs" class="nav-dropdown-link-2 nav-text-animation resources w-dropdown-link">Blogs</a>
+                      <a href="https://docs.sprinkledata.com/product/data-security-and-privacy/security-at-sprinkle" target="_blank" class="nav-dropdown-link-2 nav-text-animation w-dropdown-link">Data Security</a>
+                      <a href="https://docs.sprinkledata.com/product/" target="_blank" class="nav-dropdown-link-2 nav-text-animation w-dropdown-link">Documentation</a>
+                    </nav>
+                  </div>
+                </li>
+              </ul>
+              <div class="navbar-actions action-dropdwon">
+                <div data-w-id="f2b418ce-103e-0481-d092-b19cc8df2650" class="login-container">
+                  <a href="https://console.sprinkledata.com/signin.html" target="_blank" class="button-ghost-login w-button">Login</a>
+                  <div class="underline-login">
+                  </div>
+                </div>
+                <a data-w-id="be25b21a-776d-5db1-6592-c8f86cee5e39" href="/request-demo" class="animated-color-button animated-small w-inline-block">
+                  <div class="animated-slide">
+                  </div>
+                  <div class="animated-text navbar-action-btn">Book a demo</div>
+                </a>
+                <a data-w-id="be25b21a-776d-5db1-6592-c8f86cee5e3d" href="https://console.sprinkledata.com/signin.html#createaccount" target="_blank" class="animated-button-shine-effect small-animated-button hide-free-trial w-inline-block">
+                  <div class="box-shadow-animated-button">
+                  </div>
+                  <div class="animated-button-text navbar-action-btn-free">Start free trial</div>
+                </a>
+              </div>
+            </nav>
+            <div class="menu-button-responsive w-nav-button">
+              <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d5cfc797eac4afa0dab683_menu.png" loading="lazy" width="25" sizes="(max-width: 479px) 39vw, (max-width: 767px) 25px, 100vw" alt="" srcset="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d5cfc797eac4afa0dab683_menu-p-500.png 500w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d5cfc797eac4afa0dab683_menu.png 512w" class="hamburger-icon"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="banner-container">
+        <div class="banner-text">
+          <div class="hero-frame-content warehouse-hero-frame">
+            <div class="content">
+              <div data-w-id="f366ea76-7ef3-9fb6-143b-e42e198c9187" style="opacity:0" class="frame-content-header">
+                <div class="frame-content-short-heading">
+                  <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65cf3776674013074c568e82_Vectors-Wrapper.svg" loading="lazy" width="20" height="20" alt="" class="magic-icon"/>
+                  <h1 class="subheading">Transformation layer</h1>
+                </div>
+                <h2 class="heading">Create and schedule transformation pipelines</h2>
+              </div>
+              <h3 data-w-id="f366ea76-7ef3-9fb6-143b-e42e198c9190" style="opacity:0" class="text">Prepare and clean data using familiar SQL queries or Python notebooks for seamless analysis.</h3>
+            </div>
+            <div class="actions">
+              <div data-w-id="9e9ddc31-4179-0f60-2201-550c93276760" style="opacity:0" class="frame-actions">
+                <a data-w-id="9e9ddc31-4179-0f60-2201-550c93276761" href="/request-demo" class="animated-button-shine-effect w-inline-block">
+                  <div style="-webkit-transform:translate3d(-70px, -70%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(20deg) skew(0, 0);-moz-transform:translate3d(-70px, -70%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(20deg) skew(0, 0);-ms-transform:translate3d(-70px, -70%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(20deg) skew(0, 0);transform:translate3d(-70px, -70%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(20deg) skew(0, 0)" class="box-shadow-animated-button">
+                  </div>
+                  <div class="animated-button-text">Book a demo</div>
+                </a>
+                <a data-w-id="9e9ddc31-4179-0f60-2201-550c93276765" href="/request-demo-old" class="animated-color-button hide-button-book-demo w-inline-block">
+                  <div style="-webkit-transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="animated-slide">
+                  </div>
+                  <div style="color:rgb(39,109,244)" class="animated-text">Book a demo</div>
+                </a>
+              </div>
+              <div data-w-id="f366ea76-7ef3-9fb6-143b-e42e198c919c" style="opacity:0" class="hero-small-text">
+                <div class="small-text-container">
+                  <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65f14dd0b89cfcd9e5cb2303_14days.svg" loading="lazy" alt=""/>
+                  <h4 class="text-small">14 day free trial</h4>
+                </div>
+                <div class="small-text-container">
+                  <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65f14ddd5d22e28c43895c0c_credit-card.svg" loading="lazy" alt=""/>
+                  <h4 class="text-small">No credit card required</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-w-id="f366ea76-7ef3-9fb6-143b-e42e198c91a5" style="opacity:0" class="banner-image">
+          <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/661cbf914907e55afed0751e_Group%20237625.png" loading="lazy" width="Auto" sizes="(max-width: 767px) 100vw, (max-width: 991px) 44vw, (max-width: 1439px) 51vw, (max-width: 1919px) 699.59375px, 773.796875px" alt="" srcset="https://cdn.prod.website-files.com/6058658002faec26b7e08402/661cbf914907e55afed0751e_Group%20237625-p-500.png 500w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/661cbf914907e55afed0751e_Group%20237625-p-800.png 800w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/661cbf914907e55afed0751e_Group%20237625-p-1080.png 1080w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/661cbf914907e55afed0751e_Group%20237625-p-1600.png 1600w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/661cbf914907e55afed0751e_Group%20237625-p-2000.png 2000w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/661cbf914907e55afed0751e_Group%20237625.png 2272w" class="image-114"/>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div data-w-id="a70bfe50-ed28-4f7d-19a6-5aa87d7b68b9" style="opacity:0" class="warehouse-container">
+        <div data-w-id="a70bfe50-ed28-4f7d-19a6-5aa87d7b68ba" style="opacity:0" class="image-container">
+          <div class="frame-1000003521 bg-blue-color-text">
+            <h6 class="text-7">Script editor</h6>
+          </div>
+          <h2 data-w-id="a70bfe50-ed28-4f7d-19a6-5aa87d7b68be" style="opacity:0" class="supported-carrier-heading warehouse-heading-text">Write and edit SQL queries with ease</h2>
+          <div class="image-container-bi transform-vid-1">
+            <div data-poster-url="https://cdn.prod.website-files.com/6058658002faec26b7e08402/661cc175c00dbe0688011e88_SQLTransformVid-poster-00001.jpg" data-video-urls="https://cdn.prod.website-files.com/6058658002faec26b7e08402/661cc175c00dbe0688011e88_SQLTransformVid-transcode.mp4,https://cdn.prod.website-files.com/6058658002faec26b7e08402/661cc175c00dbe0688011e88_SQLTransformVid-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="background-video-4 transform-vid-1 w-background-video w-background-video-atom">
+              <video id="4d8d2053-989d-966f-a2f8-5d197e62eddc-video" autoplay="" loop="" style="background-image:url(&quot;https://cdn.prod.website-files.com/6058658002faec26b7e08402/661cc175c00dbe0688011e88_SQLTransformVid-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+                <source src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/661cc175c00dbe0688011e88_SQLTransformVid-transcode.mp4" data-wf-ignore="true"/>
+                <source src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/661cc175c00dbe0688011e88_SQLTransformVid-transcode.webm" data-wf-ignore="true"/>
+              </video>
+            </div>
+          </div>
+        </div>
+        <div data-w-id="a70bfe50-ed28-4f7d-19a6-5aa87d7b68c2" style="opacity:0" class="content-container">
+          <div class="accordion-2 js-accordion-2">
+            <div class="accordion__item-2 js-accordion-item-2 cd active-2">
+              <div class="accordion-header-2 js-accordion-header-2">
+                <div class="accordian-header-content-text">
+                  <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/660a71c6d708a5ea15a88d6e_Frame%20237617.png" loading="lazy" width="40" alt="" class="image-118"/>
+                  <h5 class="heading-48">Advanced tables from raw data using SQL</h5>
+                </div>
+                <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6604176c3376e314c9b725c8_Vector%20(1).png" loading="lazy" width="14" alt="" class="js-accordion-icon-2 active-2"/>
+              </div>
+              <div class="accordion-body-2 js-accordion-body-2">
+                <p class="paragraph-16">Combine data from multiple sources, join tables, manipulate data,  cast data types, and craft new calculated fields, measures etc.</p>
+              </div>
+            </div>
+            <div class="accordion__item-2 js-accordion-item-2">
+              <div class="accordion-header-2 js-accordion-header-2">
+                <div class="accordian-header-content-text">
+                  <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/660a71f4644f6bf267905166_Frame%20237617%20(1).png" loading="lazy" width="40" alt="" class="image-119"/>
+                  <h5 class="heading-48">Syntax highlighting and auto-completion</h5>
+                </div>
+                <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6604176c3376e314c9b725c8_Vector%20(1).png" loading="lazy" width="14" alt="" class="js-accordion-icon-2"/>
+              </div>
+              <div class="accordion-body-2 js-accordion-body-2">
+                <p class="paragraph-16">Write code with ease, with the editor highlighting keywords and suggesting relevant options as you type.</p>
+              </div>
+            </div>
+            <div class="accordion__item-2 js-accordion-item-2">
+              <div class="accordion-header-2 js-accordion-header-2">
+                <div class="accordian-header-content-text">
+                  <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/660a71f6bec017e773836a37_Frame%20237617%20(2).png" loading="lazy" width="40" alt="" class="image-120"/>
+                  <h5 class="heading-48">Debug in place</h5>
+                </div>
+                <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6604176c3376e314c9b725c8_Vector%20(1).png" loading="lazy" width="14" alt="" class="js-accordion-icon-2"/>
+              </div>
+              <div class="accordion-body-2 js-accordion-body-2">
+                <p class="paragraph-16">Test specific parts of your query by selecting them and running it allowing you to iterate and refine your transformations<br/>
+                <br/>Also you can track jobs for both successful queries and any errors encountered.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div data-w-id="a8ee5e8b-e2cb-f20b-d8d0-42bbdd7cb0e1" style="opacity:0" class="bi-container reverse-bi-container">
+        <div class="single-wrapper left">
+          <div class="side-content">
+            <div class="upper">
+              <div class="frame-1000003521 bg-blue-color-text">
+                <h6 class="text-7">Schema browser</h6>
+              </div>
+              <h2 class="heading-37 bi-heading-small">Effortlessly navigate your warehouse schemas and tables</h2>
+              <p class="text-10">Easily search for tables, view column details, and add them directly to your queries with a simple double-click.<br/>
+            </p>
+            <a data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e972" href="https://docs.sprinkledata.com/product/transforming-your-data/sql-transform#id-2.-schema-browser" target="_blank" class="arrow-btn-white arrow-button arrow-custom-explore-integrations-btn w-inline-block">
+              <div class="text-container">
+                <div class="text-block-58 primary-blue">Learn more</div>
+                <div class="underline-arrow-btn-blue">
+                </div>
+              </div>
+              <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65da284a2ed568152b2de52a_arrow-blue.svg" loading="lazy" data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e977" alt="" class="image-111"/>
+              <div class="arrow-full-container">
+                <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ee94685cb31cfdcaeaab68_arrow-full-blue.svg" loading="lazy" alt="" class="image-92"/>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="single-wrapper right">
+        <div class="image-container-bi reverse-card image-only">
+          <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e6bba7b960c52d4ea6111_Group%201000002810.png" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 96vw, (max-width: 1439px) 42vw, (max-width: 1919px) 580px, 650px" srcset="https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e6bba7b960c52d4ea6111_Group%201000002810-p-500.png 500w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e6bba7b960c52d4ea6111_Group%201000002810-p-800.png 800w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e6bba7b960c52d4ea6111_Group%201000002810-p-1080.png 1080w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e6bba7b960c52d4ea6111_Group%201000002810-p-1600.png 1600w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e6bba7b960c52d4ea6111_Group%201000002810-p-2000.png 2000w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e6bba7b960c52d4ea6111_Group%201000002810.png 2494w" alt=""/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div data-w-id="0be342e0-6d04-2ba8-f0bd-d3b9ce96cdad" style="opacity:0" class="bi-container">
+      <div class="single-wrapper left">
+        <div class="image-container-bi">
+          <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e77c960eaa8c12be40c25_Group%201000002811.png" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 96vw, (max-width: 1439px) 42vw, (max-width: 1919px) 580px, 650px" srcset="https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e77c960eaa8c12be40c25_Group%201000002811-p-500.png 500w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e77c960eaa8c12be40c25_Group%201000002811-p-800.png 800w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e77c960eaa8c12be40c25_Group%201000002811-p-1080.png 1080w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e77c960eaa8c12be40c25_Group%201000002811-p-1600.png 1600w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e77c960eaa8c12be40c25_Group%201000002811-p-2000.png 2000w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e77c960eaa8c12be40c25_Group%201000002811.png 2583w" alt=""/>
+        </div>
+      </div>
+      <div class="single-wrapper right">
+        <div class="side-content">
+          <div class="upper">
+            <div class="frame-1000003521 bg-blue-color-text">
+              <h6 class="text-7">Variables</h6>
+            </div>
+            <h2 class="heading-37 bi-heading-small">Write efficient and maintainable SQL scripts with variables</h2>
+            <p class="text-10">Define local and global variables to hold reusable values, keeping your code organised, efficient and reducing redundancy.<br/>
+          </p>
+          <a data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e972" href="https://docs.sprinkledata.com/product/analysing-your-data/data-models/variables" target="_blank" class="arrow-btn-white arrow-button arrow-custom-explore-integrations-btn w-inline-block">
+            <div class="text-container">
+              <div class="text-block-58 primary-blue">Learn more</div>
+              <div class="underline-arrow-btn-blue">
+              </div>
+            </div>
+            <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65da284a2ed568152b2de52a_arrow-blue.svg" loading="lazy" data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e977" alt="" class="image-111"/>
+            <div class="arrow-full-container">
+              <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ee94685cb31cfdcaeaab68_arrow-full-blue.svg" loading="lazy" alt="" class="image-92"/>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div data-w-id="36364a21-dd3b-4eda-1e40-3e8d2434718b" style="opacity:0" class="bi-container reverse-bi-container">
+    <div class="single-wrapper left">
+      <div class="side-content">
+        <div class="upper">
+          <div class="frame-1000003521 bg-blue-color-text">
+            <h6 class="text-7">Auto-run</h6>
+          </div>
+          <h2 class="heading-37 bi-heading-small">Automate your data refreshes</h2>
+          <p class="text-10">Schedule your SQL transforms to run automatically at predefined intervals, such as hourly, daily, weekly, or at a custom interval ensuring  always up-to-date data for analysis.<br/>
+        </p>
+        <a data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e972" href="https://docs.sprinkledata.com/product/managing-schedules-and-data-refreshes/schedules" target="_blank" class="arrow-btn-white arrow-button arrow-custom-explore-integrations-btn w-inline-block">
+          <div class="text-container">
+            <div class="text-block-58 primary-blue">Learn more</div>
+            <div class="underline-arrow-btn-blue">
+            </div>
+          </div>
+          <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65da284a2ed568152b2de52a_arrow-blue.svg" loading="lazy" data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e977" alt="" class="image-111"/>
+          <div class="arrow-full-container">
+            <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ee94685cb31cfdcaeaab68_arrow-full-blue.svg" loading="lazy" alt="" class="image-92"/>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="single-wrapper right">
+    <div class="image-container-bi reverse-card image-only">
+      <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e782bc5d77c56640a8b0c_Group%201000002812.png" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 96vw, (max-width: 1439px) 42vw, (max-width: 1919px) 580px, 650px" srcset="https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e782bc5d77c56640a8b0c_Group%201000002812-p-500.png 500w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e782bc5d77c56640a8b0c_Group%201000002812-p-800.png 800w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e782bc5d77c56640a8b0c_Group%201000002812-p-1080.png 1080w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e782bc5d77c56640a8b0c_Group%201000002812-p-1600.png 1600w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e782bc5d77c56640a8b0c_Group%201000002812.png 1921w" alt=""/>
+    </div>
+  </div>
+</div>
+</div>
+<div class="container-fluid">
+  <div data-w-id="7ace27f1-28cc-b3a4-7de3-9ff6f7adef08" style="opacity:0" class="bi-container">
+    <div class="single-wrapper left lareg-image">
+      <div class="image-container-bi">
+        <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e7879c37538543ec66c2b_Desktop%20-%20616%20(2)%201.png" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 96vw, (max-width: 1439px) 44vw, (max-width: 1919px) 609.84375px, 679.859375px" srcset="https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e7879c37538543ec66c2b_Desktop%20-%20616%20(2)%201-p-500.png 500w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e7879c37538543ec66c2b_Desktop%20-%20616%20(2)%201-p-800.png 800w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e7879c37538543ec66c2b_Desktop%20-%20616%20(2)%201-p-1080.png 1080w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e7879c37538543ec66c2b_Desktop%20-%20616%20(2)%201-p-1600.png 1600w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e7879c37538543ec66c2b_Desktop%20-%20616%20(2)%201-p-2000.png 2000w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e7879c37538543ec66c2b_Desktop%20-%20616%20(2)%201-p-2600.png 2600w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e7879c37538543ec66c2b_Desktop%20-%20616%20(2)%201.png 2828w" alt=""/>
+      </div>
+    </div>
+    <div class="single-wrapper right">
+      <div class="side-content">
+        <div class="upper">
+          <div class="frame-1000003521 bg-blue-color-text">
+            <h6 class="text-7">View Activity</h6>
+          </div>
+          <h2 class="heading-37 bi-heading-small">Clear audit trail for your transforms</h2>
+          <p class="text-10">View a detailed history of all actions performed on your SQL transforms, including creation, editing, execution, and any errors encountered. <br/>
+          <br/>Track all actions, identify who made changes, and foster effective collaboration within your team.<br/>
+        </p>
+        <a data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e972" href="https://docs.sprinkledata.com/product/collaborating-on-data/activity" target="_blank" class="arrow-btn-white arrow-button arrow-custom-explore-integrations-btn w-inline-block">
+          <div class="text-container">
+            <div class="text-block-58 primary-blue">Learn more</div>
+            <div class="underline-arrow-btn-blue">
+            </div>
+          </div>
+          <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65da284a2ed568152b2de52a_arrow-blue.svg" loading="lazy" data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e977" alt="" class="image-111"/>
+          <div class="arrow-full-container">
+            <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ee94685cb31cfdcaeaab68_arrow-full-blue.svg" loading="lazy" alt="" class="image-92"/>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="container-fluid">
+  <div data-w-id="f897078b-97dc-53e7-6f6d-4d3431b0b610" style="opacity:0" class="testimonial-section testimonail-new">
+    <div class="pricing-content faq-content warehouse-faq">
+      <h1 data-w-id="eb44d8a9-3114-a26c-0ccf-aabe54b5bf57" style="opacity:0" class="main-head-pricing faq-heading">Advanced Settings &amp; Workflows</h1>
+      <p data-w-id="eb44d8a9-3114-a26c-0ccf-aabe54b5bf59" style="opacity:0" class="extra-text">SQL Transform offers a range of advanced settings to tailor your data manipulation process to your specific needs.</p>
+    </div>
+    <div class="cards">
+      <div class="card-testimonial">
+        <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/661eb86c560cac2aabc4e8e8_Group%201000002805.png" loading="lazy" width="50" alt=""/>
+        <div class="frame-1000003521 bg-blue-color-text">
+          <h6 class="text-7">Data Management</h6>
+        </div>
+        <h2 class="heading-49">Cleanup External Tables</h2>
+        <p class="paragraph-21">Working with external tables? <br/>
+        <br/>Utilise the Cleanup feature to automatically remove existing data before executing your script and recreate it afterwards, maintaining data integrity.</p>
+        <a data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e972" href="https://docs.sprinkledata.com/product/transforming-your-data/sql-transform#cleanup" target="_blank" class="arrow-btn-white arrow-button arrow-custom-explore-integrations-btn w-inline-block">
+          <div class="text-container">
+            <div class="text-block-58 primary-blue">Learn more</div>
+            <div class="underline-arrow-btn-blue">
+            </div>
+          </div>
+          <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65da284a2ed568152b2de52a_arrow-blue.svg" loading="lazy" data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e977" alt="" class="image-111"/>
+          <div class="arrow-full-container">
+            <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ee94685cb31cfdcaeaab68_arrow-full-blue.svg" loading="lazy" alt="" class="image-92"/>
+          </div>
+        </a>
+      </div>
+      <div class="card-testimonial green">
+        <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/661eb8889464dd02bf557d87_Group%201000002806.png" loading="lazy" width="50" alt=""/>
+        <div class="frame-1000003521 bg-blue-color-text">
+          <h6 class="text-7">Managed Data Loading</h6>
+        </div>
+        <h2 class="heading-49">Prevent Report Disruptions</h2>
+        <p class="paragraph-21">Dropping tables to refresh data in query can disrupt reports that rely on those tables.<br/>
+        <br/>With Managed Data Loading, Sprinkle handles data transfer between a temporary table and your final table, ensuring that reports remain functional during transformations.</p>
+        <a data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e972" href="https://docs.sprinkledata.com/product/transforming-your-data/sql-transform#managed-data-loading" target="_blank" class="arrow-btn-white arrow-button arrow-custom-explore-integrations-btn w-inline-block">
+          <div class="text-container">
+            <div class="text-block-58 primary-blue">Learn more</div>
+            <div class="underline-arrow-btn-blue">
+            </div>
+          </div>
+          <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65da284a2ed568152b2de52a_arrow-blue.svg" loading="lazy" data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e977" alt="" class="image-111"/>
+          <div class="arrow-full-container">
+            <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ee94685cb31cfdcaeaab68_arrow-full-blue.svg" loading="lazy" alt="" class="image-92"/>
+          </div>
+        </a>
+      </div>
+      <div class="card-testimonial red">
+        <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/661ecc7031473c079b751a6d_Group%201000002809.png" loading="lazy" width="50" alt=""/>
+        <div class="frame-1000003521 bg-blue-color-text">
+          <h6 class="text-7">Incremental Processing</h6>
+        </div>
+        <h2 class="heading-49">Optimise Processing</h2>
+        <p class="paragraph-21">For large datasets, leverage Incremental Processing. <br/>
+        <br/>This feature focuses on updating only new or changed data, significantly reducing processing time and resource usage.</p>
+        <a data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e972" href="https://docs.sprinkledata.com/product/transforming-your-data/sql-transform#incremental-processing" target="_blank" class="arrow-btn-white arrow-button arrow-custom-explore-integrations-btn w-inline-block">
+          <div class="text-container">
+            <div class="text-block-58 primary-blue">Learn more</div>
+            <div class="underline-arrow-btn-blue">
+            </div>
+          </div>
+          <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65da284a2ed568152b2de52a_arrow-blue.svg" loading="lazy" data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e977" alt="" class="image-111"/>
+          <div class="arrow-full-container">
+            <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ee94685cb31cfdcaeaab68_arrow-full-blue.svg" loading="lazy" alt="" class="image-92"/>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="slider-wrapper">
+    <div class="slider-container">
+      <div class="pricing-content faq-content warehouse-faq">
+        <div data-w-id="8b2efc2e-784b-17bf-4978-8ce9103d0eff" style="opacity:0" class="frame-1000003521 bg-blue-color-text">
+          <div class="text-11">Testimonials</div>
+        </div>
+        <h1 data-w-id="8b2efc2e-784b-17bf-4978-8ce9103d0f02" style="opacity:0" class="main-head-pricing faq-heading">Hear it from our customers</h1>
+        <p data-w-id="8b2efc2e-784b-17bf-4978-8ce9103d0f04" style="opacity:0" class="extra-text">Some of the most memorable reviews we have received from our  customers.</p>
+      </div>
+      <div data-delay="8000" data-animation="slide" class="review-slider w-slider" data-autoplay="true" data-easing="ease-in-out" style="opacity:0" data-hide-arrows="false" data-disable-swipe="false" data-w-id="8b2efc2e-784b-17bf-4978-8ce9103d0f06" data-autoplay-limit="0" data-nav-spacing="4" data-duration="500" data-infinite="true">
+        <div class="mask-2 w-slider-mask">
+          <div class="common-slide w-slide">
+            <div class="slide-wrapper">
+              <div class="slide-rate">
+                <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/660478ef02fff9112b4d8c5f_fivestar.png" loading="lazy" width="200" alt="" class="rate-image"/>
+              </div>
+              <p class="header-slider">“With Sprinkle, we’re able to query data across datasets much more quickly. I can run any query I need and get data within seconds, as opposed to doing it the traditional way of coding. <br/>
+            </p>
+            <div class="reviewer-container">
+              <div class="img-container">
+                <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e7945df2b00643b849fba_623e9fc3e48d40747a781807_brightmoney-Balbrishna-Jeph-p-500%201.png" loading="lazy" width="64" sizes="(max-width: 479px) 50px, 64px" alt="" srcset="https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e7945df2b00643b849fba_623e9fc3e48d40747a781807_brightmoney-Balbrishna-Jeph-p-500%201-p-500.png 500w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e7945df2b00643b849fba_623e9fc3e48d40747a781807_brightmoney-Balbrishna-Jeph-p-500%201-p-800.png 800w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/661e7945df2b00643b849fba_623e9fc3e48d40747a781807_brightmoney-Balbrishna-Jeph-p-500%201.png 856w" class="image-106"/>
+                <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65f1c3506cefedb1f6066a68_Vector.png" loading="lazy" width="28" alt="" class="image-105"/>
+              </div>
+              <p class="paragraph-17">Balkrishna Jeph</p>
+              <p class="paragraph-18">VP Engineering (ML/AI) @ <span class="text-span-7">BrightMoney</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="common-slide w-slide">
+          <div class="slide-wrapper">
+            <div class="slide-rate">
+              <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/660478ef02fff9112b4d8c5f_fivestar.png" loading="lazy" width="200" alt="" class="rate-image"/>
+            </div>
+            <p class="header-slider">“Sprinkle has an easy to understand UI. It makes code debugging easier and more effective. It helps us in creating effective reports for teams.”<br/>
+          </p>
+          <div class="reviewer-container">
+            <div class="img-container">
+              <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/661eb569662c9b8bca667ecb_Group%201000002803.png" loading="lazy" width="64" alt="" class="image-106"/>
+              <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65f1c512ef5eb3e795157d53_Vector.png" loading="lazy" width="28" alt="" class="image-105"/>
+            </div>
+            <p class="paragraph-17">Nikita Gupta</p>
+            <p class="paragraph-18">Senior data analyst @ <span class="text-span-7">LeadSquared</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="common-slide w-slide">
+        <div class="slide-wrapper">
+          <div class="slide-rate">
+            <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/660478ef02fff9112b4d8c5f_fivestar.png" loading="lazy" width="200" alt="" class="rate-image"/>
+          </div>
+          <p class="header-slider">“Sprinkle is very useful. It’s easily accessible by multiple users.  The auto-suggestion feature &amp; to be able to create flows helping in staging tables is quite helpful.”<br/>
+        </p>
+        <div class="reviewer-container">
+          <div class="img-container">
+            <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65f1c98652bda0d8d8cd3713_joel%20(1).jpeg" loading="lazy" width="64" alt="" class="image-106"/>
+            <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65f1bb169518f9fbf1022c38_yulu-customer.png" loading="lazy" width="28" alt="" class="image-105"/>
+          </div>
+          <p class="paragraph-17">Joel Dominic Pereira</p>
+          <p class="paragraph-18">Operations Specialist @ <span class="text-span-7">Yulu</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="left-arrow-2 w-slider-arrow-left">
+    <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66047313308c9e3f93157458_Button%20-%20previous%20slide.png" loading="lazy" width="100" height="Auto" alt="" srcset="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66047313308c9e3f93157458_Button%20-%20previous%20slide-p-500.png 500w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/66047313308c9e3f93157458_Button%20-%20previous%20slide.png 513w" sizes="(max-width: 479px) 65px, 100px" class="image-122"/>
+  </div>
+  <div class="right-arrow-2 w-slider-arrow-right">
+    <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/660473173775d5c8be913344_Button%20-%20next%20slide.png" loading="lazy" width="100" sizes="(max-width: 479px) 65px, 100px" alt="" srcset="https://cdn.prod.website-files.com/6058658002faec26b7e08402/660473173775d5c8be913344_Button%20-%20next%20slide-p-500.png 500w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/660473173775d5c8be913344_Button%20-%20next%20slide.png 513w" class="image-121"/>
+  </div>
+  <div class="w-slider-nav w-round">
+  </div>
+</div>
+</div>
+</div>
+</div>
+<section class="footer-container">
+  <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ef0d806feb36f3d570455f_Vector.png" loading="lazy" width="250" sizes="(max-width: 479px) 100vw, 250px" alt="" srcset="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ef0d806feb36f3d570455f_Vector-p-500.png 500w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ef0d806feb36f3d570455f_Vector-p-800.png 800w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ef0d806feb36f3d570455f_Vector-p-1080.png 1080w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ef0d806feb36f3d570455f_Vector.png 1197w" class="image-93"/>
+  <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ef0d8351a4e36357360c68_Vector-two.png" loading="lazy" width="290" sizes="(max-width: 479px) 100vw, 290px" alt="" srcset="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ef0d8351a4e36357360c68_Vector-two-p-500.png 500w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ef0d8351a4e36357360c68_Vector-two-p-800.png 800w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ef0d8351a4e36357360c68_Vector-two-p-1080.png 1080w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ef0d8351a4e36357360c68_Vector-two-p-1600.png 1600w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ef0d8351a4e36357360c68_Vector-two-p-2000.png 2000w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ef0d8351a4e36357360c68_Vector-two.png 2046w" class="image-94"/>
+  <div class="w-layout-blockcontainer container-15 w-container">
+    <div class="div-block-130">
+      <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d6320f301fd729472bb059_footer-avatar.png" loading="lazy" data-w-id="1ed80f1d-a64d-2f3d-af28-396ee4f131f6" alt="" sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 939.982666015625px" srcset="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d6320f301fd729472bb059_footer-avatar-p-500.png 500w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d6320f301fd729472bb059_footer-avatar-p-800.png 800w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d6320f301fd729472bb059_footer-avatar-p-1080.png 1080w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d6320f301fd729472bb059_footer-avatar-p-1600.png 1600w, https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d6320f301fd729472bb059_footer-avatar.png 1800w" class="image-96"/>
+    </div>
+    <div class="div-block-131">
+      <div data-w-id="1ed80f1d-a64d-2f3d-af28-396ee4f131f8" class="container-16">
+        <div class="section-title">
+          <div class="section-title">
+            <h2 class="heading-43">Unleash Insights for Everyone</h2>
+            <p class="text-20">Got a question? Reach out to us!</p>
+          </div>
+        </div>
+        <div class="actions-3">
+          <a href="https://console.sprinkledata.com/signin.html#createaccount" target="_blank" class="button-5">
+            <div class="button-6">Start for free</div>
+          </a>
+          <a data-w-id="1ed80f1d-a64d-2f3d-af28-396ee4f13200" href="/request-demo" class="button-7">
+            <div class="button-8">Contact us</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-14">
+    <div class="footer-wrapper-two">
+      <a href="#" class="footer-brand w-inline-block">
+        <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65cdd1e92bbc7d57ac605a68_logo.png" loading="lazy" alt="" class="image-84"/>
+      </a>
+      <div class="footer-block-two">
+        <div class="footer-title">Product</div>
+        <div data-w-id="e8fa49aa-e7c0-673d-e29b-d97f19064203" class="footer-link-container hide-me-link">
+          <a href="#" class="footer-link-two footer-link-override-css">Why Sprinkle?</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="3b47cd88-8e18-eea7-36de-ad934ef97652" class="footer-link-container hide-me-link">
+          <a href="#" class="footer-link-two footer-link-override-css">Dashboards</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="abf01da9-2da6-26ef-c369-bb308f31db60" class="footer-link-container hide-me-link">
+          <a href="#" class="footer-link-two footer-link-override-css">Reports</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="3e268f99-7e7d-59fa-a4ad-345cee9e8db6" class="footer-link-container hide-me-link">
+          <a href="#" class="footer-link-two footer-link-override-css">Models</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="80f7d8d1-1484-1133-ce67-f9d0b0e244ad" class="footer-link-container">
+          <a href="/product/connectors" class="footer-link-two footer-link-override-css">Data Integration</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="18c995a9-637e-7c3b-5bf7-7997307801b9" class="footer-link-container">
+          <a href="/product/transformation-layer" aria-current="page" class="footer-link-two footer-link-override-css w--current">Transformation layer</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="04f1df9d-7ce0-f262-d3aa-e0b5a497fcad" class="footer-link-container">
+          <a href="/product/self-serve-bi" class="footer-link-two footer-link-override-css">Self Serve BI</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="fc501493-cba9-e789-2c6b-0647c60fdcce" class="footer-link-container">
+          <a href="/product/data-delivery" class="footer-link-two footer-link-override-css">Data Delivery</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="46ef3150-4543-091e-22df-4d703d97ab2e" class="footer-link-container">
+          <a href="/product/embed-analytics" class="footer-link-two footer-link-override-css">Embed Analytics</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="f3f08617-c127-f12b-b512-54dab158e29f" class="footer-link-container hide-me-link">
+          <a href="#" class="footer-link-two footer-link-override-css">Data delivery</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="7941d964-3b4a-513a-0fb3-bda5c3af25f4" class="footer-link-container">
+          <a href="/product/datawarehouse" class="footer-link-two footer-link-override-css">Data Warehouses</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="5520566c-b7d6-b69a-12aa-ba089494e3ad" class="footer-link-container">
+          <a href="/generative-ai" class="footer-link-two footer-link-override-css">Write with AI</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+      </div>
+      <div class="footer-block-two">
+        <div class="footer-title">Compare</div>
+        <div data-w-id="a9862f03-125f-c832-9d6d-d2fffc69789f" class="footer-link-container">
+          <a href="/analytics/tableau-alternative" class="footer-link-two footer-link-override-css">Tableau</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="c2197790-08ef-29c7-8421-f970d2fd6adf" class="footer-link-container">
+          <a href="/analytics/powerbi-alternative" class="footer-link-two footer-link-override-css">Power BI</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="43a76ca8-dfa7-55f1-ccfb-5c19a39ba6d1" class="footer-link-container">
+          <a href="/analytics/google-data-studio-alternative" class="footer-link-two footer-link-override-css">Google data studio</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="2cd49cd0-6b7e-9e69-5e5d-c6ea45d3814b" class="footer-link-container">
+          <a href="/analytics/metabase-alternative" class="footer-link-two footer-link-override-css">Metabase</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="9a3d10f9-8dbd-686d-79d7-06fcca00f58c" class="footer-link-container">
+          <a href="/analytics/redash-alternative" class="footer-link-two footer-link-override-css">Redash</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="d495aada-f23c-3e38-019b-efe6ab4671c4" class="footer-link-container">
+          <a href="/analytics/redash-alternative" class="footer-link-two footer-link-override-css">Superset</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+      </div>
+      <div class="footer-block-two">
+        <div class="footer-title">Usecases</div>
+        <div data-w-id="4c0bd584-d8ce-8063-8b03-de22894059bd" class="footer-link-container">
+          <a href="/usecases/sales-analytics" class="footer-link-two footer-link-override-css">Sales analytics</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="b153f8a1-4c55-8363-7620-f73fe47f7be0" class="footer-link-container">
+          <a href="/usecases/marketing-analytics" class="footer-link-two footer-link-override-css">Marketing analytics</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="e467d3a1-69d5-5713-06f0-e5232428f34b" class="footer-link-container">
+          <a href="/usecases/operations" class="footer-link-two footer-link-override-css">Operations analytics</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="a08e8c57-e2c0-4aa6-ab06-09a2c9bbb728" class="footer-link-container">
+          <a href="/usecases/data-management" class="footer-link-two footer-link-override-css">Data management</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="4544185a-4cd2-519a-787a-2f4630d0e41c" class="footer-link-container">
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="f47fbbc2-366e-7151-6948-39e2ae655f9e" class="footer-link-container">
+          <div class="footer-underline">
+          </div>
+        </div>
+      </div>
+      <div class="footer-block-two">
+        <div class="footer-title">Resources</div>
+        <div data-w-id="89cb9e4e-a3e2-1ff7-75df-9f0f323048cd" class="footer-link-container hide-me-link">
+          <a href="#" class="footer-link-two footer-link-override-css">How it works</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="46b56244-b512-59e8-b7ff-40b45b1e0538" class="footer-link-container">
+          <a href="/pricing" class="footer-link-two footer-link-override-css">Pricing</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="6da77c69-b96a-e81b-75a6-91ec53cdf3bc" class="footer-link-container">
+          <a href="https://docs.sprinkledata.com/product" target="_blank" class="footer-link-two footer-link-override-css">Documentation</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="a22e5e3e-00f4-589f-5e77-6205df0ecb5a" class="footer-link-container">
+          <a href="https://docs.sprinkledata.com/product/data-security-and-privacy/security-at-sprinkle" target="_blank" class="footer-link-two footer-link-override-css">Data Security</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="67955a89-277b-19b6-0ec1-1e3281eb1583" class="footer-link-container">
+          <a href="https://docs.sprinkledata.com/product/data-security-and-privacy/gdpr" target="_blank" class="footer-link-two footer-link-override-css">GDPR</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="d1af9c37-5a7f-c6e1-478a-faa10d23cd11" class="footer-link-container">
+          <a href="/customers" class="footer-link-two footer-link-override-css">Customers</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="7dd8023f-6af5-3ed0-4d0a-cabcbb4a958c" class="footer-link-container hide-me-link">
+          <a href="#" class="footer-link-two footer-link-override-css">FAQs</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="dd4393a6-f903-f3bf-1ab0-e33d6b0cacbf" class="footer-link-container">
+          <a href="/blogs" class="footer-link-two footer-link-override-css">Blogs</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="c9cd972e-c52b-c66e-9385-0194b6934944" class="footer-link-container">
+          <a href="https://docs.sprinkledata.com/product/release-notes/release-notes" target="_blank" class="footer-link-two footer-link-override-css">Release Notes</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+        <div data-w-id="6c6a066c-a068-9226-f7eb-a95fb17ef943" class="footer-link-container hide-me-link">
+          <a href="#" class="footer-link-two footer-link-override-css">About Sprinkle</a>
+          <div class="footer-underline">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-divider-two">
+    </div>
+    <div class="footer-bottom-2">
+      <div class="div-block-129">
+        <div class="footer-copyright">© 2024 Sprinkle. All rights reserved.</div>
+        <a href="https://docs.sprinkledata.com/product/data-security-and-privacy/privacy-policy" target="_blank" class="link-21">Privacy Policy</a>
+        <a href="/terms" class="link-22">Terms of Service</a>
+      </div>
+      <div class="footer-social-block-two">
+        <a href="https://www.facebook.com/SprinkleData" target="_blank" class="footer-social-link w-inline-block">
+          <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d628b7a6be3544b11c49d9_Facebook.svg" loading="lazy" alt=""/>
+        </a>
+        <a href="#" class="footer-social-link hide-social w-inline-block">
+          <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d62929fa7e69243eaf2a93_Instagram.svg" loading="lazy" alt=""/>
+        </a>
+        <a href="https://twitter.com/sprinkledata" target="_blank" class="footer-social-link w-inline-block">
+          <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d62931b27c230c2f712190_X.svg" loading="lazy" alt=""/>
+        </a>
+        <a href="https://www.linkedin.com/company/sprinkle-data/" target="_blank" class="footer-social-link w-inline-block">
+          <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d6293bc120fde0d54ba434_LinkedIn-logo.svg" loading="lazy" alt=""/>
+        </a>
+        <a href="https://www.youtube.com/channel/UC3F0YwGaykiD6AyPya9nTBg/featured" target="_blank" class="footer-social-link w-inline-block">
+          <img src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d629411eb52fb40c3165a6_Youtube.svg" loading="lazy" alt=""/>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NN89GDT"
+    height="0" width="0" style="display:none;visibility:hidden">
+  </iframe>
+</noscript>
+<script>
+      (function () {
+        function initCustomReveal() {
+          var hiddenItems = Array.prototype.filter.call(
+            document.querySelectorAll("[data-w-id][style]"),
+            function (element) {
+              var inlineStyle = (element.getAttribute("style") || "")
+                .replace(/\s+/g, "")
+                .toLowerCase();
+              return inlineStyle.indexOf("opacity:0") !== -1;
+            }
+          );
+
+          if (!hiddenItems.length) {
+            return;
+          }
+
+          hiddenItems.forEach(function (element, index) {
+            element.classList.add("custom-reveal");
+            element.style.opacity = "0";
+            element.style.transitionDelay = Math.min(index * 40, 240) + "ms";
+          });
+
+          function reveal(element) {
+            element.classList.add("is-visible");
+            element.style.opacity = "1";
+            element.style.transform = "none";
+          }
+
+          if (!("IntersectionObserver" in window)) {
+            hiddenItems.forEach(reveal);
+            return;
+          }
+
+          var observer = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (!entry.isIntersecting) {
+                  return;
+                }
+
+                reveal(entry.target);
+                observer.unobserve(entry.target);
+              });
+            },
+            {
+              threshold: 0.12,
+              rootMargin: "0px 0px -10% 0px",
+            }
+          );
+
+          hiddenItems.forEach(function (element) {
+            observer.observe(element);
+          });
+        }
+
+        function initDropdowns() {
+          var dropdowns = Array.prototype.slice.call(
+            document.querySelectorAll(".w-dropdown:not(.faq)")
+          );
+
+          if (!dropdowns.length) {
+            return;
+          }
+
+          function closeDropdown(dropdown) {
+            dropdown.classList.remove("w--open");
+            var toggle = dropdown.querySelector(".w-dropdown-toggle");
+            var list = dropdown.querySelector(".w-dropdown-list");
+
+            if (toggle) {
+              toggle.classList.remove("w--open");
+              toggle.setAttribute("aria-expanded", "false");
+            }
+
+            if (list) {
+              list.classList.remove("w--open");
+            }
+          }
+
+          function openDropdown(dropdown) {
+            dropdowns.forEach(function (item) {
+              if (item !== dropdown) {
+                closeDropdown(item);
+              }
+            });
+
+            dropdown.classList.add("w--open");
+            var toggle = dropdown.querySelector(".w-dropdown-toggle");
+            var list = dropdown.querySelector(".w-dropdown-list");
+
+            if (toggle) {
+              toggle.classList.add("w--open");
+              toggle.setAttribute("aria-expanded", "true");
+            }
+
+            if (list) {
+              list.classList.add("w--open");
+            }
+          }
+
+          dropdowns.forEach(function (dropdown) {
+            var toggle = dropdown.querySelector(".w-dropdown-toggle");
+            if (!toggle) {
+              return;
+            }
+
+            toggle.setAttribute("aria-expanded", "false");
+
+            toggle.addEventListener("click", function (event) {
+              event.preventDefault();
+              event.stopPropagation();
+
+              if (dropdown.classList.contains("w--open")) {
+                closeDropdown(dropdown);
+              } else {
+                openDropdown(dropdown);
+              }
+            });
+
+            dropdown.addEventListener("mouseenter", function () {
+              if (window.innerWidth > 991) {
+                openDropdown(dropdown);
+              }
+            });
+
+            dropdown.addEventListener("mouseleave", function () {
+              if (window.innerWidth > 991) {
+                closeDropdown(dropdown);
+              }
+            });
+          });
+
+          document.addEventListener("click", function (event) {
+            dropdowns.forEach(function (dropdown) {
+              if (!dropdown.contains(event.target)) {
+                closeDropdown(dropdown);
+              }
+            });
+          });
+        }
+
+        function initMobileNav() {
+          var button = document.querySelector(".menu-button-responsive");
+          var navMenu = document.querySelector(".nav-menu-wrapper-items");
+
+          if (!button || !navMenu) {
+            return;
+          }
+
+          button.setAttribute("role", "button");
+          button.setAttribute("tabindex", "0");
+          button.setAttribute("aria-expanded", "false");
+
+          function closeMenu() {
+            button.classList.remove("w--open");
+            navMenu.classList.remove("w--open");
+            button.setAttribute("aria-expanded", "false");
+            document.body.classList.remove("custom-nav-open");
+          }
+
+          function toggleMenu() {
+            var willOpen = !navMenu.classList.contains("w--open");
+            navMenu.classList.toggle("w--open", willOpen);
+            button.classList.toggle("w--open", willOpen);
+            button.setAttribute("aria-expanded", willOpen ? "true" : "false");
+            document.body.classList.toggle("custom-nav-open", willOpen);
+          }
+
+          button.addEventListener("click", function (event) {
+            event.preventDefault();
+            toggleMenu();
+          });
+
+          button.addEventListener("keydown", function (event) {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              toggleMenu();
+            }
+          });
+
+          navMenu.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+              if (window.innerWidth <= 991) {
+                closeMenu();
+              }
+            });
+          });
+
+          window.addEventListener("resize", function () {
+            if (window.innerWidth > 991) {
+              closeMenu();
+            }
+          });
+
+          document.addEventListener("click", function (event) {
+            if (window.innerWidth > 991) {
+              return;
+            }
+
+            if (!button.contains(event.target) && !navMenu.contains(event.target)) {
+              closeMenu();
+            }
+          });
+        }
+
+        function initTabs() {
+          var tabGroups = document.querySelectorAll(".w-tabs");
+
+          tabGroups.forEach(function (tabGroup) {
+            var links = Array.prototype.slice.call(
+              tabGroup.querySelectorAll(".w-tab-menu .w-tab-link")
+            );
+            var panes = Array.prototype.slice.call(
+              tabGroup.querySelectorAll(".w-tab-content .w-tab-pane")
+            );
+
+            if (!links.length || !panes.length) {
+              return;
+            }
+
+            function activateTab(name) {
+              links.forEach(function (link) {
+                var isActive = link.getAttribute("data-w-tab") === name;
+                link.classList.toggle("w--current", isActive);
+                link.setAttribute("aria-selected", isActive ? "true" : "false");
+                link.setAttribute("tabindex", isActive ? "0" : "-1");
+              });
+
+              panes.forEach(function (pane) {
+                var isActive = pane.getAttribute("data-w-tab") === name;
+                pane.classList.toggle("w--tab-active", isActive);
+                pane.style.display = isActive ? "block" : "none";
+              });
+            }
+
+            links.forEach(function (link) {
+              link.setAttribute("role", "tab");
+              link.addEventListener("click", function (event) {
+                event.preventDefault();
+                activateTab(link.getAttribute("data-w-tab"));
+              });
+            });
+
+            var initialLink =
+              tabGroup.querySelector(".w-tab-menu .w-tab-link.w--current") ||
+              links[0];
+
+            activateTab(initialLink.getAttribute("data-w-tab"));
+          });
+        }
+
+        function initFaqs() {
+          var faqs = document.querySelectorAll(".faq.w-dropdown");
+
+          faqs.forEach(function (faq) {
+            var toggle = faq.querySelector(".faq-wrapper.w-dropdown-toggle");
+            var content = faq.querySelector(".dropdown-content.w-dropdown-list");
+
+            if (!toggle || !content) {
+              return;
+            }
+
+            toggle.setAttribute("role", "button");
+            toggle.setAttribute("tabindex", "0");
+
+            function closeFaq() {
+              faq.classList.remove("w--open");
+              toggle.classList.remove("w--open");
+              content.classList.remove("w--open");
+              toggle.setAttribute("aria-expanded", "false");
+              content.style.display = "none";
+              faq.style.height = toggle.offsetHeight + "px";
+            }
+
+            function openFaq() {
+              faqs.forEach(function (item) {
+                if (item !== faq) {
+                  var otherToggle = item.querySelector(".faq-wrapper.w-dropdown-toggle");
+                  var otherContent = item.querySelector(".dropdown-content.w-dropdown-list");
+
+                  item.classList.remove("w--open");
+                  if (otherToggle) {
+                    otherToggle.classList.remove("w--open");
+                    otherToggle.setAttribute("aria-expanded", "false");
+                  }
+                  if (otherContent) {
+                    otherContent.classList.remove("w--open");
+                    otherContent.style.display = "none";
+                  }
+                  if (otherToggle) {
+                    item.style.height = otherToggle.offsetHeight + "px";
+                  }
+                }
+              });
+
+              faq.classList.add("w--open");
+              toggle.classList.add("w--open");
+              content.classList.add("w--open");
+              toggle.setAttribute("aria-expanded", "true");
+              content.style.display = "block";
+              faq.style.height =
+                toggle.offsetHeight + content.scrollHeight + "px";
+            }
+
+            closeFaq();
+
+            toggle.addEventListener("click", function (event) {
+              event.preventDefault();
+              event.stopPropagation();
+
+              if (faq.classList.contains("w--open")) {
+                closeFaq();
+              } else {
+                openFaq();
+              }
+            });
+
+            toggle.addEventListener("keydown", function (event) {
+              if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                toggle.click();
+              }
+            });
+          });
+        }
+
+        function initSliders() {
+          var sliders = document.querySelectorAll(".w-slider");
+
+          sliders.forEach(function (slider) {
+            var mask = slider.querySelector(".w-slider-mask");
+            var slides = Array.prototype.slice.call(
+              slider.querySelectorAll(".w-slide")
+            );
+            var prev = slider.querySelector(".w-slider-arrow-left");
+            var next = slider.querySelector(".w-slider-arrow-right");
+            var nav = slider.querySelector(".w-slider-nav");
+            var currentIndex = 0;
+            var autoplay = slider.getAttribute("data-autoplay") === "true";
+            var delay = parseInt(slider.getAttribute("data-delay") || "5000", 10);
+            var timer = null;
+
+            if (!mask || slides.length <= 1) {
+              return;
+            }
+
+            if (nav && !nav.children.length) {
+              slides.forEach(function (_, index) {
+                var dot = document.createElement("button");
+                dot.type = "button";
+                dot.className = "w-slider-dot";
+                dot.setAttribute("aria-label", "Go to slide " + (index + 1));
+                dot.addEventListener("click", function () {
+                  goTo(index);
+                });
+                nav.appendChild(dot);
+              });
+            }
+
+            var dots = nav
+              ? Array.prototype.slice.call(nav.querySelectorAll(".w-slider-dot"))
+              : [];
+
+            function render() {
+              slides.forEach(function (slide, index) {
+                var isActive = index === currentIndex;
+                slide.style.display = isActive ? "block" : "none";
+                slide.setAttribute("aria-hidden", isActive ? "false" : "true");
+              });
+
+              dots.forEach(function (dot, index) {
+                dot.classList.toggle("w-active", index === currentIndex);
+                dot.setAttribute(
+                  "aria-pressed",
+                  index === currentIndex ? "true" : "false"
+                );
+              });
+            }
+
+            function goTo(index) {
+              currentIndex = (index + slides.length) % slides.length;
+              render();
+              restartAutoplay();
+            }
+
+            function restartAutoplay() {
+              if (!autoplay) {
+                return;
+              }
+
+              window.clearInterval(timer);
+              timer = window.setInterval(function () {
+                goTo(currentIndex + 1);
+              }, delay);
+            }
+
+            if (prev) {
+              prev.setAttribute("role", "button");
+              prev.setAttribute("tabindex", "0");
+              prev.addEventListener("click", function (event) {
+                event.preventDefault();
+                goTo(currentIndex - 1);
+              });
+            }
+
+            if (next) {
+              next.setAttribute("role", "button");
+              next.setAttribute("tabindex", "0");
+              next.addEventListener("click", function (event) {
+                event.preventDefault();
+                goTo(currentIndex + 1);
+              });
+            }
+
+            slider.addEventListener("mouseenter", function () {
+              window.clearInterval(timer);
+            });
+
+            slider.addEventListener("mouseleave", function () {
+              restartAutoplay();
+            });
+
+            render();
+            restartAutoplay();
+          });
+        }
+
+        function init() {
+          addCountries("#country");
+          initCustomReveal();
+          initDropdowns();
+          initMobileNav();
+          initTabs();
+          initFaqs();
+          initSliders();
+        }
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", init);
+        } else {
+          init();
+        }
+      })();
+    </script>
+<script>
+  (function () {
+    var settings = {
+      oneOpen: true,
+      accordion: '.js-accordion-2',
+      header: '.js-accordion-header-2',
+      item: '.js-accordion-item-2',
+      body: '.js-accordion-body-2',
+      icon: '.js-accordion-icon-2',
+      active: 'active-2'
+    };
+
+    function setBodyState(item, isOpen) {
+      var body = item.querySelector(settings.body);
+      var icon = item.querySelector(settings.icon);
+
+      if (body) {
+        body.style.display = isOpen ? 'block' : 'none';
+      }
+
+      if (icon) {
+        icon.classList.toggle(settings.active, isOpen);
+      }
+
+      item.classList.toggle(settings.active, isOpen);
+    }
+
+    function initAccordion(rootEl) {
+      var items = Array.prototype.slice.call(rootEl.querySelectorAll(':scope > ' + settings.item));
+
+      items.forEach(function (item) {
+        var header = item.querySelector(':scope > ' + settings.header);
+        var isOpen = item.classList.contains(settings.active);
+
+        setBodyState(item, isOpen);
+
+        if (!header) {
+          return;
+        }
+
+        header.addEventListener('click', function () {
+          var willOpen = !item.classList.contains(settings.active);
+
+          if (settings.oneOpen) {
+            items.forEach(function (other) {
+              if (other !== item) {
+                setBodyState(other, false);
+              }
+            });
+          }
+
+          setBodyState(item, willOpen);
+        });
+      });
+    }
+
+    document.querySelectorAll(settings.accordion).forEach(initAccordion);
+  })();
+</script>
+</body>
+</html>

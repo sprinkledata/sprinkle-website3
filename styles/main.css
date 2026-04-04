@@ -3,6 +3,16 @@ html {
   -ms-text-size-adjust: 100%;
   font-family: sans-serif;
 }
+
+/* Custom FAQ alignment overrides */
+.faq-wrapper,
+.dropdown-header,
+.dropdown-content,
+.faq-text,
+.faq-text a,
+.faq-text p {
+  text-align: left !important;
+}
 body {
   margin: 0;
 }
@@ -18517,11 +18527,11 @@ blockquote {
     padding: 0 16px;
   }
 
-  .list-item1,
-  .list-item2,
-  .list-item4,
-  .list-item5,
-  .list-item6 {
+  .list-item_1,
+  .list-item_2,
+  .list-item_4,
+  .list-item_5,
+  .list-item_6 {
     width: 100%;
     border-bottom: 1px solid rgba(119,131,143,0.12);
   }
