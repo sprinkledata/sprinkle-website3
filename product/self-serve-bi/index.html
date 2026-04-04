@@ -3,26 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <title>
-      Data Warehouses | Build your data platform on any warehouse/data-lake
+      Self Serve BI | No IT Needed: Self-Serve Analytics at Your Fingertips
     </title>
     <meta
-      content="Sprinkle seamlessly integrates with leading data warehouses to empower your analytics like never before."
+      content="Transform complex data into meaningful insights with our intuitive drag-and-drop interface, without any coding. Build stunning visualisations to uncover hidden insights and trends in seconds!"
       name="description"
     />
     <meta
-      content="Data Warehouses | Build your data platform on any warehouse/data-lake"
+      content="Self Serve BI | No IT Needed: Self-Serve Analytics at Your Fingertips"
       property="og:title"
     />
     <meta
-      content="Sprinkle seamlessly integrates with leading data warehouses to empower your analytics like never before."
+      content="Transform complex data into meaningful insights with our intuitive drag-and-drop interface, without any coding. Build stunning visualisations to uncover hidden insights and trends in seconds!"
       property="og:description"
     />
     <meta
-      content="Data Warehouses | Build your data platform on any warehouse/data-lake"
+      content="Self Serve BI | No IT Needed: Self-Serve Analytics at Your Fingertips"
       property="twitter:title"
     />
     <meta
-      content="Sprinkle seamlessly integrates with leading data warehouses to empower your analytics like never before."
+      content="Transform complex data into meaningful insights with our intuitive drag-and-drop interface, without any coding. Build stunning visualisations to uncover hidden insights and trends in seconds!"
       property="twitter:description"
     />
     <meta property="og:type" content="website" />
@@ -72,7 +72,7 @@
       rel="apple-touch-icon"
     />
     <link
-      href="https://www.sprinkledata.com/product/datawarehouse"
+      href="https://www.sprinkledata.com/product/self-serve-bi"
       rel="canonical"
     />
     <script
@@ -149,32 +149,25 @@
         ]
       }
     </script>
-    <style>
-      .js-accordion-body-2 {
-        display: none;
-      }
-      .w-slider-dot {
-        background: #276df452;
-      }
-      .w-slider-nav.w-round {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .w-slider-nav.w-round > div {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-      }
-      .w-slider-dot.w-active {
-        background: #276df4;
-        width: 12px !important;
-        height: 12px !important;
-        border-radius: 50%;
-      }
-    </style>
   </head>
   <body>
+    <div class="custom-styles-bi w-embed">
+      <style>
+        .slider {
+          pointer-events: none;
+        }
+        .w-tab-link {
+          background: transparent;
+          color: #959595;
+          border-bottom: 2px solid transparent;
+        }
+        .w-tab-link.w--current {
+          background: transparent;
+          color: #276df4;
+          border-bottom: 2px solid #276df4;
+        }
+      </style>
+    </div>
     <div data-w-id="be25b21a-776d-5db1-6592-c8f86cee5dfd" class="navbar">
       <div
         data-animation="default"
@@ -187,7 +180,7 @@
       >
         <div class="navbar-container">
           <div class="navbar-wrapper-items">
-            <a href="../../index.html" class="navbar-company-logo w-nav-brand">
+            <a href="/" class="navbar-company-logo w-nav-brand">
               <img
                 src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65cdd1e92bbc7d57ac605a68_logo.png"
                 alt=""
@@ -237,7 +230,7 @@
                         <div class="nav-left-extra">
                           <a
                             data-w-id="230caf00-4d06-5575-49a8-45c5e5c058fc"
-                            href="./connectors.html"
+                            href="/product/connectors"
                             class="single-extra-nav w-inline-block"
                           >
                             <img
@@ -255,7 +248,7 @@
                           </a>
                           <a
                             data-w-id="461849ae-a94c-8e49-724a-a097a19a1922"
-                            href="./transformation-layer.html"
+                            href="/product/transformation-layer"
                             class="single-extra-nav w-inline-block"
                           >
                             <img
@@ -273,8 +266,9 @@
                           </a>
                           <a
                             data-w-id="c116786a-6b4e-b028-cb69-188b8ce0ecc1"
-                            href="./self-serve-bi.html"
-                            class="single-extra-nav w-inline-block"
+                            href="/product/self-serve-bi"
+                            aria-current="page"
+                            class="single-extra-nav w-inline-block w--current"
                           >
                             <img
                               src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6628a40a1e37b251a11ded68_dashboard_FILL0_wght300_GRAD0_opsz24%201.png"
@@ -291,7 +285,7 @@
                           </a>
                           <a
                             data-w-id="cb09b959-c45a-ca48-9c3b-882686ab322a"
-                            href="./data-delivery.html"
+                            href="/product/data-delivery"
                             class="single-extra-nav hide-for-normal w-inline-block"
                           >
                             <img
@@ -309,7 +303,7 @@
                           </a>
                           <a
                             data-w-id="c18070c9-03ed-4fc4-7d1d-44d9fe8407c9"
-                            href="./embed-analytics.html"
+                            href="/product/embed-analytics"
                             class="single-extra-nav hide-for-normal w-inline-block"
                           >
                             <img
@@ -347,7 +341,7 @@
                         <div class="nav-left-extra hide-for-tab">
                           <a
                             data-w-id="eaf95fd5-c5eb-3feb-c522-cb61434f1718"
-                            href="./data-delivery.html"
+                            href="/product/data-delivery"
                             class="single-extra-nav w-inline-block"
                           >
                             <img
@@ -365,7 +359,7 @@
                           </a>
                           <a
                             data-w-id="eaf95fd5-c5eb-3feb-c522-cb61434f171f"
-                            href="./embed-analytics.html"
+                            href="/product/embed-analytics"
                             class="single-extra-nav w-inline-block"
                           >
                             <img
@@ -412,9 +406,8 @@
                               Supported SQL warehouses
                             </p>
                             <a
-                              href="./datawarehouse.html"
-                              aria-current="page"
-                              class="connectors-div w-inline-block w--current"
+                              href="/product/datawarehouse"
+                              class="connectors-div w-inline-block"
                             >
                               <div class="single-container">
                                 <img
@@ -454,9 +447,8 @@
                               </div>
                             </a>
                             <a
-                              href="./datawarehouse.html"
-                              aria-current="page"
-                              class="connectors-div w-inline-block w--current"
+                              href="/product/datawarehouse"
+                              class="connectors-div w-inline-block"
                             >
                               <div class="single-container">
                                 <img
@@ -498,9 +490,8 @@
                             <div class="connectors-div">
                               <a
                                 data-w-id="f63e6f35-1385-ea96-6b64-bcf270ae6d3c"
-                                href="./datawarehouse.html"
-                                aria-current="page"
-                                class="arrow-extra connector-flex nav-see-all w-inline-block w--current"
+                                href="/product/datawarehouse"
+                                class="arrow-extra connector-flex nav-see-all w-inline-block"
                               >
                                 <div class="text-container-white">
                                   <div class="text-block-58 connector-text">
@@ -530,34 +521,34 @@
                         </div>
                       </div>
                       <a
-                        href="./connectors.html"
+                        href="/product/connectors"
                         class="nav-dropdown-link-2 nav-text-animation hide-for-integration w-dropdown-link"
                         >Data Integration</a
                       >
                       <a
-                        href="./transformation-layer.html"
+                        href="/product/transformation-layer"
                         class="nav-dropdown-link-2 nav-text-animation hide-for-integration w-dropdown-link"
                         >Transformation layer</a
                       >
                       <a
-                        href="./self-serve-bi.html"
-                        class="nav-dropdown-link-2 nav-text-animation hide-for-integration w-dropdown-link"
+                        href="/product/self-serve-bi"
+                        aria-current="page"
+                        class="nav-dropdown-link-2 nav-text-animation hide-for-integration w-dropdown-link w--current"
                         >Self Serve BI</a
                       >
                       <a
-                        href="./data-delivery.html"
+                        href="/product/data-delivery"
                         class="nav-dropdown-link-2 nav-text-animation hide-for-integration w-dropdown-link"
                         >Data Delivery</a
                       >
                       <a
-                        href="./embed-analytics.html"
+                        href="/product/embed-analytics"
                         class="nav-dropdown-link-2 nav-text-animation hide-for-integration w-dropdown-link"
                         >Embed Analytics</a
                       >
                       <a
-                        href="./datawarehouse.html"
-                        aria-current="page"
-                        class="nav-dropdown-link-2 nav-text-animation hide-for-integration w-dropdown-link w--current"
+                        href="/product/datawarehouse"
+                        class="nav-dropdown-link-2 nav-text-animation hide-for-integration w-dropdown-link"
                         >Data Warehouses</a
                       >
                       <a
@@ -721,13 +712,13 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid">
-      <div class="banner-container">
-        <div class="banner-text">
+    <div class="container-fluid self-serve-container-fluid">
+      <div class="banner-container self-serve-banner">
+        <div class="banner-text banner-text-connectors">
           <div class="hero-frame-content warehouse-hero-frame">
             <div class="content">
               <div
-                data-w-id="1b0b150a-fc77-e15e-062b-0f2350761e3a"
+                data-w-id="6b22b994-d096-0eb6-04f0-3cf43fbf6d85"
                 style="opacity: 0"
                 class="frame-content-header"
               >
@@ -740,29 +731,31 @@
                     alt=""
                     class="magic-icon"
                   />
-                  <h1 class="subheading">Data Warehouses</h1>
+                  <h1 class="subheading">Self-Serve BI</h1>
                 </div>
-                <h2 class="heading">
-                  Build your data platform on any warehouse/data-lake
+                <h2 class="heading self-serve-heading">
+                  Drag and drop your way to insights
                 </h2>
               </div>
               <h3
-                data-w-id="1b0b150a-fc77-e15e-062b-0f2350761e43"
+                data-w-id="6b22b994-d096-0eb6-04f0-3cf43fbf6d8e"
                 style="opacity: 0"
                 class="text"
               >
-                Sprinkle seamlessly integrates with leading data warehouses to
-                empower your analytics like never before.
+                Transform complex data into meaningful insights with our
+                intuitive drag-and-drop interface, without any coding.<br />
+                <br />Build stunning visualisations to uncover hidden insights
+                and trends in seconds!
               </h3>
             </div>
             <div class="actions">
               <div
-                data-w-id="1b0b150a-fc77-e15e-062b-0f2350761e46"
+                data-w-id="7e09413a-a688-ad57-2975-6e23f3082e6d"
                 style="opacity: 0"
                 class="frame-actions"
               >
                 <a
-                  data-w-id="1b0b150a-fc77-e15e-062b-0f2350761e47"
+                  data-w-id="7e09413a-a688-ad57-2975-6e23f3082e6e"
                   href="/request-demo"
                   class="animated-button-shine-effect w-inline-block"
                 >
@@ -785,7 +778,7 @@
                   <div class="animated-button-text">Book a demo</div>
                 </a>
                 <a
-                  data-w-id="1b0b150a-fc77-e15e-062b-0f2350761e4b"
+                  data-w-id="7e09413a-a688-ad57-2975-6e23f3082e72"
                   href="/request-demo-old"
                   class="animated-color-button hide-button-book-demo w-inline-block"
                 >
@@ -809,7 +802,7 @@
                 </a>
               </div>
               <div
-                data-w-id="1b0b150a-fc77-e15e-062b-0f2350761e4f"
+                data-w-id="6b22b994-d096-0eb6-04f0-3cf43fbf6d9d"
                 style="opacity: 0"
                 class="hero-small-text"
               >
@@ -834,286 +827,233 @@
           </div>
         </div>
         <div
-          data-w-id="c69f98aa-1e4c-09e5-eaaf-86c79ee2d8ec"
+          data-w-id="6b22b994-d096-0eb6-04f0-3cf43fbf6da6"
           style="opacity: 0"
-          class="banner-image"
+          class="banner-image self-serve-bi-banner"
         >
           <img
-            src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6606650f6b18e362a990b168_Component%2027.png"
-            loading="lazy"
-            width="Auto"
-            sizes="100vw"
+            src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66137ade6ed70d12604e9693_Frame%201000003761.png"
             alt=""
+            sizes="(max-width: 767px) 100vw, (max-width: 991px) 42vw, (max-width: 1439px) 50vw, (max-width: 1919px) 690.1953125px, 753.796875px"
             srcset="
-              https://cdn.prod.website-files.com/6058658002faec26b7e08402/6606650f6b18e362a990b168_Component%2027-p-500.png   500w,
-              https://cdn.prod.website-files.com/6058658002faec26b7e08402/6606650f6b18e362a990b168_Component%2027-p-800.png   800w,
-              https://cdn.prod.website-files.com/6058658002faec26b7e08402/6606650f6b18e362a990b168_Component%2027-p-1080.png 1080w,
-              https://cdn.prod.website-files.com/6058658002faec26b7e08402/6606650f6b18e362a990b168_Component%2027-p-1600.png 1600w,
-              https://cdn.prod.website-files.com/6058658002faec26b7e08402/6606650f6b18e362a990b168_Component%2027-p-2000.png 2000w,
-              https://cdn.prod.website-files.com/6058658002faec26b7e08402/6606650f6b18e362a990b168_Component%2027-p-2600.png 2600w,
-              https://cdn.prod.website-files.com/6058658002faec26b7e08402/6606650f6b18e362a990b168_Component%2027.png        2681w
+              https://cdn.prod.website-files.com/6058658002faec26b7e08402/66137ade6ed70d12604e9693_Frame%201000003761-p-500.png   500w,
+              https://cdn.prod.website-files.com/6058658002faec26b7e08402/66137ade6ed70d12604e9693_Frame%201000003761-p-800.png   800w,
+              https://cdn.prod.website-files.com/6058658002faec26b7e08402/66137ade6ed70d12604e9693_Frame%201000003761-p-1080.png 1080w,
+              https://cdn.prod.website-files.com/6058658002faec26b7e08402/66137ade6ed70d12604e9693_Frame%201000003761-p-1600.png 1600w,
+              https://cdn.prod.website-files.com/6058658002faec26b7e08402/66137ade6ed70d12604e9693_Frame%201000003761-p-2000.png 2000w,
+              https://cdn.prod.website-files.com/6058658002faec26b7e08402/66137ade6ed70d12604e9693_Frame%201000003761-p-2600.png 2600w,
+              https://cdn.prod.website-files.com/6058658002faec26b7e08402/66137ade6ed70d12604e9693_Frame%201000003761-p-3200.png 3200w,
+              https://cdn.prod.website-files.com/6058658002faec26b7e08402/66137ade6ed70d12604e9693_Frame%201000003761.png        3251w
             "
-            class="image-114"
+            class="banner-image-self-serve"
           />
         </div>
       </div>
     </div>
     <div class="container-fluid">
-      <div class="supported-carriers-container">
-        <h2
-          data-w-id="2254591d-2c15-c5d6-c002-5eb16c92bbca"
-          style="opacity: 0"
-          class="supported-carrier-heading"
-        >
-          All supported analytical data warehouses
-        </h2>
-        <div class="supported-carriers-wrapper">
-          <div
-            data-w-id="29169c79-ef8d-64a7-1cb6-789b514129fd"
-            style="opacity: 0"
-            class="single-carrier"
-          >
-            <img
-              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603c002fbb5b321e07939a6_pngwing%203.png"
-              loading="lazy"
-              alt=""
-              class="image-115"
-            />
-            <p class="paragraph-13">MySQL</p>
-          </div>
-          <div
-            data-w-id="8954378a-35af-4526-66fe-453b9bdc2a3c"
-            style="opacity: 0"
-            class="single-carrier"
-          >
-            <img
-              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603c007a8c60b1936f46351_aws-redshift-logo%201.png"
-              loading="lazy"
-              alt=""
-              class="image-115"
-            />
-            <p class="paragraph-13">AWS Redshift</p>
-          </div>
-          <div
-            data-w-id="9f4b44c4-ba72-8260-903e-fae44eae2ceb"
-            style="opacity: 0"
-            class="single-carrier"
-          >
-            <img
-              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603c00e181f2a2d4c0a1cd0_amazon-athena-logo%402x%201.png"
-              loading="lazy"
-              alt=""
-              class="image-115"
-            />
-            <p class="paragraph-13">AWS Athena</p>
-          </div>
-          <div
-            data-w-id="8b6c6eef-1016-c0e2-6c75-0a7a91e1464a"
-            style="opacity: 0"
-            class="single-carrier"
-          >
-            <img
-              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603c0187a15857911a65c21_google-bigquery-2048x688%201.png"
-              loading="lazy"
-              alt=""
-              class="image-115"
-            />
-            <p class="paragraph-13">Google Big Query</p>
-          </div>
-          <div
-            data-w-id="d50bc9d3-5d5c-623e-0af3-e388476f79ff"
-            style="opacity: 0"
-            class="single-carrier"
-          >
-            <img
-              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603c0215954506b8038cc9b_Azure-Synapse-Logo-PNG%40ZEEVECTOR%201.png"
-              loading="lazy"
-              alt=""
-              class="image-115"
-            />
-            <p class="paragraph-13">Azure Synapse</p>
-          </div>
-          <div
-            data-w-id="450781e0-cfcc-96f8-eb04-da20d10fa6de"
-            style="opacity: 0"
-            class="single-carrier"
-          >
-            <img
-              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603c025141be8921ae1fa17_postgresql-logo-png-transparent%201.png"
-              loading="lazy"
-              alt=""
-              class="image-115"
-            />
-            <p class="paragraph-13">Postgres</p>
-          </div>
-          <div
-            data-w-id="1ddb22e4-525d-63aa-5bb0-eea5f0636d2d"
-            style="opacity: 0"
-            class="single-carrier"
-          >
-            <img
-              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603c028d2e42216b6a427c7_image_processing20200607-24705-1ry6qs5%201.png"
-              loading="lazy"
-              alt=""
-              class="image-115"
-            />
-            <p class="paragraph-13">Snowflake</p>
-          </div>
-          <div
-            data-w-id="eaa6c40c-2c3e-4253-9a88-8ae99dd27067"
-            style="opacity: 0"
-            class="single-carrier"
-          >
-            <img
-              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603c02ca8c60b1936f47ec2_pngwing%202.png"
-              loading="lazy"
-              alt=""
-              class="image-115"
-            />
-            <p class="paragraph-13">SQL Server</p>
-          </div>
-          <div
-            data-w-id="7363ff3a-fc0b-351c-92a8-16ae5ec8cdf6"
-            style="opacity: 0"
-            class="single-carrier"
-          >
-            <img
-              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603c0309e11010647bbe23e_1681406945310%201.png"
-              loading="lazy"
-              alt=""
-              class="image-115"
-            />
-            <p class="paragraph-13">Databricks</p>
-          </div>
-          <div
-            data-w-id="badd780c-ab72-879d-ea0e-139242104ad0"
-            style="opacity: 0"
-            class="single-carrier"
-          >
-            <img
-              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/69327694e3e6cd790ecbc78b_clickhouse.png"
-              loading="lazy"
-              alt=""
-              class="image-115"
-            />
-            <p class="paragraph-13">Clickhouse</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="warehouse-form">
-        <div
-          data-w-id="0f4402d2-5096-9d52-90c9-8671d0cfe4ac"
-          style="opacity: 0"
-          class="form-container"
-        >
-          <div class="img-form-container">
-            <img
-              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603e096c853a13d171f9f39_anonymous-suggestion-box_1%201.png"
-              loading="lazy"
-              sizes="(max-width: 1919px) 100vw, 1631.979248046875px"
-              srcset="
-                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603e096c853a13d171f9f39_anonymous-suggestion-box_1%201-p-500.png   500w,
-                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603e096c853a13d171f9f39_anonymous-suggestion-box_1%201-p-800.png   800w,
-                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603e096c853a13d171f9f39_anonymous-suggestion-box_1%201-p-1080.png 1080w,
-                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603e096c853a13d171f9f39_anonymous-suggestion-box_1%201-p-1600.png 1600w,
-                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6603e096c853a13d171f9f39_anonymous-suggestion-box_1%201.png        1632w
-              "
-              alt=""
-              class="image-116"
-            />
-          </div>
-          <div class="form-wrapper">
-            <div class="warehouse-form-block w-form">
-              <h2 class="heading-47">Cannot find your warehouse here?</h2>
-              <p class="paragraph-15">
-                Feel free to let us know and we will add your warehouse into our
-                waiting list!
-              </p>
-              <form
-                id="wf-form-Warehouse-Suggestion-Form"
-                name="wf-form-Warehouse-Suggestion-Form"
-                data-name="Warehouse Suggestion Form"
-                method="get"
-                class="form-warehouse"
-                data-wf-page-id="6602a564d9caab4371df2f80"
-                data-wf-element-id="e5178d95-57fa-cecc-1374-16fb93224d80"
-              >
-                <label for="Email" class="field-label-2">
-                  <span class="text-span-6">*</span> Work email</label
+      <div
+        data-w-id="d6fc0586-05b1-48b8-19f0-8441ac3e1bab"
+        style="opacity: 0"
+        class="bi-container"
+      >
+        <div class="single-wrapper left">
+          <div class="side-tabs">
+            <div
+              data-current="All"
+              data-easing="ease-in-out"
+              data-duration-in="300"
+              data-duration-out="100"
+              class="tabs-7 w-tabs"
+            >
+              <div class="tabs-menu-10 w-tab-menu">
+                <a
+                  data-w-tab="All"
+                  class="tab-link-all w-inline-block w-tab-link w--current"
                 >
-                <input
-                  class="form-custom-input w-input"
-                  maxlength="256"
-                  name="Email"
-                  data-name="Email"
-                  placeholder="test_user@company.co.in"
-                  type="email"
-                  id="Email"
-                  required=""
-                />
-                <label for="Message" class="field-label-2">
-                  <span class="text-span-6">*</span>You want to ingest data
-                  from?</label
+                  <div class="text-block-61">Using tables</div>
+                </a>
+                <a
+                  data-w-tab="Databases"
+                  class="tab-link-databases w-inline-block w-tab-link"
                 >
-                <input
-                  class="form-custom-input w-input"
-                  maxlength="256"
-                  name="Message"
-                  data-name="Message"
-                  placeholder=""
-                  type="text"
-                  id="Message"
-                  required=""
-                />
-                <div class="field-wrapper recaptcha-wrapper">
-                  <div
-                    data-sitekey="6LeJzwoqAAAAAMKKFFsrqIu26aAVYvtAUn5M5BXS"
-                    class="w-form-formrecaptcha recaptcha-model g-recaptcha g-recaptcha-error g-recaptcha-disabled"
-                  ></div>
-                </div>
-                <div class="form-actions">
-                  <input
-                    type="submit"
-                    data-wait="Please wait..."
-                    class="submit-button-3 w-button"
-                    value="Suggest"
-                  />
-                  <a
-                    data-w-id="62314e4b-9fc3-f6b6-5886-07f7d4957941"
-                    href="/request-demo-old"
-                    class="animated-color-button form-contact-us w-inline-block"
-                  >
+                  <div class="text-block-62">Using models</div>
+                </a>
+                <a
+                  data-w-tab="Files"
+                  class="tab-link-files w-inline-block w-tab-link"
+                >
+                  <div class="text-block-63">Using SQL</div>
+                </a>
+              </div>
+              <div class="w-tab-content">
+                <div data-w-tab="All" class="w-tab-pane w--tab-active">
+                  <div class="image-container-bi">
                     <div
-                      style="
-                        -webkit-transform: translate3d(-100%, 0, 0)
-                          scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0)
-                          skew(0, 0);
-                        -moz-transform: translate3d(-100%, 0, 0)
-                          scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0)
-                          skew(0, 0);
-                        -ms-transform: translate3d(-100%, 0, 0) scale3d(1, 1, 1)
-                          rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                        transform: translate3d(-100%, 0, 0) scale3d(1, 1, 1)
-                          rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                      "
-                      class="animated-slide"
-                    ></div>
-                    <div class="animated-text form-contact-us-text">
-                      Contact us
+                      data-poster-url="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66138a14084bd646550d48de_ReportUsingTableV2-poster-00001.jpg"
+                      data-video-urls="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66138a14084bd646550d48de_ReportUsingTableV2-transcode.mp4,https://cdn.prod.website-files.com/6058658002faec26b7e08402/66138a14084bd646550d48de_ReportUsingTableV2-transcode.webm"
+                      data-autoplay="true"
+                      data-loop="true"
+                      data-wf-ignore="true"
+                      class="background-video-4 w-background-video w-background-video-atom"
+                    >
+                      <video
+                        id="f00b57c8-6ff4-31fa-b423-d73ebad0b7f7-video"
+                        autoplay=""
+                        loop=""
+                        style="
+                          background-image: url(&quot;https://cdn.prod.website-files.com/6058658002faec26b7e08402/66138a14084bd646550d48de_ReportUsingTableV2-poster-00001.jpg&quot;);
+                        "
+                        muted=""
+                        playsinline=""
+                        data-wf-ignore="true"
+                        data-object-fit="cover"
+                      >
+                        <source
+                          src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66138a14084bd646550d48de_ReportUsingTableV2-transcode.mp4"
+                          data-wf-ignore="true"
+                        />
+                        <source
+                          src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66138a14084bd646550d48de_ReportUsingTableV2-transcode.webm"
+                          data-wf-ignore="true"
+                        />
+                      </video>
                     </div>
-                  </a>
+                  </div>
                 </div>
-              </form>
-              <div class="success-message-2 w-form-done">
-                <div class="text-block-59">
-                  Thank you! Your submission has been received!
+                <div data-w-tab="Databases" class="w-tab-pane">
+                  <div class="image-container-bi">
+                    <div
+                      data-poster-url="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66138bfd3ae6c5ad1733e017_ReportUsingModelV2-poster-00001.jpg"
+                      data-video-urls="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66138bfd3ae6c5ad1733e017_ReportUsingModelV2-transcode.mp4,https://cdn.prod.website-files.com/6058658002faec26b7e08402/66138bfd3ae6c5ad1733e017_ReportUsingModelV2-transcode.webm"
+                      data-autoplay="true"
+                      data-loop="true"
+                      data-wf-ignore="true"
+                      class="background-video-4 w-background-video w-background-video-atom"
+                    >
+                      <video
+                        id="2cab0a10-fb42-6569-60fa-125bdd0ffb84-video"
+                        autoplay=""
+                        loop=""
+                        style="
+                          background-image: url(&quot;https://cdn.prod.website-files.com/6058658002faec26b7e08402/66138bfd3ae6c5ad1733e017_ReportUsingModelV2-poster-00001.jpg&quot;);
+                        "
+                        muted=""
+                        playsinline=""
+                        data-wf-ignore="true"
+                        data-object-fit="cover"
+                      >
+                        <source
+                          src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66138bfd3ae6c5ad1733e017_ReportUsingModelV2-transcode.mp4"
+                          data-wf-ignore="true"
+                        />
+                        <source
+                          src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66138bfd3ae6c5ad1733e017_ReportUsingModelV2-transcode.webm"
+                          data-wf-ignore="true"
+                        />
+                      </video>
+                    </div>
+                  </div>
+                </div>
+                <div data-w-tab="Files" class="w-tab-pane">
+                  <div class="image-container-bi">
+                    <div
+                      data-poster-url="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66138c5368dba0087c7a1304_ReportUsingSQLV2-poster-00001.jpg"
+                      data-video-urls="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66138c5368dba0087c7a1304_ReportUsingSQLV2-transcode.mp4,https://cdn.prod.website-files.com/6058658002faec26b7e08402/66138c5368dba0087c7a1304_ReportUsingSQLV2-transcode.webm"
+                      data-autoplay="true"
+                      data-loop="true"
+                      data-wf-ignore="true"
+                      class="background-video-4 w-background-video w-background-video-atom"
+                    >
+                      <video
+                        id="6aedfe7d-4db3-c316-c974-0db343111ba3-video"
+                        autoplay=""
+                        loop=""
+                        style="
+                          background-image: url(&quot;https://cdn.prod.website-files.com/6058658002faec26b7e08402/66138c5368dba0087c7a1304_ReportUsingSQLV2-poster-00001.jpg&quot;);
+                        "
+                        muted=""
+                        playsinline=""
+                        data-wf-ignore="true"
+                        data-object-fit="cover"
+                      >
+                        <source
+                          src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66138c5368dba0087c7a1304_ReportUsingSQLV2-transcode.mp4"
+                          data-wf-ignore="true"
+                        />
+                        <source
+                          src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66138c5368dba0087c7a1304_ReportUsingSQLV2-transcode.webm"
+                          data-wf-ignore="true"
+                        />
+                      </video>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="error-message-2 w-form-fail">
-                <div class="text-block-60">
-                  Oops! Something went wrong while submitting the form.
+            </div>
+          </div>
+        </div>
+        <div class="single-wrapper right">
+          <div class="side-content">
+            <div class="upper">
+              <div class="frame-1000003521 bg-blue-color-text">
+                <h6 class="text-7">Intuitive interface</h6>
+              </div>
+              <h2 class="heading-37 bi-heading-small">
+                Effortless Report Creation
+              </h2>
+              <p class="text-10">
+                Say goodbye to complex coding and hello to an intuitive
+                drag-and-drop interface.<br />
+                <br />Build stunning reports in minutes, using models, tables,
+                or even writing your own SQL queries.<br />
+              </p>
+              <a
+                data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e972"
+                href="https://docs.sprinkledata.com/product/analysing-your-data/reports"
+                target="_blank"
+                class="arrow-btn-white arrow-button arrow-custom-explore-integrations-btn w-inline-block"
+              >
+                <div class="text-container">
+                  <div class="text-block-58 primary-blue">Learn more</div>
+                  <div class="underline-arrow-btn-blue"></div>
+                </div>
+                <img
+                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65da284a2ed568152b2de52a_arrow-blue.svg"
+                  loading="lazy"
+                  data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e977"
+                  alt=""
+                  class="image-111"
+                />
+                <div class="arrow-full-container">
+                  <img
+                    src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ee94685cb31cfdcaeaab68_arrow-full-blue.svg"
+                    loading="lazy"
+                    alt=""
+                    class="image-92"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="divider"></div>
+            <div class="lower">
+              <p class="text-10">
+                “The reporting tasks that could have easily taken 4 to 8 hours
+                can be done with Sprinkle in half an hour, which is a
+                game-changer for us .<br />
+              </p>
+              <div class="user">
+                <img
+                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613b617376d336f50145fa6_div.framer-h82xxf.png"
+                  loading="lazy"
+                  width="45"
+                  alt=""
+                  class="user-image"
+                />
+                <div class="user-data">
+                  <p class="paragraph-20">Sneha Saha</p>
+                  <p class="user-designation">
+                    Lead Data Engineer @BYJU&#x27;s
+                  </p>
                 </div>
               </div>
             </div>
@@ -1122,231 +1062,497 @@
       </div>
     </div>
     <div class="container-fluid">
-      <div class="warehouse-container warehouse-page">
-        <div
-          data-w-id="fd671cbc-9316-b4b8-f5bf-eb4541a33109"
-          style="opacity: 0"
-          class="image-container"
-        >
-          <div class="frame-1000003521 bg-blue-color-text">
-            <h6 class="text-7">Warehouse</h6>
-          </div>
-          <h2
-            data-w-id="8632d90a-950f-a48e-4977-fe1244787acf"
-            style="opacity: 0"
-            class="supported-carrier-heading warehouse-heading-text"
-          >
-            Connect Your Warehouse to Build Powerful Visualizations &amp;
-            Dashboards
-          </h2>
-          <div class="img-wrapper">
-            <img
-              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6606654a20fc666f74a64cc9_Group%20237624.png"
-              loading="lazy"
-              width="350"
-              sizes="(max-width: 479px) 100vw, 350.0000305175781px"
-              alt=""
-              srcset="
-                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6606654a20fc666f74a64cc9_Group%20237624-p-500.png   500w,
-                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6606654a20fc666f74a64cc9_Group%20237624-p-800.png   800w,
-                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6606654a20fc666f74a64cc9_Group%20237624-p-1080.png 1080w,
-                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6606654a20fc666f74a64cc9_Group%20237624-p-1600.png 1600w,
-                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6606654a20fc666f74a64cc9_Group%20237624-p-2000.png 2000w,
-                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6606654a20fc666f74a64cc9_Group%20237624.png        2177w
-              "
-              class="image-117"
-            />
+      <div
+        data-w-id="9981e92b-3bb9-d5ce-62a8-5c3d4561e8a2"
+        style="opacity: 0"
+        class="bi-container reverse-bi-container"
+      >
+        <div class="single-wrapper left">
+          <div class="side-content">
+            <div class="upper">
+              <div class="frame-1000003521 bg-blue-color-text">
+                <h6 class="text-7">Stunning visualisations</h6>
+              </div>
+              <h2 class="heading-37 bi-heading-small">
+                Visualise Your Insights
+              </h2>
+              <p class="text-10">
+                Bring your data to life with a wide range of customisable
+                charts, including line, bar, column, area, pie, scatter, Point
+                map, heat map and more. <br />
+                <br />Tailor every aspect of your charts, from colours and
+                labels to data points and axes.<br />
+              </p>
+              <a
+                data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e972"
+                href="https://docs.sprinkledata.com/product/analysing-your-data/dashboards"
+                target="_blank"
+                class="arrow-btn-white arrow-button arrow-custom-explore-integrations-btn w-inline-block"
+              >
+                <div class="text-container">
+                  <div class="text-block-58 primary-blue">Learn more</div>
+                  <div class="underline-arrow-btn-blue"></div>
+                </div>
+                <img
+                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65da284a2ed568152b2de52a_arrow-blue.svg"
+                  loading="lazy"
+                  data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e977"
+                  alt=""
+                  class="image-111"
+                />
+                <div class="arrow-full-container">
+                  <img
+                    src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ee94685cb31cfdcaeaab68_arrow-full-blue.svg"
+                    loading="lazy"
+                    alt=""
+                    class="image-92"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="divider"></div>
+            <div class="lower">
+              <p class="text-10">
+                “Sprinkle offers the most comprehensive dashboard features. The
+                Dashboard feature really helps collating the entire business
+                function together with the ability to visualise data using
+                various charts and graphs.”<br />
+              </p>
+              <div class="user">
+                <img
+                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613babc135ca957aa3e7005_1708679300550%201.png"
+                  loading="lazy"
+                  width="45"
+                  alt=""
+                  class="user-image"
+                />
+                <div class="user-data">
+                  <p class="paragraph-20">Sanchit Vijh</p>
+                  <p class="user-designation">
+                    Manager - Operations Design @YULU
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div
-          data-w-id="b1115ed4-44c9-55a5-881c-a40d5a729340"
-          style="opacity: 0"
-          class="content-container"
-        >
-          <div class="accordion-2 js-accordion-2">
-            <div class="accordion__item-2 js-accordion-item-2 cd active-2">
-              <div class="accordion-header-2 js-accordion-header-2">
-                <div class="accordian-header-content-text">
-                  <img
-                    src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/660a725390a05eb56f1956ba_Frame%20237617%20(3).png"
-                    loading="lazy"
-                    width="40"
-                    alt=""
-                    class="image-118"
-                  />
-                  <h5 class="heading-48">Seamless Data Access</h5>
-                </div>
-                <img
-                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6604176c3376e314c9b725c8_Vector%20(1).png"
-                  loading="lazy"
-                  width="14"
-                  alt=""
-                  class="js-accordion-icon-2 active-2"
+        <div class="single-wrapper right">
+          <div class="image-container-bi reverse-card">
+            <div
+              data-poster-url="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613bb3459a6b2cc5854ec1c_VizORdashbordVidV2-poster-00001.jpg"
+              data-video-urls="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613bb3459a6b2cc5854ec1c_VizORdashbordVidV2-transcode.mp4,https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613bb3459a6b2cc5854ec1c_VizORdashbordVidV2-transcode.webm"
+              data-autoplay="true"
+              data-loop="true"
+              data-wf-ignore="true"
+              class="background-video-4 w-background-video w-background-video-atom"
+            >
+              <video
+                id="dd4c62f1-67d5-76a9-8534-810057d92aca-video"
+                autoplay=""
+                loop=""
+                style="
+                  background-image: url(&quot;https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613bb3459a6b2cc5854ec1c_VizORdashbordVidV2-poster-00001.jpg&quot;);
+                "
+                muted=""
+                playsinline=""
+                data-wf-ignore="true"
+                data-object-fit="cover"
+              >
+                <source
+                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613bb3459a6b2cc5854ec1c_VizORdashbordVidV2-transcode.mp4"
+                  data-wf-ignore="true"
                 />
-              </div>
-              <div class="accordion-body-2 js-accordion-body-2">
-                <p class="paragraph-16">
-                  All your analytical data is stored and queried from your data
-                  warehouse. <br />
-                  <br />Sprinkle seamlessly integrates with various popular
-                  warehouses, allowing you to leverage your existing data
-                  infrastructure for insightful reports and dashboards.
-                </p>
-              </div>
-            </div>
-            <div class="accordion__item-2 js-accordion-item-2">
-              <div class="accordion-header-2 js-accordion-header-2">
-                <div class="accordian-header-content-text">
-                  <img
-                    src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/660a7255b397cf1a239c691b_Frame%20237617%20(4).png"
-                    loading="lazy"
-                    width="40"
-                    alt=""
-                    class="image-119"
-                  />
-                  <h5 class="heading-48">Unmatched Data Security</h5>
-                </div>
-                <img
-                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6604176c3376e314c9b725c8_Vector%20(1).png"
-                  loading="lazy"
-                  width="14"
-                  alt=""
-                  class="js-accordion-icon-2"
+                <source
+                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613bb3459a6b2cc5854ec1c_VizORdashbordVidV2-transcode.webm"
+                  data-wf-ignore="true"
                 />
-              </div>
-              <div class="accordion-body-2 js-accordion-body-2">
-                <p class="paragraph-16">
-                  Sprinkle prioritizes your data security. <br />
-                  <br />We don&#x27;t store any of your data on our servers. All
-                  data remains secure within your chosen data warehouse. <br />
-                  <br />Sprinkle only queries the warehouse to generate reports
-                  and dashboards.
-                </p>
-              </div>
-            </div>
-            <div class="accordion__item-2 js-accordion-item-2">
-              <div class="accordion-header-2 js-accordion-header-2">
-                <div class="accordian-header-content-text">
-                  <img
-                    src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/660a7259318bdc118b707209_Frame%20237617%20(5).png"
-                    loading="lazy"
-                    width="40"
-                    alt=""
-                    class="image-120"
-                  />
-                  <h5 class="heading-48">Efficient Data Processing</h5>
-                </div>
-                <img
-                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6604176c3376e314c9b725c8_Vector%20(1).png"
-                  loading="lazy"
-                  width="14"
-                  alt=""
-                  class="js-accordion-icon-2"
-                />
-              </div>
-              <div class="accordion-body-2 js-accordion-body-2">
-                <p class="paragraph-16">
-                  Sprinkle utilizes a cloud storage bucket to store temporary
-                  data and report caches. <br />
-                  <br />During the data processing and report generation,
-                  Sprinkle might use intermediate files. <br />
-                  <br />The &quot;Add Storage&quot; section allows you to
-                  configure a cloud storage bucket associated with your data
-                  warehouse for this purpose.
-                </p>
-              </div>
+              </video>
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="container-fluid">
-      <div class="warehouse-container">
-        <div
-          data-w-id="3031e073-c725-d187-c9ef-48432bfff56d"
-          style="opacity: 0"
-          class="image-container"
-        >
-          <div class="img-wrapper">
+      <div
+        data-w-id="d412890c-b995-53a4-a763-5596efb2cfb1"
+        style="opacity: 0"
+        class="bi-container"
+      >
+        <div class="single-wrapper left">
+          <div class="image-container-bi">
+            <div
+              data-poster-url="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613bd0850b9a24782cd3dd8_DrillVidoV2-poster-00001.jpg"
+              data-video-urls="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613bd0850b9a24782cd3dd8_DrillVidoV2-transcode.mp4,https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613bd0850b9a24782cd3dd8_DrillVidoV2-transcode.webm"
+              data-autoplay="true"
+              data-loop="true"
+              data-wf-ignore="true"
+              class="background-video-4 w-background-video w-background-video-atom"
+            >
+              <video
+                id="43887ac0-8405-c85e-8e86-44cec675c677-video"
+                autoplay=""
+                loop=""
+                style="
+                  background-image: url(&quot;https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613bd0850b9a24782cd3dd8_DrillVidoV2-poster-00001.jpg&quot;);
+                "
+                muted=""
+                playsinline=""
+                data-wf-ignore="true"
+                data-object-fit="cover"
+              >
+                <source
+                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613bd0850b9a24782cd3dd8_DrillVidoV2-transcode.mp4"
+                  data-wf-ignore="true"
+                />
+                <source
+                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613bd0850b9a24782cd3dd8_DrillVidoV2-transcode.webm"
+                  data-wf-ignore="true"
+                />
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="single-wrapper right">
+          <div class="side-content">
+            <div class="upper">
+              <div class="frame-1000003521 bg-blue-color-text">
+                <h6 class="text-7">Go beyond the surface</h6>
+              </div>
+              <h2 class="heading-37 bi-heading-small">
+                Drill Down and Understand the “Why?”
+              </h2>
+              <ul role="list" class="list-4">
+                <li class="text-10">
+                  Drill Down &amp; Up: Explore hierarchical data and uncover
+                  deeper insights.
+                </li>
+                <li class="text-10">
+                  Break Out: Analyse how specific measures are distributed
+                  across different categories and timeframes.
+                </li>
+              </ul>
+              <a
+                data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e972"
+                href="https://docs.sprinkledata.com/product/analysing-your-data/reports/build-using-tables/advanced-features/drill-hierarchical-and-date"
+                target="_blank"
+                class="arrow-btn-white arrow-button arrow-custom-explore-integrations-btn w-inline-block"
+              >
+                <div class="text-container">
+                  <div class="text-block-58 primary-blue">Learn more</div>
+                  <div class="underline-arrow-btn-blue"></div>
+                </div>
+                <img
+                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65da284a2ed568152b2de52a_arrow-blue.svg"
+                  loading="lazy"
+                  data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e977"
+                  alt=""
+                  class="image-111"
+                />
+                <div class="arrow-full-container">
+                  <img
+                    src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ee94685cb31cfdcaeaab68_arrow-full-blue.svg"
+                    loading="lazy"
+                    alt=""
+                    class="image-92"
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div
+        data-w-id="0bcdac8d-1cc1-00ba-6604-31a99a4cd90c"
+        style="opacity: 0"
+        class="bi-container reverse-bi-container"
+      >
+        <div class="single-wrapper left">
+          <div class="side-content">
+            <div class="upper">
+              <div class="frame-1000003521 bg-blue-color-text">
+                <h6 class="text-7">Share with your team</h6>
+              </div>
+              <h2 class="heading-37 bi-heading-small">
+                Work together seamlessly with granular access control
+              </h2>
+              <p class="text-10">
+                Sprinkle makes sharing data entities a breeze, fostering
+                effortless collaboration within your team. <br />
+                <br />Share dashboards, reports, SQL transforms, and more with
+                your colleagues, granting them specific access levels
+                (edit/view/manage etc) to suit their needs.<br />
+              </p>
+              <a
+                data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e972"
+                href="https://docs.sprinkledata.com/product/collaborating-on-data/sharing"
+                target="_blank"
+                class="arrow-btn-white arrow-button arrow-custom-explore-integrations-btn w-inline-block"
+              >
+                <div class="text-container">
+                  <div class="text-block-58 primary-blue">Learn more</div>
+                  <div class="underline-arrow-btn-blue"></div>
+                </div>
+                <img
+                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65da284a2ed568152b2de52a_arrow-blue.svg"
+                  loading="lazy"
+                  data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e977"
+                  alt=""
+                  class="image-111"
+                />
+                <div class="arrow-full-container">
+                  <img
+                    src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ee94685cb31cfdcaeaab68_arrow-full-blue.svg"
+                    loading="lazy"
+                    alt=""
+                    class="image-92"
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="single-wrapper right">
+          <div class="image-container-bi reverse-card image-only">
             <img
-              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66041d1f29cad878d174a1f8_Component%2025.png"
+              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613be8e1cae07d2924e3c50_Group%201000002800.png"
               loading="lazy"
-              width="400"
-              sizes="(max-width: 479px) 100vw, 400.0000305175781px"
-              alt=""
+              sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 96vw, (max-width: 1439px) 42vw, (max-width: 1919px) 580px, 650px"
               srcset="
-                https://cdn.prod.website-files.com/6058658002faec26b7e08402/66041d1f29cad878d174a1f8_Component%2025-p-500.png   500w,
-                https://cdn.prod.website-files.com/6058658002faec26b7e08402/66041d1f29cad878d174a1f8_Component%2025-p-800.png   800w,
-                https://cdn.prod.website-files.com/6058658002faec26b7e08402/66041d1f29cad878d174a1f8_Component%2025-p-1080.png 1080w,
-                https://cdn.prod.website-files.com/6058658002faec26b7e08402/66041d1f29cad878d174a1f8_Component%2025-p-1600.png 1600w,
-                https://cdn.prod.website-files.com/6058658002faec26b7e08402/66041d1f29cad878d174a1f8_Component%2025.png        1971w
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613be8e1cae07d2924e3c50_Group%201000002800-p-500.png   500w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613be8e1cae07d2924e3c50_Group%201000002800-p-800.png   800w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613be8e1cae07d2924e3c50_Group%201000002800-p-1080.png 1080w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613be8e1cae07d2924e3c50_Group%201000002800-p-1600.png 1600w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613be8e1cae07d2924e3c50_Group%201000002800-p-2000.png 2000w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613be8e1cae07d2924e3c50_Group%201000002800.png        2176w
               "
-              class="image-117"
+              alt=""
             />
           </div>
         </div>
-        <div
-          data-w-id="3031e073-c725-d187-c9ef-48432bfff575"
-          style="opacity: 0"
-          class="content-container"
-        >
-          <div class="frame-1000003521 bg-blue-color-text">
-            <h6 class="text-7">Connectors</h6>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div
+        data-w-id="bfc7786b-8465-5966-6dbc-f00e1035e943"
+        style="opacity: 0"
+        class="bi-container"
+      >
+        <div class="single-wrapper left">
+          <div class="image-container-bi image-only-normal">
+            <img
+              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613befede87a8c33510803e_Group%201000002796.png"
+              loading="lazy"
+              sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 96vw, (max-width: 1439px) 42vw, (max-width: 1919px) 580px, 650px"
+              srcset="
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613befede87a8c33510803e_Group%201000002796-p-500.png   500w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613befede87a8c33510803e_Group%201000002796-p-800.png   800w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613befede87a8c33510803e_Group%201000002796-p-1080.png 1080w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613befede87a8c33510803e_Group%201000002796-p-1600.png 1600w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613befede87a8c33510803e_Group%201000002796-p-2000.png 2000w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613befede87a8c33510803e_Group%201000002796.png        2412w
+              "
+              alt=""
+            />
           </div>
-          <h2
-            data-w-id="a1a3fe4e-e5cf-719e-c974-a201f9a23838"
-            style="opacity: 0"
-            class="supported-carrier-heading warehouse-heading-text"
-          >
-            Unify Data from Any System
-          </h2>
-          <p class="paragraph-16 para-connectors">
-            If your data is fragmented in different systems, Sprinkle helps you
-            unify all your data into your data warehouse using our native
-            connectors.
-            <br />
-            <br />Sprinkle provides 25+ ready to use connectors supporting
-            ingestion from:
+        </div>
+        <div class="single-wrapper right">
+          <div class="side-content">
+            <div class="upper">
+              <div class="frame-1000003521 bg-blue-color-text">
+                <h6 class="text-7">Streamlined Teamwork</h6>
+              </div>
+              <h2 class="heading-37 bi-heading-small">
+                Collaborate on Data with Ease
+              </h2>
+              <p class="text-10">
+                Discuss data entities, share insights, and suggest edits
+                directly within the platform.<br />
+              </p>
+              <a
+                data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e972"
+                href="https://docs.sprinkledata.com/product/collaborating-on-data/comments"
+                target="_blank"
+                class="arrow-btn-white arrow-button arrow-custom-explore-integrations-btn w-inline-block"
+              >
+                <div class="text-container">
+                  <div class="text-block-58 primary-blue">Learn more</div>
+                  <div class="underline-arrow-btn-blue"></div>
+                </div>
+                <img
+                  src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65da284a2ed568152b2de52a_arrow-blue.svg"
+                  loading="lazy"
+                  data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e977"
+                  alt=""
+                  class="image-111"
+                />
+                <div class="arrow-full-container">
+                  <img
+                    src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ee94685cb31cfdcaeaab68_arrow-full-blue.svg"
+                    loading="lazy"
+                    alt=""
+                    class="image-92"
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div
+        data-w-id="748dcdf8-1b14-c7ac-555a-6a6bc5bf1bac"
+        style="opacity: 0"
+        class="bi-container reverse-bi-container last-card"
+      >
+        <div class="single-wrapper left">
+          <div class="side-content">
+            <div class="upper">
+              <div class="frame-1000003521 bg-blue-color-text">
+                <h6 class="text-7">Access from Any Device</h6>
+              </div>
+              <h2 class="heading-37 bi-heading-small">
+                Mobile-friendly dashboards on the go!
+              </h2>
+              <ul role="list" class="list-4">
+                <li class="text-10">
+                  Access dashboards anytime, anywhere: View key metrics and
+                  insights directly from your mobile browser.
+                </li>
+                <li class="text-10">
+                  Optimized UI for mobile: Sprinkle automatically adjusts the
+                  layout for a smooth user experience on smaller screens.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="single-wrapper right">
+          <div class="image-container-bi reverse-card image-only">
+            <img
+              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613c03da318d22630ab1c3c_Claymockups.png"
+              loading="lazy"
+              sizes="100vw"
+              srcset="
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613c03da318d22630ab1c3c_Claymockups-p-500.png   500w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613c03da318d22630ab1c3c_Claymockups-p-800.png   800w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613c03da318d22630ab1c3c_Claymockups-p-1080.png 1080w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613c03da318d22630ab1c3c_Claymockups-p-1600.png 1600w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613c03da318d22630ab1c3c_Claymockups-p-2000.png 2000w,
+                https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613c03da318d22630ab1c3c_Claymockups.png        2576w
+              "
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="power-container">
+      <div
+        data-w-id="f9511b1c-701b-cde1-b99f-7facccc0d65f"
+        style="opacity: 0"
+        class="w-layout-blockcontainer container-12 w-container"
+      >
+        <div class="div-block-122">
+          <div class="div-block-124">
+            <img
+              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65d60c22fb909cd1a8f2f67a_heart.svg"
+              loading="lazy"
+              alt=""
+            />
+            <h2 class="subheading-2">Here’s why you’ll love Sprinkle</h2>
+          </div>
+          <h3 class="heading-41">Effortless Analysis, Beautiful Results</h3>
+        </div>
+        <div class="div-block-123">
+          <p class="text-18">
+            Free up your IT team from repetitive report generation and allow
+            them to focus on more strategic projects. <br />
+            <br />Sprinkle BI empowers business users to analyse data
+            independently, saving valuable time and resources.
           </p>
-          <ul role="list" class="list-3">
-            <li class="paragraph-16 list-para">
-              Databases (on-premise and cloud)
-            </li>
-            <li class="paragraph-16 list-para">
-              Applications (CRM, marketing tools, etc.)
-            </li>
-            <li class="paragraph-16 list-para">Files (CSV, Excel)</li>
-            <li class="paragraph-16 list-para">Events And more!</li>
-          </ul>
-          <a
-            data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e972"
-            href="./connectors.html"
-            class="arrow-btn-white arrow-button arrow-custom-explore-integrations-btn w-inline-block"
-          >
-            <div class="text-container">
-              <div class="text-block-58 primary-blue">See all connectors</div>
-              <div class="underline-arrow-btn-blue"></div>
-            </div>
-            <img
-              src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65da284a2ed568152b2de52a_arrow-blue.svg"
-              loading="lazy"
-              data-w-id="240a8deb-dc68-dc8c-315e-9a0ab969e977"
-              alt=""
-              class="image-111"
-            />
-            <div class="arrow-full-container">
-              <img
-                src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ee94685cb31cfdcaeaab68_arrow-full-blue.svg"
-                loading="lazy"
-                alt=""
-                class="image-92"
-              />
-            </div>
-          </a>
         </div>
       </div>
-    </div>
-    <div class="container-fluid">
+      <div class="w-layout-blockcontainer container-13 w-container">
+        <div
+          data-w-id="f9511b1c-701b-cde1-b99f-7facccc0d66b"
+          style="opacity: 0"
+          class="div-block-125"
+        >
+          <img
+            src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613c2b7ac06bc65a4fc68ba_Group.png"
+            loading="lazy"
+            width="45"
+            alt=""
+            class="image-87 unleash-icon-small"
+          />
+          <h5 class="heading-42">Gain instant insights</h5>
+          <p class="text-19">
+            Quickly identify trends and patterns within your data, without
+            getting bogged down in details.
+          </p>
+        </div>
+        <div
+          data-w-id="f9511b1c-701b-cde1-b99f-7facccc0d671"
+          style="opacity: 0"
+          class="div-block-125 real-time-analysis"
+        >
+          <img
+            src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613c2fe0e6f9e3a57acf47c_Frame%2013.png"
+            loading="lazy"
+            width="45"
+            alt=""
+            class="unleash-icon-small"
+          />
+          <h5 class="heading-42">Drive data-driven decisions</h5>
+          <p class="text-19">
+            Translate complex data into actionable insights that inform
+            strategic choices.
+          </p>
+        </div>
+      </div>
+      <div class="w-layout-blockcontainer container-13 w-container">
+        <div
+          data-w-id="f9511b1c-701b-cde1-b99f-7facccc0d67e"
+          style="opacity: 0"
+          class="div-block-125"
+        >
+          <img
+            src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613c3435d67b8a2883a2fc2_Group.png"
+            loading="lazy"
+            width="45"
+            alt=""
+            class="image-89"
+          />
+          <h5 class="heading-42">Improve collaboration</h5>
+          <p class="text-19">
+            Share dashboards with colleagues and stakeholders, fostering
+            transparent and informed communication.
+          </p>
+        </div>
+        <div
+          data-w-id="f9511b1c-701b-cde1-b99f-7facccc0d684"
+          style="opacity: 0"
+          class="div-block-125"
+        >
+          <img
+            src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6613c359870fb02135c0caa5_Group.png"
+            loading="lazy"
+            width="45"
+            alt=""
+            class="image-90"
+          />
+          <h5 class="heading-42">Save time and effort</h5>
+          <p class="text-19">
+            Eliminate the need for manual report generation and data analysis,
+            freeing up valuable resources.
+          </p>
+        </div>
+      </div>
+    </section>
+    <article class="container-fluid">
       <div class="faq-section">
         <img
           src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65f1e8e2a125d24560df67ed_gradient.svg"
@@ -1357,21 +1563,21 @@
         <div class="faq-container">
           <div class="pricing-content faq-content warehouse-faq">
             <div
-              data-w-id="2a0efbcf-2b78-518a-0940-b1598b1d0547"
+              data-w-id="32cff587-f8ca-c0a3-ad51-a80e941c44c2"
               style="opacity: 0"
               class="frame-1000003521 bg-blue-color-text"
             >
               <div class="text-11">Questions</div>
             </div>
             <h1
-              data-w-id="2a0efbcf-2b78-518a-0940-b1598b1d054a"
+              data-w-id="32cff587-f8ca-c0a3-ad51-a80e941c44c5"
               style="opacity: 0"
               class="main-head-pricing faq-heading"
             >
               Frequently asked questions
             </h1>
             <p
-              data-w-id="2a0efbcf-2b78-518a-0940-b1598b1d054c"
+              data-w-id="32cff587-f8ca-c0a3-ad51-a80e941c44c7"
               style="opacity: 0"
               class="extra-text"
             >
@@ -1383,7 +1589,7 @@
             <div
               data-hover="false"
               data-delay="0"
-              data-w-id="2a0efbcf-2b78-518a-0940-b1598b1d0551"
+              data-w-id="32cff587-f8ca-c0a3-ad51-a80e941c44cc"
               style="height: 70px"
               class="faq w-dropdown"
             >
@@ -1391,7 +1597,7 @@
                 <div
                   data-is-ix2-target="1"
                   class="lottie-animation"
-                  data-w-id="2a0efbcf-2b78-518a-0940-b1598b1d0553"
+                  data-w-id="32cff587-f8ca-c0a3-ad51-a80e941c44ce"
                   data-animation-type="lottie"
                   data-src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66029e681dcae2416719f686_cross-icon-anim.json"
                   data-loop="0"
@@ -1403,66 +1609,35 @@
                   data-ix2-initial-state="0"
                 ></div>
                 <div class="dropdown-header">
-                  Why integrate a Data Warehouse?
+                  What types of visualizations can I use in Sprinkle?
                 </div>
               </div>
               <nav class="dropdown-content w-dropdown-list">
                 <p class="faq-text">
-                  Data Warehouses offer a central location to store all your
-                  organization&#x27;s analytical data. This creates a single
-                  source of truth, ensuring consistency and accuracy for your
-                  analysis.  <br />
-                  <br />Having all your data in one place simplifies the process
-                  of querying and generating insights.
-                </p>
-              </nav>
-            </div>
-            <div
-              data-hover="false"
-              data-delay="0"
-              data-w-id="2a0efbcf-2b78-518a-0940-b1598b1d056a"
-              style="height: 70px"
-              class="faq w-dropdown"
-            >
-              <div class="faq-wrapper w-dropdown-toggle">
-                <div
-                  data-is-ix2-target="1"
-                  class="lottie-animation"
-                  data-w-id="2a0efbcf-2b78-518a-0940-b1598b1d056c"
-                  data-animation-type="lottie"
-                  data-src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66029e681dcae2416719f686_cross-icon-anim.json"
-                  data-loop="0"
-                  data-direction="1"
-                  data-autoplay="0"
-                  data-renderer="svg"
-                  data-default-duration="0.5"
-                  data-duration="0"
-                  data-ix2-initial-state="0"
-                ></div>
-                <div class="dropdown-header">
-                  What if i don’t have any data in my warehouse?
-                </div>
-              </div>
-              <nav class="dropdown-content w-dropdown-list">
-                <p class="faq-text">
-                  No problem! <br />
-                  <br />Sprinkle provides 25+ ready to use connectors that
-                  enable you to bring data to your warehouse from various
-                  systems.<br />
-                  <br />Check out all the connectors
+                  Sprinkle offers a wide range of
                   <a
-                    href="https://docs.sprinkledata.com/product/integrating-your-data/destination-warehouses"
+                    href="https://docs.sprinkledata.com/product/analysing-your-data/reports/build-using-tables/visualizations"
                     target="_blank"
-                    class="link-27"
-                    >here</a
-                  >.
+                    class="link-29"
+                    >visualisation</a
+                  >
+                  options, including:Bar charts: Effective for comparing
+                  different categories of data.<br />‍<br />
+                  <strong class="bold-span">Line charts</strong>: Ideal for
+                  showing trends and changes over time.<br />
+                  <strong class="bold-span">Pie charts</strong>: Useful for
+                  illustrating the composition of a whole.<br />
+                  <strong class="bold-span">Scatter plots</strong>: Helpful for
+                  identifying relationships between two variables.<br />
+                  <strong class="bold-span">Maps</strong>: Allow you to
+                  visualise data geographically and many more.
                 </p>
               </nav>
             </div>
             <div
               data-hover="false"
               data-delay="0"
-              data-w-id="2a0efbcf-2b78-518a-0940-b1598b1d056a"
+              data-w-id="32cff587-f8ca-c0a3-ad51-a80e941c44d4"
               style="height: 70px"
               class="faq w-dropdown"
             >
@@ -1470,7 +1645,7 @@
                 <div
                   data-is-ix2-target="1"
                   class="lottie-animation"
-                  data-w-id="2a0efbcf-2b78-518a-0940-b1598b1d056c"
+                  data-w-id="32cff587-f8ca-c0a3-ad51-a80e941c44d6"
                   data-animation-type="lottie"
                   data-src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66029e681dcae2416719f686_cross-icon-anim.json"
                   data-loop="0"
@@ -1481,305 +1656,91 @@
                   data-duration="0"
                   data-ix2-initial-state="0"
                 ></div>
-                <div class="dropdown-header">Where is my data stored?</div>
+                <div class="dropdown-header">
+                  How much can i customise my dashboards?
+                </div>
               </div>
               <nav class="dropdown-content w-dropdown-list">
                 <p class="faq-text">
-                  All your data is stored in your data warehouse itself and the
-                  intermediate data along with report caches is stored in the
-                  cloud bucket. Sprinkle does not store any data.
+                  Sprinkle offers a user-friendly interface for customising
+                  dashboards.You can drag-and-drop different reports and
+                  visualisations, arrange them to your preference, and apply
+                  filters to focus on specific aspects of your data.
+                </p>
+              </nav>
+            </div>
+            <div
+              data-hover="false"
+              data-delay="0"
+              data-w-id="32cff587-f8ca-c0a3-ad51-a80e941c44e6"
+              style="height: 70px"
+              class="faq w-dropdown"
+            >
+              <div class="faq-wrapper w-dropdown-toggle">
+                <div
+                  data-is-ix2-target="1"
+                  class="lottie-animation"
+                  data-w-id="32cff587-f8ca-c0a3-ad51-a80e941c44e8"
+                  data-animation-type="lottie"
+                  data-src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66029e681dcae2416719f686_cross-icon-anim.json"
+                  data-loop="0"
+                  data-direction="1"
+                  data-autoplay="0"
+                  data-renderer="svg"
+                  data-default-duration="0.5"
+                  data-duration="0"
+                  data-ix2-initial-state="0"
+                ></div>
+                <div class="dropdown-header">
+                  Can I customise the appearance of my visualisations?
+                </div>
+              </div>
+              <nav class="dropdown-content w-dropdown-list">
+                <p class="faq-text">
+                  Yes, Sprinkle offers customisation options for visualisations,
+                  allowing you to adjust colours, fonts, and layouts to match
+                  your preferences and branding.
+                </p>
+              </nav>
+            </div>
+            <div
+              data-hover="false"
+              data-delay="0"
+              data-w-id="32cff587-f8ca-c0a3-ad51-a80e941c44ee"
+              style="height: 70px"
+              class="faq w-dropdown"
+            >
+              <div class="faq-wrapper w-dropdown-toggle">
+                <div
+                  data-is-ix2-target="1"
+                  class="lottie-animation"
+                  data-w-id="32cff587-f8ca-c0a3-ad51-a80e941c44f0"
+                  data-animation-type="lottie"
+                  data-src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66029e681dcae2416719f686_cross-icon-anim.json"
+                  data-loop="0"
+                  data-direction="1"
+                  data-autoplay="0"
+                  data-renderer="svg"
+                  data-default-duration="0.5"
+                  data-duration="0"
+                  data-ix2-initial-state="0"
+                ></div>
+                <div class="dropdown-header">
+                  Can I schedule report delivery?
+                </div>
+              </div>
+              <nav class="dropdown-content w-dropdown-list">
+                <p class="faq-text">
+                  Yes, Sprinkle allows you to schedule reports at specific
+                  intervals (e.g., daily, weekly) and deliver them to your inbox
+                  or designated recipients.
                 </p>
               </nav>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="container-fluid">
-      <div class="slider-wrapper">
-        <div class="slider-container">
-          <div class="pricing-content faq-content warehouse-faq">
-            <div
-              data-w-id="76c11e54-34f8-9e7e-0a72-de9d27068fd3"
-              style="opacity: 0"
-              class="frame-1000003521 bg-blue-color-text"
-            >
-              <div class="text-11">Testimonials</div>
-            </div>
-            <h1
-              data-w-id="76c11e54-34f8-9e7e-0a72-de9d27068fd6"
-              style="opacity: 0"
-              class="main-head-pricing faq-heading"
-            >
-              Trusted by hundreds of professionals
-            </h1>
-            <p
-              data-w-id="76c11e54-34f8-9e7e-0a72-de9d27068fd8"
-              style="opacity: 0"
-              class="extra-text"
-            >
-              Some of the most memorable reviews we have received from our
-               customers.
-            </p>
-          </div>
-          <div
-            data-delay="8000"
-            data-animation="slide"
-            class="review-slider w-slider"
-            data-autoplay="true"
-            data-easing="ease-in-out"
-            style="opacity: 0"
-            data-hide-arrows="false"
-            data-disable-swipe="false"
-            data-w-id="684ebd8b-b3ee-0612-e7b2-563a60c10f8e"
-            data-autoplay-limit="0"
-            data-nav-spacing="4"
-            data-duration="500"
-            data-infinite="true"
-          >
-            <div class="mask-2 w-slider-mask">
-              <div class="common-slide w-slide">
-                <div class="slide-wrapper">
-                  <div class="slide-rate">
-                    <img
-                      src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6605ac2773ccc155cea8286e_div.quote-slider-decor.png"
-                      loading="lazy"
-                      width="200"
-                      alt=""
-                      class="rate-image"
-                    />
-                  </div>
-                  <p class="header-slider">
-                    Sprinkle helped me build pipelines with ease incredibly
-                    useful for building my data pipelines. My team can easily
-                    access and understand the data with platform&#x27;s
-                    user-friendly interface.<br />
-                  </p>
-                  <div class="reviewer-container">
-                    <div class="img-container">
-                      <img
-                        src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65f1c98652bda0d8d8cd3713_joel%20(1).jpeg"
-                        loading="lazy"
-                        width="64"
-                        alt=""
-                        class="image-106"
-                      />
-                      <img
-                        src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65f1c3506cefedb1f6066a68_Vector.png"
-                        loading="lazy"
-                        width="28"
-                        alt=""
-                        class="image-105"
-                      />
-                    </div>
-                    <p class="paragraph-17">Joel Dominic Pereira</p>
-                    <p class="paragraph-18">
-                      Operations Specialist @
-                      <span class="text-span-7">BrightMoney</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="common-slide w-slide">
-                <div class="slide-wrapper">
-                  <div class="slide-rate">
-                    <img
-                      src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/660478ef02fff9112b4d8c5f_fivestar.png"
-                      loading="lazy"
-                      width="200"
-                      alt=""
-                      class="rate-image"
-                    />
-                  </div>
-                  <p class="header-slider">
-                    With easy data extraction and good business analytics,
-                    Sprinkle is helping us make informed decisions towards
-                    achieving our business goals.<br />
-                  </p>
-                  <div class="reviewer-container">
-                    <div class="img-container">
-                      <img
-                        src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65f1baaf163dcef14ea334c4_customer1.png"
-                        loading="lazy"
-                        width="64"
-                        alt=""
-                        class="image-106"
-                      />
-                      <img
-                        src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65f1bb169518f9fbf1022c38_yulu-customer.png"
-                        loading="lazy"
-                        width="28"
-                        alt=""
-                        class="image-105"
-                      />
-                    </div>
-                    <p class="paragraph-17">Kaushal Mayekar</p>
-                    <p class="paragraph-18">
-                      Assistant Director @ <span class="text-span-7">Yulu</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="common-slide w-slide">
-                <div class="slide-wrapper">
-                  <div class="slide-rate">
-                    <img
-                      src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6605ac2773ccc155cea8286e_div.quote-slider-decor.png"
-                      loading="lazy"
-                      width="200"
-                      alt=""
-                      class="rate-image"
-                    />
-                  </div>
-                  <p class="header-slider">
-                    Sprinkle’s Quick data integration options for diverse data
-                    sources &amp; automation of repetitive reporting tasks, is a
-                    huge save on time for the Data Engineers &amp; Analysts.<br />
-                  </p>
-                  <div class="reviewer-container">
-                    <div class="img-container">
-                      <img
-                        src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65f800a0f5b9b2295714fa75_unnati.png"
-                        loading="lazy"
-                        width="64"
-                        alt=""
-                        class="image-106"
-                      />
-                      <img
-                        src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65f800b8f5b9b22957150e4d_Vector.png"
-                        loading="lazy"
-                        width="28"
-                        alt=""
-                        class="image-105"
-                      />
-                    </div>
-                    <p class="paragraph-17">Unnati Jaiswal</p>
-                    <p class="paragraph-18">
-                      Senior Data Analyst @
-                      <span class="text-span-7">BYJU’s</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="common-slide w-slide">
-                <div class="slide-wrapper">
-                  <div class="slide-rate">
-                    <img
-                      src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/6605ac2773ccc155cea8286e_div.quote-slider-decor.png"
-                      loading="lazy"
-                      width="200"
-                      alt=""
-                      class="rate-image"
-                    />
-                  </div>
-                  <p class="header-slider">
-                    After evaluating several other products, we ultimately
-                    decided to use Sprinkle because it offered a comprehensive
-                    solution. It had everything we needed for data integration,
-                    modeling, and visualisation.<br />
-                  </p>
-                  <div class="reviewer-container">
-                    <div class="img-container">
-                      <img
-                        src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65f80243d69a4a34078d099c_ramakrishna.png"
-                        loading="lazy"
-                        width="64"
-                        alt=""
-                        class="image-106"
-                      />
-                      <img
-                        src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65f802317288515146c28a93_Vector.png"
-                        loading="lazy"
-                        width="28"
-                        alt=""
-                        class="image-105"
-                      />
-                    </div>
-                    <p class="paragraph-17">Ramakrishna Gorty</p>
-                    <p class="paragraph-18">
-                      Associate Vice President @
-                      <span class="text-span-7">AceTurtle</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="common-slide w-slide">
-                <div class="slide-wrapper">
-                  <div class="slide-rate">
-                    <img
-                      src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/660478ef02fff9112b4d8c5f_fivestar.png"
-                      loading="lazy"
-                      width="200"
-                      alt=""
-                      class="rate-image"
-                    />
-                  </div>
-                  <p class="header-slider">
-                    Sprinkle is a must-have tool for companies on their data
-                    journey of building the data stack. It reduces manual effort
-                    by providing automation and gives companies the flexibility
-                    to work with different datasets from multiple sources.<br />
-                  </p>
-                  <div class="reviewer-container">
-                    <div class="img-container">
-                      <img
-                        src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65f80297cf9e575fa021d332_manish.png"
-                        loading="lazy"
-                        width="64"
-                        alt=""
-                        class="image-106"
-                      />
-                      <img
-                        src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65f802a1989211966d4dd046_Vector.png"
-                        loading="lazy"
-                        width="28"
-                        alt=""
-                        class="image-105"
-                      />
-                    </div>
-                    <p class="paragraph-17">Manish Kumar Jain</p>
-                    <p class="paragraph-18">
-                      AVP, Data Engineering @
-                      <span class="text-span-7">Aavas Financiers</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="left-arrow-2 w-slider-arrow-left">
-              <img
-                src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/66047313308c9e3f93157458_Button%20-%20previous%20slide.png"
-                loading="lazy"
-                width="100"
-                height="Auto"
-                alt=""
-                srcset="
-                  https://cdn.prod.website-files.com/6058658002faec26b7e08402/66047313308c9e3f93157458_Button%20-%20previous%20slide-p-500.png 500w,
-                  https://cdn.prod.website-files.com/6058658002faec26b7e08402/66047313308c9e3f93157458_Button%20-%20previous%20slide.png       513w
-                "
-                sizes="80px"
-                class="image-122"
-              />
-            </div>
-            <div class="right-arrow-2 w-slider-arrow-right">
-              <img
-                src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/660473173775d5c8be913344_Button%20-%20next%20slide.png"
-                loading="lazy"
-                width="100"
-                sizes="80px"
-                alt=""
-                srcset="
-                  https://cdn.prod.website-files.com/6058658002faec26b7e08402/660473173775d5c8be913344_Button%20-%20next%20slide-p-500.png 500w,
-                  https://cdn.prod.website-files.com/6058658002faec26b7e08402/660473173775d5c8be913344_Button%20-%20next%20slide.png       513w
-                "
-                class="image-121"
-              />
-            </div>
-            <div class="w-slider-nav w-round"></div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </article>
     <section class="footer-container">
       <img
         src="https://cdn.prod.website-files.com/6058658002faec26b7e08402/65ef0d806feb36f3d570455f_Vector.png"
@@ -1836,7 +1797,7 @@
           >
             <div class="section-title">
               <div class="section-title">
-                <h2 class="heading-43">Build your Centralized Data Hub</h2>
+                <h2 class="heading-43">Unleash Insights for Everyone</h2>
                 <p class="text-20">Got a question? Reach out to us!</p>
               </div>
             </div>
@@ -1912,7 +1873,7 @@
               class="footer-link-container"
             >
               <a
-                href="./connectors.html"
+                href="/product/connectors"
                 class="footer-link-two footer-link-override-css"
                 >Data Integration</a
               >
@@ -1923,7 +1884,7 @@
               class="footer-link-container"
             >
               <a
-                href="./transformation-layer.html"
+                href="/product/transformation-layer"
                 class="footer-link-two footer-link-override-css"
                 >Transformation layer</a
               >
@@ -1934,8 +1895,9 @@
               class="footer-link-container"
             >
               <a
-                href="./self-serve-bi.html"
-                class="footer-link-two footer-link-override-css"
+                href="/product/self-serve-bi"
+                aria-current="page"
+                class="footer-link-two footer-link-override-css w--current"
                 >Self Serve BI</a
               >
               <div class="footer-underline"></div>
@@ -1945,7 +1907,7 @@
               class="footer-link-container"
             >
               <a
-                href="./data-delivery.html"
+                href="/product/data-delivery"
                 class="footer-link-two footer-link-override-css"
                 >Data Delivery</a
               >
@@ -1956,7 +1918,7 @@
               class="footer-link-container"
             >
               <a
-                href="./embed-analytics.html"
+                href="/product/embed-analytics"
                 class="footer-link-two footer-link-override-css"
                 >Embed Analytics</a
               >
@@ -1976,9 +1938,8 @@
               class="footer-link-container"
             >
               <a
-                href="./datawarehouse.html"
-                aria-current="page"
-                class="footer-link-two footer-link-override-css w--current"
+                href="/product/datawarehouse"
+                class="footer-link-two footer-link-override-css"
                 >Data Warehouses</a
               >
               <div class="footer-underline"></div>
@@ -2314,66 +2275,5 @@
     </noscript>
         <script src="../../assets/js/site-runtime.js"></script>
 
-    <script>
-      (function () {
-        var settings = {
-          oneOpen: true,
-          accordion: ".js-accordion-2",
-          header: ".js-accordion-header-2",
-          item: ".js-accordion-item-2",
-          body: ".js-accordion-body-2",
-          icon: ".js-accordion-icon-2",
-          active: "active-2",
-        };
-
-        function setBodyState(item, isOpen) {
-          var body = item.querySelector(settings.body);
-          var icon = item.querySelector(settings.icon);
-
-          if (body) {
-            body.style.display = isOpen ? "block" : "none";
-          }
-
-          if (icon) {
-            icon.classList.toggle(settings.active, isOpen);
-          }
-
-          item.classList.toggle(settings.active, isOpen);
-        }
-
-        function initAccordion(rootEl) {
-          var items = Array.prototype.slice.call(
-            rootEl.querySelectorAll(":scope > " + settings.item),
-          );
-
-          items.forEach(function (item) {
-            var header = item.querySelector(":scope > " + settings.header);
-            var isOpen = item.classList.contains(settings.active);
-
-            setBodyState(item, isOpen);
-
-            if (!header) {
-              return;
-            }
-
-            header.addEventListener("click", function () {
-              var willOpen = !item.classList.contains(settings.active);
-
-              if (settings.oneOpen) {
-                items.forEach(function (other) {
-                  if (other !== item) {
-                    setBodyState(other, false);
-                  }
-                });
-              }
-
-              setBodyState(item, willOpen);
-            });
-          });
-        }
-
-        document.querySelectorAll(settings.accordion).forEach(initAccordion);
-      })();
-    </script>
   </body>
 </html>
