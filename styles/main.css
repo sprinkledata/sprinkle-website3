@@ -18495,3 +18495,149 @@ blockquote {
 .animated-color-button:focus-visible .animated-text {
   color: #fff !important;
 }
+
+@media screen and (max-width: 991px) {
+
+  .nav-menu-wrapper-items.w--open {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    z-index: 300;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    padding: 8px 0 16px;
+  }
+
+  .nav-menu-list {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .list-item1,
+  .list-item2,
+  .list-item4,
+  .list-item5,
+  .list-item6 {
+    width: 100%;
+    border-bottom: 1px solid rgba(119,131,143,0.12);
+  }
+
+  .nav-dropdown-3 {
+    width: 100% !important;
+    align-items: stretch !important;
+  }
+
+  .nav-dropdown-toggle-2 {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 14px 4px !important;
+  }
+
+  /* ── FIX: icon size so it doesn't collapse into text ── */
+  .nav-dropdown-icon-3.w-icon-dropdown-toggle {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px !important;
+    flex-shrink: 0 !important;
+    margin-left: 0 !important;        /* remove auto from icon */
+    order: 2 !important;              /* push icon to the RIGHT */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .nav-dropdown-toggle-2 .text-block-55,
+  .nav-dropdown-toggle-2 .text-block-56,
+  .nav-dropdown-toggle-2 .text-block-57 {
+    flex: 1 !important;
+    white-space: nowrap !important;
+    order: 1 !important;              /* text stays LEFT */
+  }
+
+  .nav-dropdown-toggle-2 .underline-nav {
+    display: none !important;
+  }
+
+  /* ── THE CORE FIX: submenu inline, not floating ── */
+  .nav-dropdown-list-2.shadow-three.mobile-shadow-hide,
+  .nav-dropdown-list-2.shadow-three.mobile-shadow-hide.integration-new-nav.big-nav,
+  .nav-dropdown-list-2.shadow-three.mobile-shadow-hide.resources-nav,
+  .nav-dropdown-list-2.shadow-three.mobile-shadow-hide.resources-nav.resouces-nav-small {
+    position: static !important;
+    inset: auto !important;
+    transform: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+    padding: 0 !important;
+  }
+
+  .nav-dropdown-list-2.shadow-three.mobile-shadow-hide.w--open,
+  .nav-dropdown-list-2.shadow-three.mobile-shadow-hide.integration-new-nav.big-nav.w--open,
+  .nav-dropdown-list-2.shadow-three.mobile-shadow-hide.resources-nav.w--open,
+  .nav-dropdown-list-2.shadow-three.mobile-shadow-hide.resources-nav.resouces-nav-small.w--open {
+    position: static !important;
+    transform: none !important;
+    display: block !important;
+  }
+
+  /* ── CONNECTED FEEL: left border accent on submenu items ── */
+  .nav-dropdown-list-2 .nav-dropdown-link-2,
+  .nav-dropdown-list-2 .single-extra-nav {
+    border-left: 2px solid rgba(55, 125, 255, 0.25) !important;
+    margin-left: 8px !important;
+    padding-left: 16px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    display: block !important;
+    font-size: 14px !important;
+    color: #77838f !important;
+    transition: border-color 0.2s, color 0.2s !important;
+  }
+
+  .nav-dropdown-list-2 .nav-dropdown-link-2:hover,
+  .nav-dropdown-list-2 .single-extra-nav:hover {
+    border-left-color: #377dff !important;
+    color: #377dff !important;
+  }
+
+  .nav-right-extra,
+  .nav-left-extra.hide-for-tab,
+  .nav-extra {
+    display: none !important;
+  }
+
+  .navbar-actions {
+    width: 100%;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 12px 16px 4px !important;
+    gap: 8px !important;
+  }
+
+  .navbar-actions .animated-color-button,
+  .navbar-actions .animated-button-shine-effect,
+  .navbar-actions .login-container {
+    width: 100% !important;
+  }
+
+  .nav-dropdown-icon-3 {
+    margin-right: -6px;
+  }
+
+  .nav-link-3 {
+    padding-right: 0px;
+  }
+  
+  .nav-link-3.nav-common-wd {
+    padding-left: 6px;
+  }
+}
